@@ -29,16 +29,16 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="section bg-gradient-to-b from-white to-light-gray dark:from-deep-charcoal dark:to-black relative overflow-hidden">
+    <section className="section bg-gradient-to-b from-white to-light-gray relative overflow-hidden">
       {/* Circuit pattern background */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full bg-circuit-pattern bg-repeat"></div>
       </div>
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="text-xl max-w-3xl mx-auto text-gray-600">
             Don't just take our word for it. Here's what organizations are achieving with IgnitionAI.
           </p>
         </div>
@@ -51,13 +51,13 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-deep-charcoal/80 rounded-lg shadow-xl p-8 relative"
+              className="bg-white rounded-lg shadow-xl p-8 relative"
             >
               {/* Quotation mark */}
               <div className="absolute top-4 left-4 text-6xl text-ignition-orange/20">"</div>
               
               <div className="relative z-10">
-                <p className="text-gray-700 dark:text-gray-200 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
                 
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4 flex-shrink-0">
@@ -65,8 +65,8 @@ const TestimonialsSection = () => {
                     <div className="w-full h-full bg-gradient-to-br from-ignition-orange to-ember-red"></div>
                   </div>
                   <div>
-                    <p className="font-bold text-deep-charcoal dark:text-white">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">{testimonial.title}, {testimonial.company}</p>
+                    <p className="font-bold text-deep-charcoal">{testimonial.author}</p>
+                    <p className="text-sm text-gray-600">{testimonial.title}, {testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
         
         {/* Client logos */}
         <div className="mt-20">
-          <p className="text-center text-gray-500 dark:text-gray-400 mb-8 text-sm uppercase tracking-wider font-medium">Trusted by innovative organizations</p>
+          <p className="text-center text-gray-500 mb-8 text-sm uppercase tracking-wider font-medium">Trusted by innovative organizations</p>
           
           <motion.div 
             initial={{ opacity: 0 }}
@@ -87,7 +87,7 @@ const TestimonialsSection = () => {
           >
             {/* These would be replaced with actual client logos */}
             {[1, 2, 3, 4, 5].map((_, index) => (
-              <div key={index} className="h-8 w-32 bg-gray-200 dark:bg-gray-700 rounded opacity-60 hover:opacity-100 transition-opacity"></div>
+              <div key={index} className="h-8 w-32 bg-gray-200 rounded opacity-60 hover:opacity-100 transition-opacity"></div>
             ))}
           </motion.div>
         </div>

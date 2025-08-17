@@ -26,11 +26,11 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="section bg-white dark:bg-deep-charcoal">
+    <section id="services" className="section bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">Our Services</h2>
-          <p className="text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
+          <p className="text-xl max-w-3xl mx-auto text-gray-700">
             We offer a structured approach to AI implementation, from assessment to execution, ensuring rapid ROI and measurable business impact.
           </p>
         </div>
@@ -49,7 +49,7 @@ const ServicesSection = () => {
           >
             <div className="absolute -right-16 -top-16 w-32 h-32 bg-ignition-orange/10 rounded-full"></div>
             <h3 className="text-2xl font-bold mb-4">AI Needs Audit</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-700 mb-6">
               Comprehensive assessment of your business operations to identify AI opportunities with the highest ROI potential.
             </p>
             <ul className="space-y-3 mb-8">
@@ -74,7 +74,7 @@ const ServicesSection = () => {
             </ul>
             <div className="font-montserrat font-medium">
               <span className="text-spark-yellow">$500-1,000</span>
-              <span className="text-sm text-gray-600 dark:text-gray-400"> (Free with implementation)</span>
+              <span className="text-sm text-gray-600"> (Free with implementation)</span>
             </div>
           </motion.div>
           
@@ -85,7 +85,7 @@ const ServicesSection = () => {
           >
             <div className="absolute -right-16 -top-16 w-32 h-32 bg-ember-red/10 rounded-full"></div>
             <h3 className="text-2xl font-bold mb-4">Solution Design</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-700 mb-6">
               Custom AI solution architecture tailored to your specific business needs, goals, and existing systems.
             </p>
             <ul className="space-y-3 mb-8">
@@ -120,7 +120,7 @@ const ServicesSection = () => {
           >
             <div className="absolute -right-16 -top-16 w-32 h-32 bg-spark-yellow/10 rounded-full"></div>
             <h3 className="text-2xl font-bold mb-4">Implementation</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-700 mb-6">
               End-to-end deployment of custom AI solutions with training, integration, and optimization.
             </p>
             <ul className="space-y-3 mb-8">

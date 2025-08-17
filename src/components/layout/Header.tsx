@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-deep-charcoal shadow-sm">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -37,7 +36,7 @@ const Header = () => {
                 priority
               />
             </div>
-            <span className="text-xl font-bold text-deep-charcoal dark:text-white">
+            <span className="text-xl font-bold text-deep-charcoal">
               <span>Ignition</span>
               <span className="font-light">AI</span>
             </span>
@@ -50,26 +49,24 @@ const Header = () => {
                 <li key={item.name}>
                   <Link 
                     href={item.path}
-                    className="font-montserrat text-deep-charcoal dark:text-white hover:text-ignition-orange dark:hover:text-ignition-orange transition-colors"
+                    className="font-montserrat text-deep-charcoal hover:text-ignition-orange transition-colors"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <ThemeToggle />
             <Link href="/contact" className="btn-primary">
               Free AI Audit
             </Link>
           </nav>
 
           {/* Mobile Navigation Button */}
-          <div className="flex items-center space-x-4 lg:hidden">
-            <ThemeToggle />
+          <div className="flex items-center lg:hidden">
             <button 
               onClick={toggleMenu}
               aria-label="Toggle Menu"
-              className="p-2 text-deep-charcoal dark:text-white"
+              className="p-2 text-deep-charcoal"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -95,7 +92,7 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white dark:bg-deep-charcoal border-t border-gray-100 dark:border-gray-800"
+          className="lg:hidden bg-white border-t border-gray-100"
         >
           <nav className="container mx-auto px-4 py-4">
             <ul className="flex flex-col space-y-4">
@@ -103,7 +100,7 @@ const Header = () => {
                 <li key={item.name}>
                   <Link 
                     href={item.path}
-                    className="block font-montserrat text-deep-charcoal dark:text-white hover:text-ignition-orange dark:hover:text-ignition-orange transition-colors"
+                    className="block font-montserrat text-deep-charcoal hover:text-ignition-orange transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

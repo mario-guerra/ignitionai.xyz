@@ -40,7 +40,7 @@ const BlogPreviewSection = () => {
   ];
 
   return (
-    <section className="section bg-white dark:bg-deep-charcoal py-20">
+    <section className="section bg-white py-20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <motion.div
@@ -50,7 +50,7 @@ const BlogPreviewSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300">
+            <p className="text-xl max-w-3xl mx-auto text-gray-600">
               Stay updated with the latest trends, strategies, and case studies in AI implementation.
             </p>
           </motion.div>
@@ -64,7 +64,7 @@ const BlogPreviewSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-light-gray dark:bg-deep-charcoal/50 rounded-lg overflow-hidden shadow-md"
+              className="bg-light-gray rounded-lg overflow-hidden shadow-md"
             >
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
                 {/* This would be replaced with actual images */}
@@ -74,7 +74,7 @@ const BlogPreviewSection = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
                   <span>{post.date}</span>
                   <span className="mx-2">•</span>
                   <span className="text-ignition-orange">{post.category}</span>
@@ -86,7 +86,7 @@ const BlogPreviewSection = () => {
                   </Link>
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-5">
+                <p className="text-gray-600 mb-5">
                   {post.excerpt}
                 </p>
                 
@@ -120,12 +120,12 @@ const BlogPreviewSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mt-20 bg-light-gray dark:bg-black p-8 md:p-12 rounded-xl shadow-lg"
+          className="mt-20 bg-light-gray p-8 md:p-12 rounded-xl shadow-lg"
         >
           <div className="md:flex items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
               <h3 className="text-2xl font-bold mb-2">Stay Informed</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Subscribe to our newsletter for the latest AI insights, case studies, and implementation strategies.
               </p>
             </div>
@@ -134,7 +134,7 @@ const BlogPreviewSection = () => {
                 <input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-deep-charcoal/80 focus:outline-none focus:ring-2 focus:ring-ignition-orange"
+                  className="px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-ignition-orange"
                   required
                 />
                 <button type="submit" className="btn-primary whitespace-nowrap">

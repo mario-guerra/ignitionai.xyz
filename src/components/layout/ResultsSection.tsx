@@ -44,7 +44,7 @@ const ResultsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-deep-charcoal/90 text-deep-charcoal dark:text-white rounded-lg p-6 text-center shadow-lg"
+              className="bg-white text-deep-charcoal rounded-lg p-6 text-center shadow-lg"
             >
               <div className={`text-5xl md:text-6xl font-bold mb-4 ${
                 result.color === 'ignition-orange' ? 'text-ignition-orange' :
@@ -54,7 +54,7 @@ const ResultsSection = () => {
               }`}>
                 {result.metric}
               </div>
-              <p className="text-gray-700 dark:text-gray-300">{result.description}</p>
+              <p className="text-gray-700">{result.description}</p>
             </motion.div>
           ))}
         </div>

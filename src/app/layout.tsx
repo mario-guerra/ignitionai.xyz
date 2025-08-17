@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { montserrat, sourceSans } from "./fonts";
-import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -28,7 +27,6 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${sourceSans.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">
@@ -36,7 +34,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-        </ThemeProvider>
       </body>
     </html>
   );

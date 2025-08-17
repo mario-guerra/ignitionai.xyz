@@ -11,25 +11,16 @@
   --font-family-source-sans: 'Source Sans Pro', ui-sans-serif, system-ui, sans-serif;
 }
 
-:root {
-  --foreground-rgb: 26, 37, 38; /* Deep Charcoal */
-  --background-rgb: 255, 255, 255;
-}
-
-.dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 26, 37, 38; /* Deep Charcoal */
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: var(--font-source-sans);
+  color: #1A2526;
+  background: #FFFFFF;
+  font-family: var(--font-family-source-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-montserrat);
+  font-family: var(--font-family-montserrat);
   font-weight: 700;
+  color: #1A2526;
 }
 
 @layer components {
@@ -93,11 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .card:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  }
-
-  /* Dark mode card styles */
-  .dark .card {
-    background-color: rgba(26, 37, 38, 0.8);
   }
 
   /* Section Styles */

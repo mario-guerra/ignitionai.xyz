@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection = () => {
   return (
-    <section className="section py-16 md:py-24 bg-white dark:bg-deep-charcoal">
+    <section className="section py-16 md:py-24 bg-white">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -16,10 +16,10 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="section-title mb-6">About IgnitionAI</h2>
-            <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
+            <p className="text-lg mb-6 text-gray-700">
               IgnitionAI was founded with a mission to make cutting-edge AI technology accessible and practical for organizations of all sizes. Our team of AI experts, data scientists, and business strategists works collaboratively to create solutions that deliver measurable value.
             </p>
-            <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
+            <p className="text-lg mb-6 text-gray-700">
               Unlike generic AI consultancies, we focus exclusively on practical implementations with rapid ROI. Every solution we design is tailored to your specific business challenges, industry context, and growth objectives.
             </p>
             <div className="flex flex-wrap gap-4 mt-8">
@@ -31,7 +31,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">30+</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">AI Specialists</p>
+                  <p className="text-sm text-gray-600">AI Specialists</p>
                 </div>
               </div>
               
@@ -43,7 +43,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">50+</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Client Projects</p>
+                  <p className="text-sm text-gray-600">Client Projects</p>
                 </div>
               </div>
               
@@ -55,7 +55,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">97%</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</p>
+                  <p className="text-sm text-gray-600">Client Satisfaction</p>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ const AboutSection = () => {
             </div>
             
             {/* Testimonial callout */}
-            <div className="absolute -bottom-10 -left-10 bg-white dark:bg-deep-charcoal border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
+            <div className="absolute -bottom-10 -left-10 bg-white border border-gray-200 p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
               <div className="flex space-x-2 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-spark-yellow" viewBox="0 0 20 20" fill="currentColor">
@@ -96,7 +96,7 @@ const AboutSection = () => {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-700 dark:text-gray-300 text-sm italic">
+              <p className="text-gray-700 text-sm italic">
                 "IgnitionAI helped us reduce customer response times by 62% while improving satisfaction scores."
               </p>
               <p className="font-bold text-sm mt-2">CTO, Fortune 500 Retailer</p>
