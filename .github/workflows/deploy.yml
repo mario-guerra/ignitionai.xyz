@@ -58,7 +58,16 @@ jobs:
         run: npm ci
         
       - name: Build with Next.js
-        run: npm run build
+        run: |
+          npm run build
+          touch out/.nojekyll
+        
+      - name: List build output (debug)
+        run: |
+          echo "Contents of current directory:"
+          ls -la
+          echo "Contents of out directory:"
+          ls -la out/ || echo "out directory does not exist"
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

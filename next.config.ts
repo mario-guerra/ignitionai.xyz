@@ -8,10 +8,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  // GitHub Pages deployment - will be set by the deployment action
-  // Uncomment and set this to your repository name if deploying manually:
-  // basePath: '/your-repo-name',
-  // assetPrefix: '/your-repo-name/',
+  // For GitHub Pages deployment with custom domain (ignitionai.xyz)
+  // If using GitHub Pages without custom domain, uncomment the basePath lines:
+  // basePath: '/ignitionai.xyz',
+  // assetPrefix: '/ignitionai.xyz/',
 };
 
 export default nextConfig;
