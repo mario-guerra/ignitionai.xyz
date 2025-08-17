@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ignition-orange: #FF6200;
+  --color-deep-charcoal: #1A2526;
+  --color-ember-red: #D32F2F;
+  --color-cool-gray: #B0BEC5;
+  --color-spark-yellow: #FFC107;
+  
+  --font-family-montserrat: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-family-source-sans: 'Source Sans Pro', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --foreground-rgb: 26, 37, 38; /* Deep Charcoal */
+  --background-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 26, 37, 38; /* Deep Charcoal */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-source-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
+
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    background-color: var(--color-ignition-orange);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-deep-charcoal);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .btn-tertiary {
+    background-color: white;
+    color: var(--color-ignition-orange);
+    border: 1px solid var(--color-ignition-orange);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-tertiary:hover {
+    background-color: rgba(255, 98, 0, 0.05);
+  }
+
+  /* Card Styles */
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  /* Dark mode card styles */
+  .dark .card {
+    background-color: rgba(26, 37, 38, 0.8);
+  }
+
+  /* Section Styles */
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding: 4rem 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      padding: 4rem 4rem;
+    }
+  }
+}
