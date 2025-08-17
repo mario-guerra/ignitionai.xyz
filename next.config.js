@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
@@ -14,4 +13,4 @@ const nextConfig: NextConfig = {
   // assetPrefix: '/ignitionai.xyz/',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
