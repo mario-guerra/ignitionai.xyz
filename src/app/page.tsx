@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import HeroSection from "@/components/layout/HeroSection";
 import AboutSection from "@/components/layout/AboutSection";
 import ServicesSection from "@/components/layout/ServicesSection";

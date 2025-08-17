@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -51,8 +50,8 @@ const HeroSection = () => {
 
               <div className="mt-8 md:mt-12 p-4 border-l-4 border-ignition-orange bg-gray-50 max-w-2xl mx-auto lg:mx-0">
                 <p className="font-montserrat italic text-gray-700 text-sm sm:text-base">
-                  "IgnitionAI helped us achieve 300% ROI within 6 months through intelligent 
-                  automation and predictive analytics."
+                  &ldquo;IgnitionAI helped us achieve 300% ROI within 6 months through intelligent 
+                  automation and predictive analytics.&rdquo;
                 </p>
                 <cite className="block mt-2 text-xs sm:text-sm text-gray-600">
                   - Sarah Chen, CTO at TechFlow Solutions

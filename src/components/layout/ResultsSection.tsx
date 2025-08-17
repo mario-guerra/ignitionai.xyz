@@ -32,7 +32,7 @@ const ResultsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Results That Speak for Themselves</h2>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Our clients achieve measurable business impact with IgnitionAI solutions. Here's what you can expect.
+            Our clients achieve measurable business impact with IgnitionAI solutions. Here&apos;s what you can expect.
           </p>
         </div>
         

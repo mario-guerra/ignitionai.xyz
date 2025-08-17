@@ -1,6 +1,6 @@
 "use client";
 
-import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const TestimonialsSection = () => {
@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What Our Clients Say</h2>
           <p className="text-xl max-w-3xl mx-auto text-gray-600">
-            Don't just take our word for it. Here's what organizations are achieving with IgnitionAI.
+            Don&apos;t just take our word for it. Here&apos;s what organizations are achieving with IgnitionAI.
           </p>
         </div>
         
@@ -54,10 +54,10 @@ const TestimonialsSection = () => {
               className="bg-white rounded-lg shadow-xl p-8 relative"
             >
               {/* Quotation mark */}
-              <div className="absolute top-4 left-4 text-6xl text-ignition-orange/20">"</div>
+              <div className="absolute top-4 left-4 text-6xl text-ignition-orange/20">&ldquo;</div>
               
               <div className="relative z-10">
-                <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4 flex-shrink-0">

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -97,7 +96,7 @@ const AboutSection = () => {
                 ))}
               </div>
               <p className="text-gray-700 text-sm italic">
-                "IgnitionAI helped us reduce customer response times by 62% while improving satisfaction scores."
+                &ldquo;IgnitionAI helped us reduce customer response times by 62% while improving satisfaction scores.&rdquo;
               </p>
               <p className="font-bold text-sm mt-2">CTO, Fortune 500 Retailer</p>
             </div>
