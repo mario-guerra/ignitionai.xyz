@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -27,12 +28,14 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative w-10 h-10">
-              <img 
-                src="/images/catalyst-circuit-logo.svg" 
-                alt="IgnitionAI Logo" 
+              <Image
+                src="/images/catalyst-circuit-logo.svg"
+                alt="IgnitionAI Logo"
                 width={40}
                 height={40}
                 className="w-full h-full object-contain"
+                unoptimized
+                priority
               />
             </div>
             <span className="text-xl font-bold text-deep-charcoal">
@@ -46,7 +49,7 @@ const Header = () => {
             <ul className="flex space-x-6">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link
                     href={item.path}
                     className="font-montserrat text-deep-charcoal hover:text-ignition-orange transition-colors"
                   >
@@ -62,22 +65,32 @@ const Header = () => {
 
           {/* Mobile Navigation Button */}
           <div className="flex items-center lg:hidden">
-            <button 
+            <button
               onClick={toggleMenu}
               aria-label="Toggle Menu"
               className="p-2 text-deep-charcoal"
             >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 className="w-6 h-6"
               >
                 {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -87,7 +100,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -97,7 +110,7 @@ const Header = () => {
             <ul className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link
                     href={item.path}
                     className="block font-montserrat text-deep-charcoal hover:text-ignition-orange transition-colors"
                     onClick={() => setIsMenuOpen(false)}
@@ -107,8 +120,8 @@ const Header = () => {
                 </li>
               ))}
               <li className="pt-2">
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="block w-full text-center btn-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
