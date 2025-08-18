@@ -6,7 +6,7 @@ const AboutPage = () => {
   const stats = [
     { label: "Time Savings", value: "80-95%", description: "Target efficiency gains for AI implementations" },
     { label: "ROI Timeline", value: "2-3 months", description: "Our goal for return on investment" },
-    { label: "Portfolio Projects", value: "6", description: "Proven AI solutions ready for deployment" },
+    { label: "Portfolio Projects", value: "6+", description: "Ready scenarios plus custom solutions" },
     { label: "Cost Reduction", value: "70-90%", description: "Potential savings from AI automation" }
   ];
 
@@ -193,7 +193,7 @@ const AboutPage = () => {
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Six production-ready solutions: automation, knowledge management, and multilingual tools</span>
+                    <span>Six ready-to-deploy scenarios plus custom solutions for unique business challenges</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
