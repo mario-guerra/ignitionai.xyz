@@ -8,21 +8,21 @@ const BlogPreviewSection = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'How AI is Revolutionizing Customer Service in 2023',
+      title: 'How AI is Revolutionizing Customer Service in 2025',
       excerpt: 'Discover how AI-powered assistants and automation are transforming customer service operations and improving satisfaction metrics.',
       image: '/images/blog/customer-service-ai.jpg',
-      date: 'June 15, 2023',
-      author: 'Sarah Chen',
+      publishDate: '2025-07-15', // Internal use only
+      author: 'Mario Guerra',
       category: 'Customer Service',
-      slug: 'how-ai-is-revolutionizing-customer-service-2023'
+      slug: 'how-ai-is-revolutionizing-customer-service-2025'
     },
     {
       id: 2,
       title: 'The ROI of AI: Measuring Success in Business Process Automation',
       excerpt: 'Learn the key metrics and methodologies for calculating the return on investment for your AI implementation projects.',
       image: '/images/blog/roi-ai-measurement.jpg',
-      date: 'May 22, 2023',
-      author: 'Marcus Johnson',
+      publishDate: '2025-06-22', // Internal use only
+      author: 'Mario Guerra',
       category: 'Business',
       slug: 'roi-ai-measuring-success-business-process-automation'
     },
@@ -31,8 +31,8 @@ const BlogPreviewSection = () => {
       title: 'Breaking Language Barriers: Multilingual AI in Global Business',
       excerpt: 'How advanced language models are helping businesses communicate seamlessly across languages and cultural boundaries.',
       image: '/images/blog/multilingual-ai.jpg',
-      date: 'April 8, 2023',
-      author: 'Elena Rodriguez',
+      publishDate: '2025-05-08', // Internal use only
+      author: 'Mario Guerra',
       category: 'Multilingual AI',
       slug: 'breaking-language-barriers-multilingual-ai-global-business'
     }
@@ -68,14 +68,12 @@ const BlogPreviewSection = () => {
               <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
                 {/* This would be replaced with actual images */}
                 <div className="absolute inset-0 bg-gradient-to-br from-ignition-orange/80 to-ember-red/80 flex items-center justify-center">
-                  <span className="text-white font-bold">Blog Image</span>
+                  <span className="text-white font-bold text-lg">{post.category}</span>
                 </div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <span>{post.date}</span>
-                  <span className="mx-2">•</span>
                   <span className="text-ignition-orange">{post.category}</span>
                 </div>
                 
