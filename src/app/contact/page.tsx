@@ -178,7 +178,7 @@ export default function Contact() {
                 Get in Touch
               </h2>
               <p className="text-gray-600 text-lg max-w-[700px] mx-auto">
-                Have a project in mind or want to collaborate? I'd love to hear from you!
+                Have a project in mind or want to collaborate? I&apos;d love to hear from you!
               </p>
             </div>
             

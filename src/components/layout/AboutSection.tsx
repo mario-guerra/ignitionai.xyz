@@ -21,7 +21,7 @@ const AboutSection = () => {
               that solve real business problems.
             </p>
             <p className="text-lg mb-6 text-gray-700">
-              I have six ready-to-deploy AI scenarios that can be implemented immediately, but I'm not limited to these. 
+              I have six ready-to-deploy AI scenarios that can be implemented immediately, but I&apos;m not limited to these. 
               Each solution is custom-built using proven technologies and frameworks, adapting to whatever challenge 
               your business faces.
             </p>
