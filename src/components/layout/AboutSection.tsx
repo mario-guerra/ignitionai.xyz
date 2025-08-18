@@ -80,46 +80,19 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            {/* Technical Stack Visualization */}
-            <div className="aspect-video bg-gradient-to-br from-gray-900 to-deep-charcoal rounded-lg overflow-hidden shadow-xl relative">
-              <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
-                  <pattern id="tech-grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-                    <circle cx="25" cy="25" r="1" fill="#FF6200"/>
-                    <path d="M25,5 L25,45 M5,25 L45,25" stroke="#FF6200" strokeWidth="0.3"/>
-                  </pattern>
-                  <rect width="100%" height="100%" fill="url(#tech-grid)"/>
-                </svg>
-              </div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                <div className="text-white text-xl font-bold mb-4">Technology Stack</div>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="text-ignition-orange text-sm font-semibold">LangChain</div>
-                  <div className="text-ignition-orange text-sm font-semibold">Azure AI</div>
-                  <div className="text-ignition-orange text-sm font-semibold">Next.js</div>
-                  <div className="text-ignition-orange text-sm font-semibold">Python</div>
-                  <div className="text-ignition-orange text-sm font-semibold">FastAPI</div>
-                  <div className="text-ignition-orange text-sm font-semibold">TypeScript</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Portfolio Highlight */}
-            <div className="absolute -bottom-10 -left-10 bg-white border border-gray-200 p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
-              <div className="flex items-center mb-2">
-                <div className="w-8 h-8 bg-ignition-orange rounded-full flex items-center justify-center mr-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            {/* Professional Visual */}
+            <div className="aspect-video bg-gradient-to-br from-ignition-orange/5 to-ember-red/5 border border-gray-200 rounded-lg overflow-hidden shadow-xl relative flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-24 h-24 bg-gradient-to-br from-ignition-orange to-ember-red rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <span className="font-bold text-deep-charcoal">Portfolio Highlight</span>
+                <h3 className="text-xl font-bold text-deep-charcoal mb-3">Enterprise AI for SMBs</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                  Bringing enterprise-grade AI solutions to small and medium businesses with SMB-friendly budgets and timelines.
+                </p>
               </div>
-              <p className="text-gray-700 text-sm">
-                Multi-agent AI system that automates complex workflows and decision-making processes.
-              </p>
-              <Link href="/services" className="text-ignition-orange text-sm font-semibold mt-2 inline-block">
-                View All Solutions →
-              </Link>
             </div>
           </motion.div>
         </div>

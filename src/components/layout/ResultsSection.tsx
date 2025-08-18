@@ -3,25 +3,25 @@
 import { motion } from "framer-motion";
 
 const ResultsSection = () => {
-  const results = [
+  const capabilities = [
     {
-      metric: "80-95%",
-      description: "Time savings through AI-powered automation and workflows",
+      metric: "6+",
+      description: "Ready-to-deploy AI scenarios with custom solutions for unique challenges",
       color: "ignition-orange"
     },
     {
-      metric: "2-3",
-      description: "Months to achieve return on investment",
+      metric: "1-8",
+      description: "Week implementation timelines for rapid business impact",
       color: "ember-red"
     },
     {
-      metric: "60%",
-      description: "Reduction in operational disruptions",
+      metric: "$5K-30K",
+      description: "SMB-focused project budgets that deliver meaningful ROI",
       color: "spark-yellow"
     },
     {
-      metric: "70%",
-      description: "Cost savings on translation and multilingual services",
+      metric: "100%",
+      description: "Custom-built solutions using proven AI technologies",
       color: "deep-charcoal"
     },
   ];
@@ -30,14 +30,14 @@ const ResultsSection = () => {
     <section className="section bg-ignition-orange text-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Results That Speak for Themselves</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to Transform Your Business</h2>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Our clients achieve measurable business impact with IgnitionAI solutions. Here&apos;s what you can expect.
+            Here&apos;s what IgnitionAI brings to your AI transformation journey.
           </p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {results.map((result, index) => (
+          {capabilities.map((capability, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -47,21 +47,21 @@ const ResultsSection = () => {
               className="bg-white text-deep-charcoal rounded-lg p-6 text-center shadow-lg"
             >
               <div className={`text-5xl md:text-6xl font-bold mb-4 ${
-                result.color === 'ignition-orange' ? 'text-ignition-orange' :
-                result.color === 'ember-red' ? 'text-ember-red' :
-                result.color === 'spark-yellow' ? 'text-spark-yellow' :
+                capability.color === 'ignition-orange' ? 'text-ignition-orange' :
+                capability.color === 'ember-red' ? 'text-ember-red' :
+                capability.color === 'spark-yellow' ? 'text-spark-yellow' :
                 'text-deep-charcoal'
               }`}>
-                {result.metric}
+                {capability.metric}
               </div>
-              <p className="text-gray-700">{result.description}</p>
+              <p className="text-gray-700">{capability.description}</p>
             </motion.div>
           ))}
         </div>
         
-        {/* Process Timeline */}
+        {/* Implementation Approach */}
         <div className="mt-24">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">Our Implementation Timeline</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">My Implementation Approach</h3>
           
           <div className="relative">
             {/* Timeline Line */}
@@ -77,8 +77,8 @@ const ResultsSection = () => {
                   viewport={{ once: true }}
                   className="md:text-right"
                 >
-                  <h4 className="text-xl font-bold mb-2">Week 1-2: Assessment & Design</h4>
-                  <p className="opacity-90">Complete AI audit, identify highest-ROI opportunities, and create custom solution design.</p>
+                  <h4 className="text-xl font-bold mb-2">Week 1-2: Discovery & Design</h4>
+                  <p className="opacity-90">Understand your business challenges, identify AI opportunities, and design a custom solution.</p>
                 </motion.div>
                 <div className="hidden md:block relative">
                   <div className="absolute left-0 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full border-4 border-ignition-orange flex items-center justify-center">
@@ -100,8 +100,8 @@ const ResultsSection = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Week 3-6: Implementation</h4>
-                  <p className="opacity-90">Develop custom solutions, integrate with existing systems, and provide initial training.</p>
+                  <h4 className="text-xl font-bold mb-2">Week 3-6: Development</h4>
+                  <p className="opacity-90">Build your custom AI solution using proven technologies and integrate with your systems.</p>
                 </motion.div>
               </div>
               
@@ -114,8 +114,8 @@ const ResultsSection = () => {
                   viewport={{ once: true }}
                   className="md:text-right"
                 >
-                  <h4 className="text-xl font-bold mb-2">Week 7-8: Optimization</h4>
-                  <p className="opacity-90">Fine-tune solutions based on initial usage data and train team members on best practices.</p>
+                  <h4 className="text-xl font-bold mb-2">Week 7-8: Training & Deployment</h4>
+                  <p className="opacity-90">Deploy the solution, train your team, and optimize based on real-world usage.</p>
                 </motion.div>
                 <div className="hidden md:block relative">
                   <div className="absolute left-0 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full border-4 border-ignition-orange flex items-center justify-center">
@@ -124,7 +124,7 @@ const ResultsSection = () => {
                 </div>
               </div>
               
-              {/* Week 9+ */}
+              {/* Ongoing */}
               <div className="md:grid md:grid-cols-2 md:gap-8 md:items-center">
                 <div className="hidden md:block relative">
                   <div className="absolute right-0 transform translate-x-1/2 w-8 h-8 bg-white rounded-full border-4 border-ignition-orange flex items-center justify-center">
@@ -137,8 +137,8 @@ const ResultsSection = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Week 9+: ROI Realization</h4>
-                  <p className="opacity-90">Measure results, calculate ROI, and identify opportunities for expansion and improvement.</p>
+                  <h4 className="text-xl font-bold mb-2">Ongoing: Support & Growth</h4>
+                  <p className="opacity-90">Monitor performance, provide support, and identify opportunities for expansion.</p>
                 </motion.div>
               </div>
             </div>

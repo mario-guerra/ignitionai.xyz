@@ -5,7 +5,7 @@ import HeroSection from "@/components/layout/HeroSection";
 import AboutSection from "@/components/layout/AboutSection";
 import ServicesSection from "@/components/layout/ServicesSection";
 import ResultsSection from "@/components/layout/ResultsSection";
-import TestimonialsSection from "@/components/layout/TestimonialsSection";
+import PortfolioShowcase from "@/components/layout/TestimonialsSection";
 import BlogPreviewSection from "@/components/layout/BlogPreviewSection";
 import CTASection from "@/components/layout/CTASection";
 
@@ -99,7 +99,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ResultsSection />
-      <TestimonialsSection />
+      <PortfolioShowcase />
       <BlogPreviewSection />
       <CTASection />
     </>

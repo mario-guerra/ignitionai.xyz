@@ -1,115 +1,141 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-const TestimonialsSection = () => {
-  const testimonials = [
+const PortfolioShowcase = () => {
+  const portfolioHighlights = [
     {
-      quote: "IgnitionAI transformed our customer service with an AI assistant that handles 78% of inquiries automatically, freeing our team to focus on complex issues.",
-      author: "Sarah Johnson",
-      title: "Customer Experience Director",
-      company: "RetailPlus",
-      image: "/images/testimonial-1.jpg"
+      title: "Multi-Agent AI System",
+      description: "Complex workflow automation using LangGraph for multi-step business processes with decision-making capabilities.",
+      technology: "LangGraph + Python",
+      scenario: "Process Automation",
+      icon: "⚡"
     },
     {
-      quote: "The multilingual content generation solution from IgnitionAI helped us expand into 12 new markets in just 3 months, something that would have taken a year with our previous approach.",
-      author: "Michael Chen",
-      title: "VP of Global Marketing",
-      company: "GrowthTech",
-      image: "/images/testimonial-2.jpg"
+      title: "RAG-Enhanced Chatbot",
+      description: "Intelligent assistant that helps users obtain accurate information using natural language queries.",
+      technology: "Azure AI + TypeScript",
+      scenario: "Knowledge Management",
+      icon: "🤖"
     },
     {
-      quote: "Our legal team used to spend weeks reviewing contracts. With IgnitionAI's document analysis solution, they now do it in hours with even greater accuracy.",
-      author: "David Okafor",
-      title: "Legal Operations Manager",
-      company: "EnterpriseCore",
-      image: "/images/testimonial-3.jpg"
+      title: "Document Intelligence",
+      description: "AI-powered document summarization and analysis system for rapid information extraction and insights.",
+      technology: "Azure AI + Python",
+      scenario: "Document Processing",
+      icon: "📄"
     }
   ];
 
+  const technologies = [
+    { name: "LangChain", category: "AI Framework" },
+    { name: "Azure AI", category: "Cloud Platform" },
+    { name: "Next.js", category: "Frontend" },
+    { name: "Python", category: "Backend" },
+    { name: "TypeSpec", category: "API Development" },
+    { name: "TypeScript", category: "Development" }
+  ];
+
   return (
-    <section className="section bg-gradient-to-b from-white to-light-gray relative overflow-hidden">
+    <section className="section bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Circuit pattern background */}
       <div className="absolute inset-0 opacity-5">
-        <div className="w-full h-full bg-circuit-pattern bg-repeat"></div>
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+          <pattern id="portfolio-circuit" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+            <circle cx="25" cy="25" r="1" fill="#FF6200"/>
+            <path d="M25,5 L25,45 M5,25 L45,25" stroke="#FF6200" strokeWidth="0.3"/>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#portfolio-circuit)"/>
+        </svg>
       </div>
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What Our Clients Say</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Portfolio Highlights</h2>
           <p className="text-xl max-w-3xl mx-auto text-gray-600">
-            Don&apos;t just take our word for it. Here&apos;s what organizations are achieving with IgnitionAI.
+            Real AI solutions built with proven technologies. Here&apos;s what IgnitionAI can deliver for your business.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+          {portfolioHighlights.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-xl p-8 relative"
+              className="bg-white rounded-lg shadow-xl p-8 relative border border-gray-100 hover:border-ignition-orange/30 transition-colors"
             >
-              {/* Quotation mark */}
-              <div className="absolute top-4 left-4 text-6xl text-ignition-orange/20">&ldquo;</div>
+              {/* Icon */}
+              <div className="text-4xl mb-4">{project.icon}</div>
               
-              <div className="relative z-10">
-                <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden mr-4 flex-shrink-0">
-                    {/* This would be replaced with actual images when available */}
-                    <div className="w-full h-full bg-gradient-to-br from-ignition-orange to-ember-red"></div>
-                  </div>
-                  <div>
-                    <p className="font-bold text-deep-charcoal">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600">{testimonial.title}, {testimonial.company}</p>
-                  </div>
+              <div className="mb-4">
+                <div className="inline-block px-3 py-1 bg-ignition-orange/10 text-ignition-orange text-sm font-semibold rounded-full mb-3">
+                  {project.scenario}
+                </div>
+                <h3 className="text-xl font-bold text-deep-charcoal mb-2">{project.title}</h3>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+                <div className="text-sm text-gray-500 font-medium">
+                  Built with: {project.technology}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
         
-        {/* Client logos */}
-        <div className="mt-20">
-          <p className="text-center text-gray-500 mb-8 text-sm uppercase tracking-wider font-medium">Trusted by innovative organizations</p>
-          
-          <motion.div 
+        {/* Technology Stack */}
+        <div className="mb-20">
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16"
+            className="text-center"
           >
-            {/* These would be replaced with actual client logos */}
-            {[1, 2, 3, 4, 5].map((_, index) => (
-              <div key={index} className="h-8 w-32 bg-gray-200 rounded opacity-60 hover:opacity-100 transition-opacity"></div>
-            ))}
+            <h3 className="text-2xl font-bold text-deep-charcoal mb-8">Technology Stack</h3>
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+              {technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white border border-gray-200 rounded-lg px-4 py-3 hover:border-ignition-orange/30 transition-colors"
+                >
+                  <div className="font-semibold text-deep-charcoal">{tech.name}</div>
+                  <div className="text-sm text-gray-500">{tech.category}</div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
         
-        {/* Case study callout */}
+        {/* Call to action */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mt-24 bg-gradient-to-r from-ignition-orange to-ember-red text-white p-8 md:p-12 rounded-xl shadow-2xl"
+          className="bg-gradient-to-r from-ignition-orange to-ember-red text-white p-8 md:p-12 rounded-xl shadow-2xl"
         >
           <div className="md:flex items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">See the full story</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Build Your Solution?</h3>
               <p className="text-white/90 max-w-xl">
-                Learn how RetailPlus achieved 78% automation in customer service and saw a 42% reduction in response time with our AI solutions.
+                Let&apos;s discuss how these proven technologies can solve your specific business challenges. 
+                Schedule a free consultation to explore what&apos;s possible.
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <a href="/case-studies/retailplus" className="inline-block px-8 py-4 bg-white text-ignition-orange font-bold rounded-lg transition-all hover:bg-light-gray hover:shadow-lg">
-                Read Case Study
-              </a>
+            <div className="flex-shrink-0 space-y-3 md:space-y-0 md:space-x-3 md:flex">
+              <Link href="/services" className="inline-block px-6 py-3 bg-white text-ignition-orange font-bold rounded-lg transition-all hover:bg-gray-100 hover:shadow-lg text-center">
+                View All Solutions
+              </Link>
+              <Link href="/contact" className="inline-block px-6 py-3 border-2 border-white text-white font-bold rounded-lg transition-all hover:bg-white hover:text-ignition-orange text-center">
+                Get Started
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -118,4 +144,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default PortfolioShowcase;
