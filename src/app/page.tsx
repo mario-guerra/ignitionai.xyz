@@ -53,44 +53,44 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-deep-charcoal">Rapid ROI</h3>
               </div>
-              <p className="text-gray-700">Achieve return on investment in 2-3 months with our focused implementation approach.</p>
+              <p className="text-gray-700">Target return on investment within 3-6 months with our focused implementation approach.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industry Focus Section */}
+      {/* Scenarios We Ignite Section */}
       <section className="section bg-gray-50 circuit-bg">
         <div className="container mx-auto">
-          <h2 className="section-title text-center">AI Solutions for Your Industry</h2>
+          <h2 className="section-title text-center">Scenarios We Ignite</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <div className="card hover:border-l-4 hover:border-l-ignition-orange transition-all">
-              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Logistics</h3>
-              <p className="text-gray-700 mb-4">Reduce supply chain disruptions by 60% with AI-powered predictive analytics.</p>
-              <div className="text-spark-yellow font-bold">60% fewer disruptions</div>
+              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Process Automation</h3>
+              <p className="text-gray-700 mb-4">Eliminate repetitive tasks and reduce manual errors with intelligent automation workflows.</p>
+              <div className="text-spark-yellow font-bold">Target: 50%+ time savings</div>
             </div>
             
             <div className="card hover:border-l-4 hover:border-l-ignition-orange transition-all">
-              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Healthcare</h3>
-              <p className="text-gray-700 mb-4">Cut administrative costs while improving multilingual patient communication.</p>
-              <div className="text-spark-yellow font-bold">70% cost reduction</div>
+              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Global Communication</h3>
+              <p className="text-gray-700 mb-4">Break language barriers and serve customers worldwide with real-time translation.</p>
+              <div className="text-spark-yellow font-bold">Target: 40%+ faster responses</div>
             </div>
             
             <div className="card hover:border-l-4 hover:border-l-ignition-orange transition-all">
-              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">E-commerce</h3>
-              <p className="text-gray-700 mb-4">Scale customer service globally without adding headcount or complexity.</p>
-              <div className="text-spark-yellow font-bold">35% sales increase</div>
+              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Knowledge Management</h3>
+              <p className="text-gray-700 mb-4">Transform scattered information into instant, searchable organizational intelligence.</p>
+              <div className="text-spark-yellow font-bold">Target: 60%+ faster retrieval</div>
             </div>
             
             <div className="card hover:border-l-4 hover:border-l-ignition-orange transition-all">
-              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Professional Services</h3>
-              <p className="text-gray-700 mb-4">Transform your expertise into scalable assets through AI knowledge systems.</p>
-              <div className="text-spark-yellow font-bold">80% faster document creation</div>
+              <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Customer Experience</h3>
+              <p className="text-gray-700 mb-4">Deliver personalized, 24/7 support that scales without increasing headcount.</p>
+              <div className="text-spark-yellow font-bold">Target: 25%+ higher satisfaction</div>
             </div>
           </div>
           <div className="text-center mt-12">
-            <Link href="/case-studies" className="btn-secondary">
-              View Case Studies
+            <Link href="/services" className="btn-secondary">
+              Explore Our Solutions
             </Link>
           </div>
         </div>

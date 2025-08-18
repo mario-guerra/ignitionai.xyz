@@ -50,8 +50,8 @@ const HeroSection = () => {
 
               <div className="mt-8 md:mt-12 p-4 border-l-4 border-ignition-orange bg-gray-50 max-w-2xl mx-auto lg:mx-0">
                 <p className="font-montserrat italic text-gray-700 text-sm sm:text-base">
-                  &ldquo;IgnitionAI helped us achieve 300% ROI within 6 months through intelligent 
-                  automation and predictive analytics.&rdquo;
+                  &ldquo;IgnitionAI's approach to intelligent automation and predictive analytics 
+                  has transformed how we operate.&rdquo;
                 </p>
                 <cite className="block mt-2 text-xs sm:text-sm text-gray-600">
                   - Sarah Chen, CTO at TechFlow Solutions
@@ -129,8 +129,8 @@ const HeroSection = () => {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <div className="text-xs text-gray-600">ROI Increase</div>
-                <div className="text-sm sm:text-lg font-bold text-ignition-orange">+300%</div>
+                <div className="text-xs text-gray-600">Target ROI</div>
+                <div className="text-sm sm:text-lg font-bold text-ignition-orange">150%+</div>
               </motion.div>
 
               <motion.div 
@@ -139,7 +139,7 @@ const HeroSection = () => {
                 transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
               >
                 <div className="text-xs text-gray-600">Time Saved</div>
-                <div className="text-sm sm:text-lg font-bold text-ember-red">80%</div>
+                <div className="text-sm sm:text-lg font-bold text-ember-red">40%+</div>
               </motion.div>
 
               <motion.div 
@@ -148,7 +148,7 @@ const HeroSection = () => {
                 transition={{ duration: 2.8, repeat: Infinity, delay: 1 }}
               >
                 <div className="text-xs text-gray-600">Accuracy</div>
-                <div className="text-sm sm:text-lg font-bold text-spark-yellow">99.5%</div>
+                <div className="text-sm sm:text-lg font-bold text-spark-yellow">95%+</div>
               </motion.div>
             </div>
           </motion.div>
