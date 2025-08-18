@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const AboutPage = () => {
   const stats = [
-    { label: "Time Savings", value: "80-95%", description: "Average efficiency gains for our clients" },
-    { label: "ROI Timeline", value: "2-3 months", description: "Typical return on investment period" },
-    { label: "Disruption Reduction", value: "60%", description: "Decreased operational disruptions" },
-    { label: "Cost Savings", value: "70-90%", description: "Reduction in manual process costs" }
+    { label: "Time Savings", value: "80-95%", description: "Target efficiency gains for AI implementations" },
+    { label: "ROI Timeline", value: "2-3 months", description: "Our goal for return on investment" },
+    { label: "Portfolio Projects", value: "6", description: "Proven AI solutions ready for deployment" },
+    { label: "Cost Reduction", value: "70-90%", description: "Potential savings from AI automation" }
   ];
 
   const values = [
@@ -17,8 +17,8 @@ const AboutPage = () => {
       icon: "🎯"
     },
     {
-      title: "Measurable Results", 
-      description: "Every solution we implement delivers quantifiable ROI within 2-3 months of deployment.",
+      title: "Measurable Impact", 
+      description: "Our solutions are designed to deliver quantifiable ROI within 2-3 months of deployment.",
       icon: "📊"
     },
     {
@@ -27,32 +27,48 @@ const AboutPage = () => {
       icon: "🚀"
     },
     {
-      title: "Proven Portfolio",
-      description: "Leveraging battle-tested automation, knowledge management, and multilingual solutions.",
+      title: "Proven Technology",
+      description: "Built on battle-tested automation, knowledge management, and multilingual AI solutions.",
       icon: "⚡"
     }
   ];
 
-  const industries = [
+  const scenarios = [
     {
-      name: "Logistics & Supply Chain",
-      description: "Automate workflows, predict disruptions, optimize routes and inventory management.",
-      challenges: ["Manual tracking", "Supply chain visibility", "Route optimization"]
+      name: "Manual Process Automation",
+      description: "Transform repetitive tasks like data entry, report generation, and workflow routing into intelligent automated systems.",
+      challenges: ["Time-consuming manual work", "Human error", "Process bottlenecks"],
+      examples: ["Invoice processing", "Customer onboarding", "Inventory tracking"]
     },
     {
-      name: "E-commerce & Retail", 
-      description: "Scale globally with multilingual tools, automated customer service, and smart inventory.",
-      challenges: ["Global expansion", "Customer support", "Inventory management"]
+      name: "Global Expansion & Communication", 
+      description: "Break language barriers with real-time translation, multilingual customer support, and localized content creation.",
+      challenges: ["Language barriers", "Cultural adaptation", "Communication scaling"],
+      examples: ["Customer support translation", "Document localization", "International sales"]
     },
     {
-      name: "Professional Services",
-      description: "Transform knowledge management, automate proposals, and streamline client communications.",
-      challenges: ["Document management", "Proposal generation", "Client onboarding"]
+      name: "Knowledge Management & Training",
+      description: "Convert scattered expertise into searchable knowledge bases, automated training, and instant Q&A systems.",
+      challenges: ["Knowledge silos", "Training consistency", "Information retrieval"],
+      examples: ["Employee onboarding", "Customer self-service", "Internal documentation"]
     },
     {
-      name: "Manufacturing",
-      description: "Optimize production schedules, predictive maintenance, and quality control processes.",
-      challenges: ["Production planning", "Equipment maintenance", "Quality assurance"]
+      name: "Customer Experience Enhancement",
+      description: "Deliver 24/7 intelligent support, personalized recommendations, and proactive customer communication.",
+      challenges: ["Response time", "Consistency", "Personalization at scale"],
+      examples: ["AI chatbots", "Smart recommendations", "Automated follow-ups"]
+    },
+    {
+      name: "Decision Support & Analytics",
+      description: "Transform data into actionable insights with automated reporting, trend analysis, and predictive recommendations.",
+      challenges: ["Data overload", "Analysis complexity", "Decision delays"],
+      examples: ["Market analysis", "Performance dashboards", "Demand forecasting"]
+    },
+    {
+      name: "Document & Content Intelligence",
+      description: "Automatically process, summarize, and extract insights from contracts, reports, emails, and other business documents.",
+      challenges: ["Document volume", "Information extraction", "Compliance tracking"],
+      examples: ["Contract analysis", "Report summarization", "Compliance monitoring"]
     }
   ];
 
@@ -76,9 +92,9 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              IgnitionAI empowers small and medium-sized businesses to unlock AI&apos;s potential without the hassle. 
-               We deliver proven automation, knowledge management, and multilingual solutions that generate 
-               measurable ROI in 2-3 months.
+              IgnitionAI brings proven AI technology to small and medium-sized businesses through 
+              accessible, purpose-built solutions. With six production-ready AI projects in our portfolio, 
+              we&apos;re ready to deliver measurable results in 2-3 months.
             </motion.p>
             <motion.div
               className="inline-flex items-center space-x-2 text-ignition-orange font-semibold"
@@ -133,8 +149,8 @@ const AboutPage = () => {
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 In 2025, over 50% of SMBs are exploring AI, but many struggle with manual processes, 
-                global expansion barriers, and complex implementations. IgnitionAI bridges this gap 
-                by delivering accessible, ROI-driven AI solutions tailored specifically for 
+                global expansion barriers, and complex implementations. IgnitionAI was founded to bridge this gap 
+                with accessible, ROI-driven AI solutions built specifically for 
                 small and medium businesses.
               </p>
             </motion.div>
@@ -155,8 +171,8 @@ const AboutPage = () => {
                   AI expertise or affordable solutions that deliver real business impact.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  We&apos;re changing that narrative. IgnitionAI specializes exclusively in SMB AI adoption, 
-                  offering proven solutions with quick implementation timelines and guaranteed ROI.
+                  IgnitionAI was founded to change that narrative. We specialize exclusively in SMB AI adoption, 
+                  bringing proven technology solutions with quick implementation timelines and measurable ROI.
                 </p>
               </motion.div>
 
@@ -173,15 +189,15 @@ const AboutPage = () => {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Affordable, SMB-focused AI with $5K-20K project budgets</span>
+                    <span>Affordable, SMB-focused AI with $5K-30K project budgets</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Proven portfolio of automation and multilingual solutions</span>
+                    <span>Six production-ready solutions: automation, knowledge management, and multilingual tools</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>4-8 week implementation timelines vs. 6+ month enterprise projects</span>
+                    <span>1-8 week implementation timelines vs. 6+ month enterprise projects</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
@@ -247,15 +263,15 @@ const AboutPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
-              Industries We Ignite
+              Scenarios We Ignite
             </h2>
             <p className="text-xl text-gray-600">
-              Specialized AI solutions for the sectors that drive SMB growth
+              Common business challenges that AI can transform across any industry
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
+            {scenarios.map((scenario, index) => (
               <motion.div 
                 key={index}
                 className="border border-gray-200 rounded-xl p-6 hover:border-ignition-orange/30 transition-colors"
@@ -265,22 +281,37 @@ const AboutPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className="text-xl font-bold text-deep-charcoal mb-3">
-                  {industry.name}
+                  {scenario.name}
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  {industry.description}
+                  {scenario.description}
                 </p>
-                <div>
+                <div className="mb-4">
                   <div className="text-sm font-semibold text-ignition-orange mb-2">
                     Common Challenges We Solve:
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {industry.challenges.map((challenge, idx) => (
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {scenario.challenges.map((challenge, idx) => (
                       <span 
                         key={idx}
                         className="text-xs bg-ignition-orange/10 text-ignition-orange px-3 py-1 rounded-full"
                       >
                         {challenge}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-gray-700 mb-2">
+                    Example Applications:
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {scenario.examples.map((example, idx) => (
+                      <span 
+                        key={idx}
+                        className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full"
+                      >
+                        {example}
                       </span>
                     ))}
                   </div>
@@ -326,14 +357,13 @@ const AboutPage = () => {
                 backbone of the economy—are being left behind.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
-                IgnitionAI was founded to democratize AI access. With a proven portfolio of 
-                automation tools, knowledge management systems, and multilingual solutions, 
-                we&apos;ve already demonstrated that SMBs can achieve the same transformational 
-                results as Fortune 500 companies.
+                IgnitionAI was founded to democratize AI access. Through deep technical expertise 
+                and a portfolio of production-ready solutions, we bring enterprise-level AI capabilities 
+                to SMBs at accessible price points and implementation timelines.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Our approach is different: we don&apos;t just consult—we implement. We don&apos;t just 
-                theorize—we deliver measurable results. Every solution is designed with SMB 
+                theorize—we deliver working solutions. Every project is designed with SMB 
                 realities in mind: limited budgets, tight timelines, and the need for immediate ROI.
               </p>
             </motion.div>
