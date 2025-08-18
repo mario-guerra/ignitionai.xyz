@@ -103,7 +103,6 @@ const Footer = () => {
             <Link href="/contact" className="inline-block bg-ignition-orange text-white px-4 py-2 rounded font-montserrat font-medium transition-all hover:brightness-110 hover:shadow-lg mb-4">
               Book Free AI Audit
             </Link>
-            <p className="text-cool-gray">info@ignitionai.xyz</p>
           </div>
         </div>
         
