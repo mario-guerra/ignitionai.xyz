@@ -203,7 +203,7 @@ const AboutPage = () => {
                 <div className="bg-gradient-to-br from-ignition-orange/10 to-ember-red/10 p-6 rounded-xl">
                   <h4 className="font-bold text-deep-charcoal mb-3">Production-Ready AI Solutions</h4>
                   <p className="text-gray-600 text-sm mb-4">
-                    At IgnitionAI, we don't just build proof-of-concepts. We architect, implement, and deploy AI systems that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
+                    At IgnitionAI, we don&apos;t just build proof-of-concepts. We architect, implement, and deploy AI systems that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start space-x-2">
@@ -477,13 +477,13 @@ const AboutPage = () => {
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
                 IgnitionAI was founded to democratize access to enterprise-grade AI solutions. Through 
-                our founder's 15+ years of experience shipping production AI systems at Microsoft, 
+                our founder&apos;s 15+ years of experience shipping production AI systems at Microsoft, 
                 Qualcomm, and ARM, we bring Fortune 500-proven methodologies to businesses ready 
                 to transform their operations.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Our approach is fundamentally different: we don't just consult—we implement production-ready 
-                systems. We don't just theorize—we deliver measurable results. Every solution is designed 
+                Our approach is fundamentally different: we don&apos;t just consult—we implement production-ready 
+                systems. We don&apos;t just theorize—we deliver measurable results. Every solution is designed 
                 with the understanding that businesses need AI implementations that integrate seamlessly 
                 with existing infrastructure and deliver ROI within 90 days.
               </p>
