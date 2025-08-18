@@ -68,13 +68,58 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Main AI visualization */}
-              <div className="bg-gradient-to-br from-ignition-orange/10 to-ember-red/10 rounded-full p-6 sm:p-8 md:p-10 lg:p-12">
-                <div className="bg-white rounded-full p-4 sm:p-6 md:p-8 shadow-xl relative">
-                  <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto bg-gradient-to-br from-ignition-orange to-ember-red rounded-full flex items-center justify-center">
-                    <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">AI</div>
-                  </div>
-                </div>
+              {/* Main AI Flame visualization */}
+              <div className="relative flex items-center justify-center h-80 w-80 mx-auto">
+                {/* Flame SVG */}
+                <svg 
+                  viewBox="0 0 200 280" 
+                  className="w-full h-full" 
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  {/* Flame shape with gradient */}
+                  <path 
+                    d="M100 20C100 20 70 50 70 90C70 130 90 140 90 170C90 140 110 140 110 90C110 50 100 20 100 20Z
+                       M100 20C100 20 80 40 80 70C80 100 100 110 100 140C100 110 120 110 120 70C120 40 100 20 100 20Z
+                       M100 20C100 20 85 35 85 60C85 85 100 95 100 120C100 95 115 95 115 60C115 35 100 20 100 20Z" 
+                    fill="url(#flameGradient)" 
+                    className="drop-shadow-lg"
+                  />
+                  
+                  {/* AI text in the center */}
+                  <text 
+                    x="100" 
+                    y="120" 
+                    textAnchor="middle" 
+                    dominantBaseline="middle" 
+                    className="text-4xl font-bold fill-white"
+                    style={{ fontSize: '36px' }}
+                  >
+                    AI
+                  </text>
+                  
+                  {/* Circuit pattern base */}
+                  <g transform="translate(0, 200)">
+                    <line x1="30" y1="0" x2="170" y2="0" stroke="#1A2526" strokeWidth="3"/>
+                    <line x1="50" y1="-10" x2="50" y2="10" stroke="#1A2526" strokeWidth="2"/>
+                    <line x1="100" y1="-10" x2="100" y2="10" stroke="#1A2526" strokeWidth="2"/>
+                    <line x1="150" y1="-10" x2="150" y2="10" stroke="#1A2526" strokeWidth="2"/>
+                    <circle cx="50" cy="0" r="4" fill="#1A2526"/>
+                    <circle cx="100" cy="0" r="4" fill="#FFC107"/>
+                    <circle cx="150" cy="0" r="4" fill="#1A2526"/>
+                  </g>
+                  
+                  {/* Spark at the tip */}
+                  <circle cx="100" cy="25" r="6" fill="#FFC107" className="animate-pulse"/>
+                  
+                  {/* Gradient definition */}
+                  <defs>
+                    <linearGradient id="flameGradient" x1="100" y1="20" x2="100" y2="170" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#FFC107" />
+                      <stop offset="40%" stopColor="#FF6200" />
+                      <stop offset="100%" stopColor="#D32F2F" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
 
               {/* Floating metrics - repositioned for mobile */}
