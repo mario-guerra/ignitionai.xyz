@@ -4,31 +4,31 @@ import { motion } from "framer-motion";
 
 const AboutPage = () => {
   const stats = [
-    { label: "Time Savings", value: "80-95%", description: "Target efficiency gains for AI implementations" },
-    { label: "ROI Timeline", value: "2-3 months", description: "Our goal for return on investment" },
-    { label: "Portfolio Projects", value: "6+", description: "Ready scenarios plus custom solutions" },
-    { label: "Cost Reduction", value: "70-90%", description: "Potential savings from AI automation" }
+    { label: "Enterprise Experience", value: "15+ Years", description: "Microsoft, Qualcomm, and ARM" },
+    { label: "Client Demonstrations", value: "65+", description: "Proven client-facing expertise" },
+    { label: "Monthly AI Interactions", value: "5,000+", description: "Queries handled by deployed systems" },
+    { label: "Typical ROI Timeline", value: "90 Days", description: "Measurable impact delivery" }
   ];
 
   const values = [
     {
-      title: "Accessible AI",
-      description: "We make advanced AI technology simple and approachable for non-technical business owners.",
+      title: "Production-Ready Solutions",
+      description: "We architect, implement, and deploy AI systems that scale in production environments, not just prototypes.",
       icon: "🎯"
     },
     {
-      title: "Measurable Impact", 
-      description: "Our solutions are designed to deliver quantifiable ROI within 2-3 months of deployment.",
+      title: "Enterprise Methodologies", 
+      description: "Our solutions are built on methodologies tested across Fortune 500 companies at Microsoft, Qualcomm, and ARM.",
       icon: "📊"
     },
     {
-      title: "SMB Focus",
-      description: "Purpose-built for small and medium businesses with real-world constraints and budgets.",
+      title: "Measurable Impact",
+      description: "Every engagement delivers quantifiable ROI within 90 days, with 40-70% improvements in key metrics.",
       icon: "🚀"
     },
     {
-      title: "Proven Technology",
-      description: "Built on battle-tested automation, knowledge management, and multilingual AI solutions.",
+      title: "Deep Technical Expertise",
+      description: "15+ years of enterprise AI experience shipping solutions that handle thousands of daily interactions.",
       icon: "⚡"
     }
   ];
@@ -84,7 +84,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Sparking <span className="text-ignition-orange">SMB Growth</span> with Accessible AI
+              Enterprise-Proven <span className="text-ignition-orange">AI Solutions</span> for Growing Businesses
             </motion.h1>
             <motion.p 
               className="text-xl text-gray-600 mb-8 leading-relaxed"
@@ -92,9 +92,9 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              IgnitionAI brings proven AI technology to small and medium-sized businesses through 
-              accessible, purpose-built solutions. With six production-ready AI projects in our portfolio, 
-              we&apos;re ready to deliver measurable results in 2-3 months.
+              IgnitionAI brings 15+ years of enterprise AI experience from Microsoft, Qualcomm, and ARM 
+              to help businesses implement production-ready AI solutions that deliver measurable impact 
+              within 90 days.
             </motion.p>
             <motion.div
               className="inline-flex items-center space-x-2 text-ignition-orange font-semibold"
@@ -103,7 +103,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <span>🔥</span>
-              <span>Making AI Simple and Impactful for Non-Technical SMBs</span>
+              <span>Production-Ready AI • Enterprise-Proven Methodologies • Measurable Results</span>
             </motion.div>
           </div>
         </div>
@@ -133,6 +133,121 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Founder & Leadership Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
+                Leadership & Expertise
+              </h2>
+              <p className="text-xl text-gray-600">
+                Founded by enterprise AI veterans with a track record of shipping production solutions
+              </p>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
+                    Mario Guerra
+                  </h3>
+                  <p className="text-lg text-ignition-orange font-semibold mb-4">
+                    Founder & Principal AI Architect
+                  </p>
+                </div>
+                
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Mario Guerra is the Founder and Principal AI Architect of IgnitionAI, bringing 15+ years of enterprise AI experience from Microsoft, Qualcomm, and ARM to help businesses transform operations through production-ready AI implementations.
+                </p>
+                
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Unlike consultants who focus on experimental prototypes, Mario specializes in shipping AI solutions that deliver measurable business impact—from reducing documentation queries by 85% to achieving 30% adoption across Azure services.
+                </p>
+
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Heritage</h4>
+                    <p className="text-gray-600 text-sm">
+                      Having architected solutions for Azure services, Snapdragon AI platforms, and ARM Cortex systems, Mario understands how AI implementations must integrate with existing enterprise infrastructure.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-deep-charcoal mb-2">Client-Facing Excellence</h4>
+                    <p className="text-gray-600 text-sm">
+                      With over 65 client demonstrations and training sessions delivered across Microsoft and Qualcomm, Mario brings a unique combination of technical depth and client communication skills.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                className="space-y-6"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-gradient-to-br from-ignition-orange/10 to-ember-red/10 p-6 rounded-xl">
+                  <h4 className="font-bold text-deep-charcoal mb-3">Production-Ready AI Solutions</h4>
+                  <p className="text-gray-600 text-sm mb-4">
+                    At IgnitionAI, we don't just build proof-of-concepts. We architect, implement, and deploy AI systems that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-ignition-orange mt-1">•</span>
+                      <span>85% reduction in support response times through knowledge-powered AI assistants</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-ignition-orange mt-1">•</span>
+                      <span>70% improvement in process efficiency via multi-agent AI architectures</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-ignition-orange mt-1">•</span>
+                      <span>92% user satisfaction rates across deployed AI solutions</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+                  <h4 className="font-bold text-deep-charcoal mb-3">Key Achievements</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-500 mt-1">•</span>
+                      <span>Led prototyping and production launch of GitHub Copilot extension for Azure</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-500 mt-1">•</span>
+                      <span>Built AI assistants processing 5,000+ monthly queries with 92% satisfaction</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-500 mt-1">•</span>
+                      <span>Guided TypeSpec API language to 30% adoption across Azure services</span>
+                    </li>
+                    <li className="flex items-start space-x-2">
+                      <span className="text-blue-500 mt-1">•</span>
+                      <span>Delivered 40+ customer onboarding sessions supporting 150+ deployments</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -145,13 +260,12 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
-                Our Mission
+                The IgnitionAI Difference
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                In 2025, over 50% of SMBs are exploring AI, but many struggle with manual processes, 
-                global expansion barriers, and complex implementations. IgnitionAI was founded to bridge this gap 
-                with accessible, ROI-driven AI solutions built specifically for 
-                small and medium businesses.
+                We bridge the gap between enterprise-grade AI capabilities and accessible business solutions. 
+                Our implementations deliver immediate, measurable impact through production-ready systems 
+                built on proven methodologies.
               </p>
             </motion.div>
 
@@ -163,16 +277,17 @@ const AboutPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className="text-2xl font-bold text-deep-charcoal mb-4">
-                  Why IgnitionAI Exists
+                  Enterprise-Proven Methodologies
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  The AI consulting industry is dominated by large firms targeting enterprise clients 
-                  with million-dollar budgets. SMBs are left with generic IT consultants who lack 
-                  AI expertise or affordable solutions that deliver real business impact.
+                  Our solutions are built on methodologies tested across Fortune 500 companies at Microsoft, 
+                  Qualcomm, and ARM. We understand enterprise constraints, compliance requirements, and the 
+                  critical difference between a working demo and a production system that handles thousands 
+                  of daily interactions.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  IgnitionAI was founded to change that narrative. We specialize exclusively in SMB AI adoption, 
-                  bringing proven technology solutions with quick implementation timelines and measurable ROI.
+                  This enterprise heritage enables us to deliver faster, more reliable deployments that work 
+                  within your current technology ecosystem while scaling to meet growing business demands.
                 </p>
               </motion.div>
 
@@ -184,24 +299,27 @@ const AboutPage = () => {
                 viewport={{ once: true }}
               >
                 <h3 className="text-2xl font-bold text-deep-charcoal mb-4">
-                  Our Unique Edge
+                  Measurable Business Impact
                 </h3>
+                <p className="text-gray-600 mb-4">
+                  Every engagement is designed around specific, measurable outcomes:
+                </p>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Affordable, SMB-focused AI with $5K-30K project budgets</span>
+                    <span>ROI typically achieved within 90 days of deployment</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Six ready-to-deploy scenarios plus custom solutions for unique business challenges</span>
+                    <span>40-70% improvements in key operational metrics</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>1-8 week implementation timelines vs. 6+ month enterprise projects</span>
+                    <span>Production systems handling thousands of daily interactions</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-ignition-orange mt-1">•</span>
-                    <span>Remote delivery model keeping costs low and accessibility high</span>
+                    <span>Seamless integration with existing technology infrastructure</span>
                   </li>
                 </ul>
               </motion.div>
@@ -337,10 +455,10 @@ const AboutPage = () => {
                 className="text-3xl md:text-4xl font-bold mb-6 text-ignition-orange"
                 style={{ color: 'var(--color-ignition-orange)', textShadow: '0 6px 18px rgba(255,98,0,0.12)' }}
               >
-                The IgnitionAI Story
+                Why IgnitionAI Exists
               </h2>
               <p className="text-xl text-gray-300">
-                Born from the understanding that SMBs deserve enterprise-level AI solutions
+                Bridging the gap between enterprise-grade AI capabilities and accessible business solutions
               </p>
             </motion.div>
 
@@ -352,19 +470,22 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <p className="text-gray-300 leading-relaxed mb-6">
-                The AI revolution is happening now, but it&apos;s largely benefiting large enterprises 
-                with unlimited budgets and dedicated AI teams. Small and medium businesses—the 
-                backbone of the economy—are being left behind.
+                The AI revolution is creating a two-tier system: large enterprises with unlimited budgets 
+                and dedicated AI teams are rapidly implementing sophisticated solutions, while growing 
+                businesses are left with generic consultants who lack deep AI expertise or experimental 
+                prototypes that never reach production.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
-                IgnitionAI was founded to democratize AI access. Through deep technical expertise 
-                and a portfolio of production-ready solutions, we bring enterprise-level AI capabilities 
-                to SMBs at accessible price points and implementation timelines.
+                IgnitionAI was founded to democratize access to enterprise-grade AI solutions. Through 
+                our founder's 15+ years of experience shipping production AI systems at Microsoft, 
+                Qualcomm, and ARM, we bring Fortune 500-proven methodologies to businesses ready 
+                to transform their operations.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Our approach is different: we don&apos;t just consult—we implement. We don&apos;t just 
-                theorize—we deliver working solutions. Every project is designed with SMB 
-                realities in mind: limited budgets, tight timelines, and the need for immediate ROI.
+                Our approach is fundamentally different: we don't just consult—we implement production-ready 
+                systems. We don't just theorize—we deliver measurable results. Every solution is designed 
+                with the understanding that businesses need AI implementations that integrate seamlessly 
+                with existing infrastructure and deliver ROI within 90 days.
               </p>
             </motion.div>
 
