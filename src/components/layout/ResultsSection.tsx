@@ -61,7 +61,7 @@ const ResultsSection = () => {
         
         {/* Implementation Approach */}
         <div className="mt-24">
-          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">My Implementation Approach</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">Our Implementation Approach</h3>
           
           <div className="relative">
             {/* Timeline Line */}

@@ -13,8 +13,8 @@ const PortfolioShowcase = () => {
       icon: "⚡"
     },
     {
-      title: "RAG-Enhanced Chatbot",
-      description: "Intelligent assistant that helps users obtain accurate information using natural language queries.",
+      title: "Knowledge-Powered Chatbot",
+      description: "Intelligent assistant that leverages your existing documentation and data to deliver precise, relevant responses instantly.",
       technology: "Azure AI + TypeScript",
       scenario: "Knowledge Management",
       icon: "🤖"
@@ -29,7 +29,7 @@ const PortfolioShowcase = () => {
   ];
 
   const technologies = [
-    { name: "LangChain", category: "AI Framework" },
+    { name: "LangGraph", category: "AI Framework" },
     { name: "Azure AI", category: "Cloud Platform" },
     { name: "Next.js", category: "Frontend" },
     { name: "Python", category: "Backend" },
