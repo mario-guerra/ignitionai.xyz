@@ -68,55 +68,56 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Main AI Flame visualization */}
+              {/* Main AI Flame visualization - Using exact header logo styling */}
               <div className="relative flex items-center justify-center h-80 w-80 mx-auto">
-                {/* Flame SVG */}
+                {/* Flame SVG - Reusing header logo design for brand consistency */}
                 <svg 
-                  viewBox="0 0 200 280" 
-                  className="w-full h-full" 
+                  viewBox="0 0 120 120" 
+                  className="w-full h-full drop-shadow-2xl" 
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  {/* Flame shape with gradient */}
-                  <path 
-                    d="M100 20C100 20 70 50 70 90C70 130 90 140 90 170C90 140 110 140 110 90C110 50 100 20 100 20Z
-                       M100 20C100 20 80 40 80 70C80 100 100 110 100 140C100 110 120 110 120 70C120 40 100 20 100 20Z
-                       M100 20C100 20 85 35 85 60C85 85 100 95 100 120C100 95 115 95 115 60C115 35 100 20 100 20Z" 
-                    fill="url(#flameGradient)" 
-                    className="drop-shadow-lg"
-                  />
+                  {/* Stylized flame rising from circuit - exact same as header logo */}
+                  <path d="M60 10C60 10 40 30 40 50C40 70 60 70 60 90C60 70 80 70 80 50C80 30 60 10 60 10Z" fill="url(#hero_flame_gradient)"/>
                   
-                  {/* AI text in the center */}
+                  {/* AI text centered in flame with readable background */}
+                  <circle cx="60" cy="50" r="12" fill="rgba(255, 255, 255, 0.95)" stroke="rgba(255, 98, 0, 0.3)" strokeWidth="1"/>
                   <text 
-                    x="100" 
-                    y="120" 
+                    x="60" 
+                    y="50" 
                     textAnchor="middle" 
-                    dominantBaseline="middle" 
-                    className="text-4xl font-bold fill-white"
-                    style={{ fontSize: '36px' }}
+                    dominantBaseline="central" 
+                    className="font-bold fill-deep-charcoal"
+                    style={{ fontSize: '12px', fontFamily: 'Montserrat, sans-serif' }}
                   >
                     AI
                   </text>
                   
-                  {/* Circuit pattern base */}
-                  <g transform="translate(0, 200)">
-                    <line x1="30" y1="0" x2="170" y2="0" stroke="#1A2526" strokeWidth="3"/>
-                    <line x1="50" y1="-10" x2="50" y2="10" stroke="#1A2526" strokeWidth="2"/>
-                    <line x1="100" y1="-10" x2="100" y2="10" stroke="#1A2526" strokeWidth="2"/>
-                    <line x1="150" y1="-10" x2="150" y2="10" stroke="#1A2526" strokeWidth="2"/>
-                    <circle cx="50" cy="0" r="4" fill="#1A2526"/>
-                    <circle cx="100" cy="0" r="4" fill="#FFC107"/>
-                    <circle cx="150" cy="0" r="4" fill="#1A2526"/>
-                  </g>
+                  {/* Circuit base - exact same as header logo */}
+                  <path d="M20 90H40M40 90V100M40 100H80M80 100V90M80 90H100" stroke="#1A2526" strokeWidth="3" strokeLinecap="round"/>
+                  <path d="M30 110H90" stroke="#1A2526" strokeWidth="3" strokeLinecap="round"/>
                   
-                  {/* Spark at the tip */}
-                  <circle cx="100" cy="25" r="6" fill="#FFC107" className="animate-pulse"/>
+                  {/* Circuit nodes - exact same as header logo */}
+                  <circle cx="20" cy="90" r="4" fill="#1A2526"/>
+                  <circle cx="40" cy="90" r="4" fill="#1A2526"/>
+                  <circle cx="40" cy="100" r="4" fill="#1A2526"/>
+                  <circle cx="80" cy="100" r="4" fill="#1A2526"/>
+                  <circle cx="80" cy="90" r="4" fill="#1A2526"/>
+                  <circle cx="100" cy="90" r="4" fill="#1A2526"/>
+                  <circle cx="30" cy="110" r="4" fill="#1A2526"/>
+                  <circle cx="90" cy="110" r="4" fill="#1A2526"/>
                   
-                  {/* Gradient definition */}
+                  {/* Spark at the tip - exact same as header logo */}
+                  <circle cx="60" cy="15" r="5" fill="#FFC107">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Gradient definitions - exact same as header logo */}
                   <defs>
-                    <linearGradient id="flameGradient" x1="100" y1="20" x2="100" y2="170" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#FFC107" />
-                      <stop offset="40%" stopColor="#FF6200" />
-                      <stop offset="100%" stopColor="#D32F2F" />
+                    <linearGradient id="hero_flame_gradient" x1="60" y1="10" x2="60" y2="90" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stopColor="#FFC107"/>
+                      <stop offset="0.5" stopColor="#FF6200"/>
+                      <stop offset="1" stopColor="#D32F2F"/>
                     </linearGradient>
                   </defs>
                 </svg>
