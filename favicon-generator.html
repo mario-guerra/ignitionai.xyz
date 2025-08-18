@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Favicon Generator</title>
+    <style>
+        canvas { border: 1px solid #ccc; margin: 10px; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Favicon Generator for IgnitionAI</h1>
+    <div class="container">
+        <div>
+            <h3>16x16 Favicon</h3>
+            <canvas id="favicon16" width="16" height="16"></canvas>
+        </div>
+        <div>
+            <h3>32x32 Favicon</h3>
+            <canvas id="favicon32" width="32" height="32"></canvas>
+        </div>
+        <div>
+            <h3>180x180 Apple Touch Icon</h3>
+            <canvas id="apple180" width="180" height="180"></canvas>
+        </div>
+        <div>
+            <h3>192x192 Android Chrome</h3>
+            <canvas id="android192" width="192" height="192"></canvas>
+        </div>
+    </div>
+    
+    <script>
+        // Draw simplified favicon versions
+        function drawFavicon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Scale factor
+            const scale = size / 32;
+            
+            // Draw flame gradient
+            const gradient = ctx.createLinearGradient(0, 2 * scale, 0, 26 * scale);
+            gradient.addColorStop(0, '#FFC107');
+            gradient.addColorStop(0.5, '#FF6200');
+            gradient.addColorStop(1, '#D32F2F');
+            
+            // Draw flame
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.moveTo(16 * scale, 2 * scale);
+            ctx.bezierCurveTo(10 * scale, 8 * scale, 10 * scale, 14 * scale, 16 * scale, 20 * scale);
+            ctx.bezierCurveTo(22 * scale, 14 * scale, 22 * scale, 8 * scale, 16 * scale, 2 * scale);
+            ctx.fill();
+            
+            // Add spark at tip
+            ctx.fillStyle = '#FFC107';
+            ctx.beginPath();
+            ctx.arc(16 * scale, 4 * scale, 2 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Draw circuit base
+            ctx.fillStyle = '#1A2526';
+            ctx.fillRect(4 * scale, 26 * scale, 24 * scale, 2 * scale);
+            
+            // Circuit dots
+            ctx.beginPath();
+            ctx.arc(8 * scale, 27 * scale, 1.5 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.fillStyle = '#FFC107';
+            ctx.beginPath();
+            ctx.arc(16 * scale, 27 * scale, 1.5 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.fillStyle = '#1A2526';
+            ctx.beginPath();
+            ctx.arc(24 * scale, 27 * scale, 1.5 * scale, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        // Generate all sizes
+        drawFavicon(document.getElementById('favicon16'), 16);
+        drawFavicon(document.getElementById('favicon32'), 32);
+        drawFavicon(document.getElementById('apple180'), 180);
+        drawFavicon(document.getElementById('android192'), 192);
+        
+        // Add download functionality
+        function addDownloadLink(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.textContent = `Download ${filename}`;
+            link.href = canvas.toDataURL();
+            canvas.parentNode.appendChild(document.createElement('br'));
+            canvas.parentNode.appendChild(link);
+        }
+        
+        setTimeout(() => {
+            addDownloadLink('favicon16', 'favicon-16x16.png');
+            addDownloadLink('favicon32', 'favicon-32x32.png');
+            addDownloadLink('apple180', 'apple-touch-icon.png');
+            addDownloadLink('android192', 'android-chrome-192x192.png');
+        }, 100);
+    </script>
+</body>
+</html>

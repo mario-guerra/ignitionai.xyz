@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -28,12 +27,12 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative w-10 h-10">
-              <Image 
+              <img 
                 src="/images/catalyst-circuit-logo.svg" 
                 alt="IgnitionAI Logo" 
-                fill
-                sizes="40px"
-                priority
+                width={40}
+                height={40}
+                className="w-full h-full object-contain"
               />
             </div>
             <span className="text-xl font-bold text-deep-charcoal">
