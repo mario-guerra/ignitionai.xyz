@@ -17,11 +17,11 @@ const AboutSection = () => {
             <h2 className="section-title mb-6">About IgnitionAI</h2>
             <p className="text-lg mb-6 text-gray-700">
               IgnitionAI was founded to make enterprise-grade AI accessible to small and medium-sized businesses. 
-              As a solo practitioner with deep technical expertise, I focus on delivering practical AI solutions 
+              With deep technical expertise and enterprise experience, we focus on delivering practical AI solutions 
               that solve real business problems.
             </p>
             <p className="text-lg mb-6 text-gray-700">
-              I have six ready-to-deploy AI scenarios that can be implemented immediately, but I&apos;m not limited to these. 
+              We have six ready-to-deploy AI scenarios that can be implemented immediately, but we&apos;re not limited to these. 
               Each solution is custom-built using proven technologies and frameworks, adapting to whatever challenge 
               your business faces.
             </p>
@@ -65,7 +65,7 @@ const AboutSection = () => {
             
             <div className="mt-8">
               <Link href="/about" className="text-ignition-orange hover:text-ember-red font-bold flex items-center transition-colors">
-                Learn more about my approach
+                Learn more about our approach
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
