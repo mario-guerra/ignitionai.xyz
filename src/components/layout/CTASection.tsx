@@ -81,8 +81,8 @@ const CTASection = () => {
                 Schedule Consultation
               </Link>
               
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Case Studies
+              <Link href="/blog" className="btn-secondary text-lg px-8 py-4">
+                Read Our Insights
               </Link>
             </div>
           </motion.div>
