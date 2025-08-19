@@ -42,13 +42,15 @@ const ServicesSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Service 1: AI Needs Audit */}
-          <motion.div 
-            className="card relative overflow-hidden border-t-4 border-t-ignition-orange"
-            variants={itemVariants}
+                    {/* Service 1: AI Readiness Assessment */}
+          <motion.div
+            className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
-            <div className="absolute -right-16 -top-16 w-32 h-32 bg-ignition-orange/10 rounded-full"></div>
-            <h3 className="text-2xl font-bold mb-4">AI Needs Audit</h3>
+            <h3 className="text-2xl font-bold mb-4">AI Readiness Assessment</h3>
             <p className="text-gray-700 mb-6">
               Comprehensive assessment of your business operations to identify AI opportunities with the highest ROI potential.
             </p>

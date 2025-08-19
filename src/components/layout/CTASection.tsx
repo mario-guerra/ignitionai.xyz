@@ -81,8 +81,8 @@ const CTASection = () => {
                 Schedule Consultation
               </Link>
               
-              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
-                View Case Studies
+              <Link href="/blog" className="btn-secondary text-lg px-8 py-4">
+                Read Our Insights
               </Link>
             </div>
           </motion.div>
@@ -124,23 +124,6 @@ const CTASection = () => {
               <h3 className="font-bold text-xl mb-2">Custom Solutions</h3>
               <p className="text-gray-300">Tailored to your specific industry and workflow needs.</p>
             </div>
-          </motion.div>
-          
-          {/* Final CTA with contact info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-16 bg-gray-800/40 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-          >
-            <p className="text-gray-300 mb-4">Prefer to email us directly?</p>
-            <a href="mailto:contact@ignitionai.xyz" className="text-ignition-orange hover:text-ember-red text-xl font-medium transition-colors">
-              contact@ignitionai.xyz
-            </a>
-            <p className="mt-4 text-sm text-gray-400">
-              Our team typically responds within 1 business day.
-            </p>
           </motion.div>
         </div>
       </div>

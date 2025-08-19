@@ -150,22 +150,22 @@ const ServicesPage = () => {
   const guarantees = [
     {
       title: "ROI Guarantee",
-      description: "Measurable return on investment within 2-3 months or we&apos;ll work until you achieve it.",
+      description: "Measurable return on investment within 2-3 months.",
       icon: "📈"
     },
     {
       title: "Fixed Timeline",
-      description: "Clear project timelines with weekly milestones and no surprise delays.",
+      description: "Clear project timelines with weekly milestones.",
       icon: "⏱️"
     },
     {
       title: "Transparent Pricing",
-      description: "Fixed-price projects with no hidden costs or hourly rate surprises.",
+      description: "Fixed-price projects with no hidden costs.",
       icon: "💰"
     },
     {
       title: "30-Day Support",
-      description: "Free support and adjustments for 30 days after go-live deployment.",
+      description: "Support for 30 days after deployment.",
       icon: "🛠️"
     }
   ];
@@ -450,10 +450,10 @@ const ServicesPage = () => {
                 Schedule Free Consultation
               </a>
               <a 
-                href="/case-studies" 
+                href="/blog" 
                 className="px-8 py-4 border-2 border-ignition-orange text-ignition-orange font-semibold rounded-lg hover:bg-ignition-orange hover:text-white transition-colors"
               >
-                View Success Stories
+                Read Our Insights
               </a>
             </motion.div>
           </div>

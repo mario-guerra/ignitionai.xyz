@@ -5,14 +5,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const services = [
-    { name: "AI Needs Audit", path: "/services#audit" },
-    { name: "Solution Design", path: "/services#design" },
+    { name: "AI Readiness Assessment", path: "/services#audit" },
+    { name: "Strategy & Roadmap", path: "/services#strategy" },
     { name: "Implementation", path: "/services#implementation" },
   ];
   
   const company = [
     { name: "About Us", path: "/about" },
-    { name: "Case Studies", path: "/case-studies" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];

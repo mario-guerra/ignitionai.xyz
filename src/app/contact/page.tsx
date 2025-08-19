@@ -178,7 +178,7 @@ export default function Contact() {
                 Get in Touch
               </h2>
               <p className="text-gray-600 text-lg max-w-[700px] mx-auto">
-                Have a project in mind or want to collaborate? I&apos;d love to hear from you!
+                Have a project in mind or want to collaborate? We&apos;d love to hear from you!
               </p>
             </div>
             
@@ -209,7 +209,7 @@ export default function Contact() {
                     Start Your AI Transformation
                   </h2>
                   <p className="text-gray-600 text-lg">
-                    Tell us about your business challenges and we&apos;ll show you how AI can solve them.
+                    Tell us about your business challenges and we&apos;ll show you how AI can help solve them.
                   </p>
                 </div>
                 

@@ -56,7 +56,7 @@ const BlogPage = () => {
               AI Insights & <span className="text-ignition-orange">Strategies</span>
             </h1>
             <p className="text-xl md:text-2xl !text-gray-300 max-w-3xl mx-auto">
-              Practical insights, case studies, and strategies for implementing AI solutions that drive real business results.
+              Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
             </p>
           </motion.div>
         </div>
