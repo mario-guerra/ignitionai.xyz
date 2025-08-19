@@ -42,7 +42,6 @@ const ServicesSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Service 1: AI Needs Audit */}
                     {/* Service 1: AI Readiness Assessment */}
           <motion.div
             className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
