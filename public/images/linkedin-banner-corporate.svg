@@ -1,0 +1,68 @@
+<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="corporateGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="subtleGrid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="none"/>
+      <path d="M0,0 L60,0 M0,0 L0,60" stroke="#f97316" stroke-width="0.3" opacity="0.1"/>
+      <circle cx="0" cy="0" r="0.8" fill="#f97316" opacity="0.15"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#corporateGradient)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <rect width="1584" height="396" fill="url(#subtleGrid)"/>
+  
+  <!-- Left Side Branding -->
+  <g transform="translate(100, 120)">
+    <!-- Corporate-style accent -->
+    <rect x="0" y="0" width="300" height="4" fill="#f97316" opacity="0.8"/>
+    <rect x="0" y="20" width="200" height="2" fill="#f97316" opacity="0.4"/>
+    <rect x="0" y="35" width="250" height="2" fill="#f97316" opacity="0.3"/>
+    
+    <!-- Professional badge-style element -->
+    <g transform="translate(50, 60)">
+      <rect x="0" y="0" width="80" height="50" rx="4" fill="none" stroke="#f97316" stroke-width="1" opacity="0.5"/>
+      <text x="40" y="20" font-family="Arial, sans-serif" font-size="10" font-weight="600" 
+            fill="#f97316" text-anchor="middle">PROVEN</text>
+      <text x="40" y="35" font-family="Arial, sans-serif" font-size="10" font-weight="400" 
+            fill="#f97316" text-anchor="middle">RESULTS</text>
+    </g>
+  </g>
+  
+  <!-- Right Content Area -->
+  <g transform="translate(850, 100)">
+    <!-- Company Name -->
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="48" font-weight="600" fill="#ffffff">
+      IgnitionAI
+    </text>
+    
+    <!-- Primary Tagline -->
+    <text x="0" y="85" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#f97316">
+      Enterprise AI Without the Enterprise Complexity
+    </text>
+    
+    <!-- Description -->
+    <text x="0" y="130" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#d1d5db">
+      Strategic AI consulting for forward-thinking organizations
+    </text>
+    
+    <!-- Service Areas -->
+    <g transform="translate(0, 170)">
+      <g fill="#9ca3af" font-family="Arial, sans-serif" font-size="13" font-weight="400">
+        <text x="0" y="0">AI Strategy & Implementation</text>
+        <text x="0" y="20">Machine Learning Engineering</text>
+        <text x="200" y="0">Data Architecture Design</text>
+        <text x="200" y="20">Technical Team Development</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="380" width="1584" height="6" fill="#f97316" opacity="0.6"/>
+</svg>
