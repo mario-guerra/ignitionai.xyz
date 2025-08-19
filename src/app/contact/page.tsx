@@ -456,7 +456,32 @@ export default function Contact() {
                 <p className="text-gray-300 text-lg">
                   Follow our journey and see the latest AI innovations for SMBs
                 </p>
-              </motion.div>              
+              </motion.div>
+              
+              <motion.div 
+                className="flex flex-wrap items-center justify-center gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <a
+                  href="https://github.com/mario-guerra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-200 border border-white/20 hover:border-white/30"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/ignitionai-consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-200 border border-white/20 hover:border-white/30"
+                >
+                  LinkedIn
+                </a>
+              </motion.div>
             </div>
           </div>
         </section>

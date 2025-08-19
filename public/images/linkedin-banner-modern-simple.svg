@@ -1,0 +1,56 @@
+<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="modernGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="techPattern" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="none"/>
+      <!-- Interconnected nodes -->
+      <g stroke="#f97316" stroke-width="0.8" opacity="0.2" fill="none">
+        <path d="M20,20 L100,20 L100,100 L20,100 Z"/>
+        <path d="M60,20 L60,100"/>
+        <path d="M20,60 L100,60"/>
+        <path d="M20,20 L100,100"/>
+        <path d="M100,20 L20,100"/>
+      </g>
+      <circle cx="20" cy="20" r="2" fill="#f97316" opacity="0.4"/>
+      <circle cx="100" cy="20" r="2" fill="#f97316" opacity="0.4"/>
+      <circle cx="60" cy="60" r="2" fill="#f97316" opacity="0.6"/>
+      <circle cx="20" cy="100" r="2" fill="#f97316" opacity="0.4"/>
+      <circle cx="100" cy="100" r="2" fill="#f97316" opacity="0.4"/>
+    </pattern>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#modernGradient)"/>
+  
+  <!-- Tech Pattern Overlay -->
+  <rect width="1584" height="396" fill="url(#techPattern)"/>
+  
+  
+  <!-- Main Content - Simplified with Larger Text -->
+  <g transform="translate(575, 120)">
+    <!-- Company Name with Glow - Larger Font -->
+    <text x="0" y="60" font-family="Arial, sans-serif" font-size="85" font-weight="700" 
+          fill="#ffffff">
+      IgnitionAI
+    </text>
+    </g>
+  <g transform="translate(575, 150)">
+    <!-- Tagline - Larger Font -->
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="40" font-weight="300" fill="#ff8a37ff">
+      Enterprise AI Without Enterprise Complexity
+    </text>
+  </g>
+</svg>
