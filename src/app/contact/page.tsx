@@ -474,20 +474,12 @@ export default function Contact() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/mario-guerra"
+                  href="https://www.linkedin.com/company/ignitionai-consulting"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-200 border border-white/20 hover:border-white/30"
                 >
                   LinkedIn
-                </a>
-                <a
-                  href="https://x.com/_marioguerra_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors duration-200 border border-white/20 hover:border-white/30"
-                >
-                  X
                 </a>
               </motion.div>
             </div>
