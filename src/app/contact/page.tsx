@@ -450,7 +450,7 @@ export default function Contact() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Let's Connect</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Let&apos;s Connect</h2>
                 <p className="text-gray-300 text-lg">
                   Follow our journey and see the latest AI innovations for startups and SMBs
                 </p>
