@@ -50,7 +50,7 @@ const BlogPage = () => {
   const categories = ['All', 'Customer Service', 'Business', 'Multilingual AI', 'Implementation'];
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-deep-charcoal to-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
@@ -155,62 +155,34 @@ const BlogPage = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
       {/* Free AI Audit CTA */}
       <section className="bg-deep-charcoal text-white py-20">
         <div className="container mx-auto text-center">
-          {isMounted ? (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Ready to Implement AI in Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation.
-              </p>
-              
-              <div className="max-w-md mx-auto">
-                <a 
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors text-lg"
-                >
-                  Schedule Free AI Audit
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-              
-              <p className="text-sm text-gray-400 mt-6">
-                ✓ No commitment required  ✓ Identify quick wins  ✓ Get actionable recommendations
-              </p>
-            </motion.div>
-          ) : (
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Implement AI in Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation.
-              </p>
-              
-              <div className="max-w-md mx-auto">
-                <a 
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors text-lg"
-                >
-                  Schedule Free AI Audit
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-              
-              <p className="text-sm text-gray-400 mt-6">
-                ✓ No commitment required  ✓ Identify quick wins  ✓ Get actionable recommendations
-              </p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Ready to Implement AI in Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation.
+            </p>
+            
+            <div className="max-w-md mx-auto">
+              <a 
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors text-lg"
+              >
+                Schedule Free AI Audit
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
-          )}
+            <p className="text-sm text-gray-400 mt-6">
+              ✓ No commitment required  ✓ Identify quick wins  ✓ Get actionable recommendations
+            </p>
+          </motion.div>
         </div>
       </section>
     </main>
