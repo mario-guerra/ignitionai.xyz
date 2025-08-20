@@ -230,20 +230,16 @@ const ServicesPage = () => {
               Our AI Service Portfolio
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Six proven AI solutions designed specifically for small and medium businesses. 
+              Six proven AI solutions designed specifically for startups and small and medium businesses. 
               Each service is built from real-world implementations with documented success stories.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 auto-rows-max">
             {services.map((service, index) => (
-              <motion.div 
+              <div 
                 key={index}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow w-full"
               >
                 <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
                 <div className="p-8">
@@ -314,7 +310,7 @@ const ServicesPage = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -382,11 +378,11 @@ const ServicesPage = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">
               Our Commitment to Your Success
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We stand behind our work with guarantees that ensure your AI investment delivers results
+              We stand behind our work to ensure your AI investment delivers results
             </p>
           </motion.div>
 

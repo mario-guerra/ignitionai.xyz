@@ -49,7 +49,7 @@ const BlogPreviewSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-600">
+            <p className="text-xl max-w-3xl mx-auto text-gray-600 !text-white">
               Stay updated with the latest trends, strategies, and insights in AI implementation.
             </p>
           </motion.div>

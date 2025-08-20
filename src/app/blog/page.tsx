@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const BlogPage = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const blogPosts = [
     {
       id: 1,
@@ -47,18 +54,29 @@ const BlogPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-deep-charcoal to-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 !text-white">
-              AI Insights & <span className="text-ignition-orange">Strategies</span>
-            </h1>
-            <p className="text-xl md:text-2xl !text-gray-300 max-w-3xl mx-auto">
-              Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
-            </p>
-          </motion.div>
+          {isMounted ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 !text-white">
+                AI Insights & <span className="text-ignition-orange">Strategies</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+              </p>
+            </motion.div>
+          ) : (
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                AI Insights & <span className="text-ignition-orange">Strategies</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -87,12 +105,8 @@ const BlogPage = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <motion.article
+              <article
                 key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
@@ -135,7 +149,7 @@ const BlogPage = () => {
                     </Link>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -144,33 +158,58 @@ const BlogPage = () => {
       {/* Newsletter Signup */}
       <section className="bg-deep-charcoal text-white py-20">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Stay Updated</h2>
-            <p className="text-xl !text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get the latest AI insights and implementation strategies delivered to your inbox.
-            </p>
-            
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-ignition-orange"
-                required
-              />
-              <button type="submit" className="btn-primary whitespace-nowrap">
-                Subscribe
-              </button>
-            </form>
-            
-            <p className="text-sm text-gray-400 mt-4">
-              No spam. Unsubscribe at any time.
-            </p>
-          </motion.div>
+          {isMounted ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Stay Updated</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Get the latest AI insights and implementation strategies delivered to your inbox.
+              </p>
+              
+              <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-ignition-orange"
+                  required
+                />
+                <button type="submit" className="btn-primary whitespace-nowrap">
+                  Subscribe
+                </button>
+              </form>
+              
+              <p className="text-sm text-gray-400 mt-4">
+                No spam. Unsubscribe at any time.
+              </p>
+            </motion.div>
+          ) : (
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Stay Updated</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Get the latest AI insights and implementation strategies delivered to your inbox.
+              </p>
+              
+              <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-ignition-orange"
+                  required
+                />
+                <button type="submit" className="btn-primary whitespace-nowrap">
+                  Subscribe
+                </button>
+              </form>
+              
+              <p className="text-sm text-gray-400 mt-4">
+                No spam. Unsubscribe at any time.
+              </p>
+            </div>
+          )}
         </div>
       </section>
     </main>
