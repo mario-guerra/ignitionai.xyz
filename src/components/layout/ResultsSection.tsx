@@ -16,7 +16,7 @@ const ResultsSection = () => {
     },
     {
       metric: "$5K-30K",
-      description: "SMB-focused project budgets that deliver meaningful ROI",
+      description: "Startup and SMB-focused project budgets that deliver meaningful ROI",
       color: "spark-yellow"
     },
     {

@@ -13,6 +13,7 @@ module.exports = {
         'ember-red': '#D32F2F',
         'cool-gray': '#B0BEC5',
         'spark-yellow': '#FFC107',
+        'light-gray': '#F5F5F5',
       },
       fontFamily: {
         'montserrat': ['var(--font-montserrat)', 'sans-serif'],

@@ -16,7 +16,7 @@ const AboutSection = () => {
           >
             <h2 className="section-title mb-6">About IgnitionAI</h2>
             <p className="text-lg mb-6 text-gray-700">
-              IgnitionAI was founded to make enterprise-grade AI accessible to small and medium-sized businesses. 
+              IgnitionAI was founded to make enterprise-grade AI accessible to startups and small & medium-sized businesses. 
               With deep technical expertise and enterprise experience, we focus on delivering practical AI solutions 
               that solve real business problems.
             </p>
@@ -88,9 +88,9 @@ const AboutSection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-deep-charcoal mb-3">Enterprise AI for SMBs</h3>
+                <h3 className="text-xl font-bold text-deep-charcoal mb-3">Enterprise AI for Startups & SMBs</h3>
                 <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-                  Bringing enterprise-grade AI solutions to small and medium businesses with SMB-friendly budgets and timelines.
+                  Bringing enterprise-grade AI solutions to startups and small and medium businesses with startup-friendly budgets and timelines.
                 </p>
               </div>
             </div>

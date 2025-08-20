@@ -2,8 +2,15 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const BlogPage = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const blogPosts = [
     {
       id: 1,
@@ -43,22 +50,33 @@ const BlogPage = () => {
   const categories = ['All', 'Customer Service', 'Business', 'Multilingual AI', 'Implementation'];
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-deep-charcoal to-gray-800 text-white py-20">
         <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 !text-white">
-              AI Insights & <span className="text-ignition-orange">Strategies</span>
-            </h1>
-            <p className="text-xl md:text-2xl !text-gray-300 max-w-3xl mx-auto">
-              Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
-            </p>
-          </motion.div>
+          {isMounted ? (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 !text-white">
+                AI Insights & <span className="text-ignition-orange">Strategies</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+              </p>
+            </motion.div>
+          ) : (
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                AI Insights & <span className="text-ignition-orange">Strategies</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -86,13 +104,9 @@ const BlogPage = () => {
       <section className="py-20">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
-              <motion.article
+            {blogPosts.map((post) => (
+              <article
                 key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
@@ -135,40 +149,38 @@ const BlogPage = () => {
                     </Link>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Newsletter Signup */}
+      {/* Free AI Audit CTA */}
       <section className="bg-deep-charcoal text-white py-20">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Stay Updated</h2>
-            <p className="text-xl !text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get the latest AI insights and implementation strategies delivered to your inbox.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Ready to Implement AI in Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation.
             </p>
             
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-ignition-orange"
-                required
-              />
-              <button type="submit" className="btn-primary whitespace-nowrap">
-                Subscribe
-              </button>
-            </form>
-            
-            <p className="text-sm text-gray-400 mt-4">
-              No spam. Unsubscribe at any time.
+            <div className="max-w-md mx-auto">
+              <a 
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors text-lg"
+              >
+                Schedule Free AI Audit
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+            <p className="text-sm text-gray-400 mt-6">
+              ✓ No commitment required  ✓ Identify quick wins  ✓ Get actionable recommendations
             </p>
           </motion.div>
         </div>

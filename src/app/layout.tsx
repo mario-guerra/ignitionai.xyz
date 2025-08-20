@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "IgnitionAI | Spark Intelligent Transformation",
   description: "IgnitionAI helps small and medium-sized businesses implement AI solutions with measurable ROI in 2-3 months.",
-  keywords: "AI consulting, SMB AI solutions, business automation, AI for business, ROI-driven AI",
+  keywords: "AI consulting, startup AI solutions, SMB AI solutions, business automation, AI for business, ROI-driven AI",
 };
 
 export default function RootLayout({

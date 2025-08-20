@@ -173,7 +173,7 @@ const AboutPage = () => {
                 </p>
                 
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Unlike consultants who focus on experimental prototypes, Mario specializes in shipping AI solutions that deliver measurable business impact—from reducing documentation queries by 85% to achieving 30% adoption across Azure services.
+                  Unlike consultants who focus on experimental prototypes, Mario specializes in shipping AI solutions that deliver measurable business impact—from reducing documentation queries by 85% to achieving 30+% adoption across Azure services.
                 </p>
 
                 <div className="space-y-4">
@@ -187,7 +187,7 @@ const AboutPage = () => {
                   <div>
                     <h4 className="font-semibold text-deep-charcoal mb-2">Client-Facing Excellence</h4>
                     <p className="text-gray-600 text-sm">
-                      With over 65 client demonstrations and training sessions delivered across Microsoft and Qualcomm, Mario brings a unique combination of technical depth and client communication skills.
+                      With over 65 client demonstrations and training sessions delivered across Microsoft, Qualcomm, and ARM, Mario brings a unique combination of technical depth and client communication skills.
                     </p>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ const AboutPage = () => {
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-blue-500 mt-1">•</span>
-                      <span>Guided TypeSpec API language to 30% adoption across Azure services</span>
+                      <span>Guided TypeSpec API language to 30+% adoption across Azure services</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <span className="text-blue-500 mt-1">•</span>
