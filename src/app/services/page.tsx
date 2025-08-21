@@ -460,7 +460,7 @@ const ServicesPage = () => {
               </div>
               <a 
                 href="/contact" 
-                className="block w-full text-center px-4 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:teal-600 transition-colors text-sm"
+                className="block w-full text-center px-4 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors text-sm"
               >
                 Start Pilot Project
               </a>
