@@ -190,8 +190,8 @@ const ServicesPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              From intelligent automation to multilingual solutions, we deliver proven AI implementations 
-              that generate measurable ROI in 2-3 months. No theoretical concepts—just practical results.
+              From quick-win pilots to comprehensive transformations, we deliver proven AI implementations 
+              that generate measurable ROI in 2-3 months. Start small or go big—we meet you where you are.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -203,21 +203,21 @@ const ServicesPage = () => {
                 href="/contact" 
                 className="px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors"
               >
-                Start Your AI Transformation
+                Schedule Consultation
               </a>
               <a 
-                href="#services" 
+                href="#quick-wins" 
                 className="px-8 py-4 border-2 border-ignition-orange text-ignition-orange font-semibold rounded-lg hover:bg-ignition-orange hover:text-white transition-colors"
               >
-                Explore Services
+                Start with Quick Wins
               </a>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section id="services" className="py-20">
+      {/* Quick Wins Section */}
+      <section id="quick-wins" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 md:px-6">
           <motion.div 
             className="text-center mb-16"
@@ -227,11 +227,279 @@ const ServicesPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
-              Our AI Service Portfolio
+              Start Your AI Journey - <span className="text-ignition-orange">Proven Quick Wins</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Six proven AI solutions designed specifically for startups and small and medium businesses. 
-              Each service is built from real-world implementations with documented success stories.
+              Fast results, clear ROI, and a natural path to scale. Start small, see immediate impact, 
+              then expand to comprehensive AI transformation.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* AI Call Agent */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-blue-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">📞</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">AI Call Agent</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Missing calls = lost revenue. AI answers, qualifies, and books appointments automatically.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $500-1.5K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 1-2 weeks</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 3+ bookings/week</span>
+                </div>
+              </div>
+              <div className="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Conversational AI Development
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+
+            {/* Email Lead Triage */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-purple-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">📧</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">Email Lead Triage</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Buried leads, slow responses. AI prioritizes and suggests replies instantly.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $750-2K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 1-2 weeks</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 80% faster responses</span>
+                </div>
+              </div>
+              <div className="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Multi-Agent AI Systems
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+
+            {/* FAQ Support Bot */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-green-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">FAQ Support Bot</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Team wastes time searching for answers. AI provides instant, accurate responses.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $1.5K-5K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 2-4 weeks</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 50% ticket deflection</span>
+                </div>
+              </div>
+              <div className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Intelligent Knowledge Management
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Appointment Booking Automation */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-indigo-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">📅</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">Booking Automation</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Manual scheduling eats time, creates errors. Automated flow reduces no-shows and admin burden.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $300-1K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 1 week</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 60% fewer no-shows</span>
+                </div>
+              </div>
+              <div className="text-xs bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Multi-Agent AI Systems
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+
+            {/* Invoice & Receipt Automation */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-orange-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🧾</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">Invoice Automation</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Manual invoice handling is slow and error-prone. AI extracts, matches, and reconciles automatically.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $1.5K-6K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 2-4 weeks</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 85% processing time saved</span>
+                </div>
+              </div>
+              <div className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Document Intelligence & Automation
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+
+            {/* Multilingual Communications */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-teal-500"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">Multilingual Communications</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                Language barriers lead to missed sales. AI provides fast, accurate translations with brand voice.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
+                  <span className="text-gray-600"> $500-2K</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="text-gray-600"> 1-3 weeks</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="text-ignition-orange font-semibold"> 70% faster translations</span>
+                </div>
+              </div>
+              <div className="text-xs bg-teal-50 text-teal-700 px-3 py-1 rounded-full mb-4 inline-block">
+                ↗ Scales to Multilingual AI Solutions
+              </div>
+              <a 
+                href="/contact" 
+                className="block w-full text-center px-4 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:teal-600 transition-colors text-sm"
+              >
+                Start Pilot Project
+              </a>
+            </motion.div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-600 mb-4">
+              Ready for comprehensive AI transformation?
+            </p>
+            <a 
+              href="#enterprise-services" 
+              className="inline-flex items-center text-ignition-orange font-semibold hover:text-ignition-orange/80 transition-colors"
+            >
+              Explore Enterprise Solutions 
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Services Grid */}
+      <section id="enterprise-services" className="py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive AI transformations for businesses ready to scale. 
+              Each solution is built from real-world implementations with documented success stories.
             </p>
           </motion.div>
 
@@ -252,6 +520,15 @@ const ServicesPage = () => {
                       <p className="text-lg text-ignition-orange font-semibold mb-4">
                         {service.subtitle}
                       </p>
+                      {(service.title === "Conversational AI Development" || 
+                        service.title === "Multi-Agent AI Systems" || 
+                        service.title === "Intelligent Knowledge Management" ||
+                        service.title === "Document Intelligence & Automation" ||
+                        service.title === "Multilingual AI Solutions") && (
+                        <div className="text-xs bg-ignition-orange/10 text-ignition-orange px-3 py-1 rounded-full mb-4 inline-block">
+                          Quick Start Available
+                        </div>
+                      )}
                     </div>
                   </div>
                   
@@ -292,7 +569,7 @@ const ServicesPage = () => {
                     </div>
 
                     <div className="pt-4">
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {service.technologies.slice(0, 3).map((tech, idx) => (
                           <span 
                             key={idx}
@@ -307,6 +584,12 @@ const ServicesPage = () => {
                           </span>
                         )}
                       </div>
+                      <a 
+                        href="/contact" 
+                        className="block w-full text-center px-4 py-2 bg-deep-charcoal text-white font-semibold rounded-lg hover:bg-deep-charcoal/90 transition-colors"
+                      >
+                        Schedule Consultation
+                      </a>
                     </div>
                   </div>
                 </div>
