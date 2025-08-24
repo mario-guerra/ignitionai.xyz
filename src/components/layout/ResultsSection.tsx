@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ResultsSection = () => {
   const capabilities = [
     {
-      metric: "6+",
+      metric: "12+",
       description: "Ready-to-deploy AI scenarios with custom solutions for unique challenges",
       color: "ignition-orange"
     },
