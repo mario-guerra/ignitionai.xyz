@@ -49,7 +49,7 @@ const BlogPreviewSection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl max-w-3xl mx-auto text-gray-600 !text-white">
+            <p className="text-xl max-w-3xl mx-auto text-gray-600">
               Stay updated with the latest trends, strategies, and insights in AI implementation.
             </p>
           </motion.div>
@@ -110,40 +110,6 @@ const BlogPreviewSection = () => {
             View All Articles
           </Link>
         </div>
-        
-        {/* Newsletter signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="mt-20 bg-light-gray p-8 md:p-12 rounded-xl shadow-lg"
-        >
-          <div className="md:flex items-center justify-between">
-            <div className="mb-6 md:mb-0 md:mr-8">
-              <h3 className="text-2xl font-bold mb-2">Stay Informed</h3>
-              <p className="text-gray-600">
-                Subscribe to our newsletter for the latest AI insights, practical guides, and implementation strategies.
-              </p>
-            </div>
-            <div className="flex-shrink-0 w-full md:w-auto">
-              <form className="flex flex-col sm:flex-row gap-3">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
-                  className="px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-ignition-orange"
-                  required
-                />
-                <button type="submit" className="btn-primary whitespace-nowrap">
-                  Subscribe
-                </button>
-              </form>
-              <p className="text-xs text-gray-500 mt-2">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
