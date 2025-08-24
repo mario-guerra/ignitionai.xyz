@@ -81,8 +81,8 @@ const AboutSection = () => {
             className="relative"
           >
             {/* Professional Visual */}
-            <div className="aspect-video bg-gradient-to-br from-ignition-orange/5 to-ember-red/5 border border-gray-200 rounded-lg overflow-hidden shadow-xl relative flex items-center justify-center">
-              <div className="text-center p-4 md:p-8">
+            <div className="min-h-[200px] md:aspect-video bg-gradient-to-br from-ignition-orange/5 to-ember-red/5 border border-gray-200 rounded-lg overflow-hidden shadow-xl relative flex items-center justify-center">
+              <div className="text-center p-4 md:p-8 w-full">
                 <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-ignition-orange to-ember-red rounded-full mx-auto mb-4 md:mb-6 flex items-center justify-center shadow-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-12 md:w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
