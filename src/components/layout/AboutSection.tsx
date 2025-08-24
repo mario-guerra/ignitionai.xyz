@@ -33,7 +33,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold">6+</h4>
+                  <h4 className="font-bold">12+</h4>
                   <p className="text-sm text-gray-600">Ready Scenarios</p>
                 </div>
               </div>
