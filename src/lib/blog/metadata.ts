@@ -17,7 +17,7 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     title: 'Introducing IgnitionAI: Sparking Intelligent Transformation',
     excerpt: 'We&apos;re bridging the AI gap for small and medium businesses, making intelligent automation accessible, practical, and transformative.',
     publishDate: '2025-08-25',
-    author: 'Mario Guerra & Hector Norza',
+    author: 'Mario Guerra & Hector Norzagaray',
     category: 'Company Announcement',
     slug: 'introducing-ignitionai-sparking-intelligent-transformation',
     readTime: '6 min read',
