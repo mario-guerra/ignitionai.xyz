@@ -3,29 +3,9 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useState, useCallback } from 'react';
-import { blogPostsMetadata, BlogPostMetadata } from '@/lib/blog/metadata';
+import { BlogPostMetadata } from '@/lib/blog/metadata';
 
-const getAllBlogPosts = (): BlogPostMetadata[] => {
-  const posts = Object.values(blogPostsMetadata);
-  return posts.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
-};
-
-const getAllCategories = (): string[] => {
-  const posts = getAllBlogPosts();
-  const categories = ['All', ...new Set(posts.map(post => post.category))];
-  return categories;
-};
-
-const getBlogPostsByCategory = (category: string): BlogPostMetadata[] => {
-  const posts = getAllBlogPosts();
-  
-  if (category === 'All') {
-    return posts;
-  }
-  
-  return posts.filter(post => post.category === category);
-};
-import { getAllBlogPosts, getAllCategories, getBlogPostsByCategory } from '@/lib/blog/utils';
+import { getAllCategories, getBlogPostsByCategory } from '@/lib/blog/utils';
 const BlogPage = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -141,7 +121,6 @@ const BlogPage = () => {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 rounded-full bg-gray-300 mr-3"></div>
                       <span className="text-sm font-medium">{post.author}</span>
                     </div>
                     
