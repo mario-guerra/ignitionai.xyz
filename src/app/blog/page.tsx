@@ -25,7 +25,7 @@ const getBlogPostsByCategory = (category: string): BlogPostMetadata[] => {
   
   return posts.filter(post => post.category === category);
 };
-
+import { getAllBlogPosts, getAllCategories, getBlogPostsByCategory } from '@/lib/blog/utils';
 const BlogPage = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
