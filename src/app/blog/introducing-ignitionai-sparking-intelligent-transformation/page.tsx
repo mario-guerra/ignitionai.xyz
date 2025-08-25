@@ -27,7 +27,7 @@ const IntroducingIgnitionAI = () => {
               We&apos;re bridging the AI gap for small and medium businesses, making intelligent automation accessible, practical, and transformative.
             </p>
             <div className="flex items-center justify-center text-gray-300 text-sm">
-              <span>By Mario Guerra & Hector Norza</span>
+              <span>By Mario Guerra & Hector Norzagaray</span>
               <span className="mx-3">•</span>
               <span>6 min read</span>
             </div>
