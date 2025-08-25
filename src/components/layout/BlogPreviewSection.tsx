@@ -2,41 +2,21 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { BlogPostMetadata, blogPostsMetadata } from '@/lib/blog/metadata';
 
 const BlogPreviewSection = () => {
-  // Sample blog posts - these would normally come from a CMS or data source
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'How AI is Revolutionizing Customer Service in 2025',
-      excerpt: 'Discover how AI-powered assistants and automation are transforming customer service operations and improving satisfaction metrics.',
-      image: '/images/blog/customer-service-ai.jpg',
-      publishDate: '2025-07-15', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Customer Service',
-      slug: 'how-ai-is-revolutionizing-customer-service-2025'
-    },
-    {
-      id: 2,
-      title: 'The ROI of AI: Measuring Success in Business Process Automation',
-      excerpt: 'Learn the key metrics and methodologies for calculating the return on investment for your AI implementation projects.',
-      image: '/images/blog/roi-ai-measurement.jpg',
-      publishDate: '2025-06-22', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Business',
-      slug: 'roi-ai-measuring-success-business-process-automation'
-    },
-    {
-      id: 3,
-      title: 'Breaking Language Barriers: Multilingual AI in Global Business',
-      excerpt: 'How advanced language models are helping businesses communicate seamlessly across languages and cultural boundaries.',
-      image: '/images/blog/multilingual-ai.jpg',
-      publishDate: '2025-05-08', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Multilingual AI',
-      slug: 'breaking-language-barriers-multilingual-ai-global-business'
-    }
-  ];
+  const [recentPosts, setRecentPosts] = useState<BlogPostMetadata[]>([]);
+
+  useEffect(() => {
+    // Get all posts and sort by date (newest first), then take first 3
+    const allPosts = Object.values(blogPostsMetadata);
+    const sortedPosts = allPosts.sort((a, b) => 
+      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    );
+    const latestThree = sortedPosts.slice(0, 3);
+    setRecentPosts(latestThree);
+  }, []);
 
   return (
     <section className="section bg-white py-20">
@@ -56,7 +36,7 @@ const BlogPreviewSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {recentPosts.map((post, index) => (
             <motion.article
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
@@ -75,6 +55,8 @@ const BlogPreviewSection = () => {
               <div className="p-6">
                 <div className="flex items-center text-sm text-gray-500 mb-3">
                   <span className="text-ignition-orange">{post.category}</span>
+                  <span className="mx-2">•</span>
+                  <span>{post.readTime}</span>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3">
@@ -89,7 +71,6 @@ const BlogPreviewSection = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-gray-300 mr-3"></div>
                     <span className="text-sm font-medium">{post.author}</span>
                   </div>
                   

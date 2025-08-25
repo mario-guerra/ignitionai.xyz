@@ -2,52 +2,33 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { BlogPostMetadata } from '@/lib/blog/metadata';
 
+import { getAllCategories, getBlogPostsByCategory } from '@/lib/blog/utils';
 const BlogPage = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [blogPosts, setBlogPosts] = useState<BlogPostMetadata[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+
+  const fetchBlogPosts = useCallback((category: string = 'All') => {
+    const posts = getBlogPostsByCategory(category);
+    const cats = getAllCategories();
+    setBlogPosts(posts);
+    setCategories(cats);
+  }, []);
 
   useEffect(() => {
     setIsMounted(true);
-  }, []);
+    fetchBlogPosts();
+  }, [fetchBlogPosts]);
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'How AI is Revolutionizing Customer Service in 2025',
-      excerpt: 'Discover how AI-powered assistants and automation are transforming customer service operations and improving satisfaction metrics.',
-      image: '/images/blog/customer-service-ai.jpg',
-      publishDate: '2025-07-15', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Customer Service',
-      slug: 'how-ai-is-revolutionizing-customer-service-2025',
-      readTime: '5 min read'
-    },
-    {
-      id: 2,
-      title: 'The ROI of AI: Measuring Success in Business Process Automation',
-      excerpt: 'Learn the key metrics and methodologies for calculating the return on investment for your AI implementation projects.',
-      image: '/images/blog/roi-ai-measurement.jpg',
-      publishDate: '2025-06-22', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Business',
-      slug: 'roi-ai-measuring-success-business-process-automation',
-      readTime: '7 min read'
-    },
-    {
-      id: 3,
-      title: 'Breaking Language Barriers: Multilingual AI in Global Business',
-      excerpt: 'How advanced language models are helping businesses communicate seamlessly across languages and cultural boundaries.',
-      image: '/images/blog/multilingual-ai.jpg',
-      publishDate: '2025-05-08', // Internal use only
-      author: 'Mario Guerra',
-      category: 'Multilingual AI',
-      slug: 'breaking-language-barriers-multilingual-ai-global-business',
-      readTime: '6 min read'
+  useEffect(() => {
+    if (isMounted) {
+      fetchBlogPosts(selectedCategory);
     }
-  ];
-
-  const categories = ['All', 'Customer Service', 'Business', 'Multilingual AI', 'Implementation'];
+  }, [selectedCategory, isMounted, fetchBlogPosts]);
 
   return (
     <main className="bg-white">
@@ -87,8 +68,9 @@ const BlogPage = () => {
             {categories.map((category, index) => (
               <button
                 key={index}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full border transition-colors ${
-                  index === 0 
+                  category === selectedCategory
                     ? 'bg-ignition-orange text-white border-ignition-orange' 
                     : 'bg-white text-gray-700 border-gray-300 hover:border-ignition-orange hover:text-ignition-orange'
                 }`}
@@ -103,12 +85,17 @@ const BlogPage = () => {
       {/* Blog Posts Grid */}
       <section className="py-20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <article
-                key={post.id}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-              >
+          {blogPosts.length === 0 ? (
+            <div className="text-center">
+              <p className="text-gray-600 text-lg">No blog posts found for this category.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                >
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200 relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-ignition-orange/80 to-ember-red/80 flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{post.category}</span>
@@ -134,7 +121,6 @@ const BlogPage = () => {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 rounded-full bg-gray-300 mr-3"></div>
                       <span className="text-sm font-medium">{post.author}</span>
                     </div>
                     
@@ -151,7 +137,8 @@ const BlogPage = () => {
                 </div>
               </article>
             ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
