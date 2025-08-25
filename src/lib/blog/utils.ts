@@ -5,7 +5,13 @@ import { BlogPostMetadata, blogPostsMetadata } from './metadata';
 export function getAllBlogPosts(): BlogPostMetadata[] {
   try {
     // Get all blog post directories
-    const blogDir = path.join(process.cwd(), 'src/app/blog');
+// Blog directory path constant
+const BLOG_DIR = path.join(process.cwd(), 'src/app/blog');
+
+export function getAllBlogPosts(): BlogPostMetadata[] {
+  try {
+    // Get all blog post directories
+    const blogDir = BLOG_DIR;
     const entries = fs.readdirSync(blogDir, { withFileTypes: true });
     
     // Filter for directories that contain page.tsx (actual blog posts)
