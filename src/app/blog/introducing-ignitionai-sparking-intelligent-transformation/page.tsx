@@ -54,8 +54,8 @@ const IntroducingIgnitionAI = () => {
                 That&apos;s exactly why we created IgnitionAI. We&apos;re here to spark intelligent transformation for businesses of all sizes, making AI accessible, practical, and genuinely transformative.
               </p>
 
-              <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">The AI Divide We&aposre Working to Bridge</h2>
-              
+              <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">The AI Divide We&apos;re Working to Bridge</h2>
+
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Having worked in the tech industry for years, we&apos;ve seen firsthand how AI can revolutionize operations. We&apos;ve lived in what you might call a &ldquo;tech bubble&rdquo; where everyone understands AI, uses it daily, and sees its immediate benefits. But stepping outside that bubble reveals a different reality.
               </p>
@@ -122,7 +122,7 @@ const IntroducingIgnitionAI = () => {
 
               <h3 className="text-2xl font-semibold text-deep-charcoal mb-4">Building a Community of Success</h3>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                We envision creating a community where businesses share their AI success stories, learn from each other&aposs experiences, and access resources that help them continue growing their AI capabilities. When businesses succeed with AI, they often discover new opportunities and use cases that we can help develop.
+                We envision creating a community where businesses share their AI success stories, learn from each other&apos;s experiences, and access resources that help them continue growing their AI capabilities. When businesses succeed with AI, they often discover new opportunities and use cases that we can help develop.
               </p>
 
               <h2 className="text-3xl font-bold text-deep-charcoal mb-6">Why We Started IgnitionAI</h2>
@@ -139,7 +139,7 @@ const IntroducingIgnitionAI = () => {
                 We&apos;re not just consultants pointing out problems. We&apos;re hands-on partners who sit down with you, understand your unique challenges, and work together to implement solutions that make a real difference in your daily operations.
               </p>
 
-              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">What You Don&apost Know Can Help You</h2>
+              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">What You Don&apos;t Know Can Help You</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Many businesses struggle with the problem of not knowing what they don&apos;t know about AI. You might recognize that AI could help your business, but without understanding the possibilities, it&apos;s impossible to identify specific opportunities.
@@ -156,14 +156,14 @@ const IntroducingIgnitionAI = () => {
               <div className="bg-gradient-to-r from-ignition-orange to-ember-red text-white p-8 rounded-lg mb-8">
                 <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Journey?</h3>
                 <p className="text-lg mb-6 text-white/90">
-                  Whether you&aposre just curious about AI possibilities or ready to implement specific solutions, we&aposre here to help. Let&aposs have a conversation about your business challenges and explore how AI can provide practical, valuable solutions.
+                  Whether you&apos;re just curious about AI possibilities or ready to implement specific solutions, we&apos;re here to help. Let&apos;s have a conversation about your business challenges and explore how AI can provide practical, valuable solutions.
                 </p>
                 <Link href="/contact" className="inline-block bg-white text-ignition-orange px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Schedule Your Free Consultation
                 </Link>
               </div>
 
-              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">The Future We&aposre Building Together</h2>
+              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">The Future We&apos;re Building Together</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 We see a future where AI adoption isn&apos;t limited by company size or technical expertise. Where every business, from local restaurants to growing startups to established manufacturers, can leverage intelligent automation to improve their operations and serve their customers better.
@@ -182,31 +182,49 @@ const IntroducingIgnitionAI = () => {
         </div>
       </article>
 
-      {/* Related Articles */}
-      <section className="bg-light-gray py-20">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Explore Our AI Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">
-                <Link href="/blog/how-ai-is-revolutionizing-customer-service-2025" className="hover:text-ignition-orange transition-colors">
-                  How AI is Revolutionizing Customer Service in 2025
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">Discover how AI-powered assistants and automation are transforming customer service operations and improving satisfaction metrics.</p>
-              <div className="text-sm text-gray-500">5 min read</div>
+      {/* Services CTA */}
+      <section className="bg-gradient-to-br from-deep-charcoal to-gray-800 text-white py-20">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 !text-white">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              From customer support automation to intelligent document processing, we help businesses implement AI solutions that deliver measurable results. Discover how our services can spark your intelligent transformation.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/services" 
+                className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors text-lg"
+              >
+                Explore Our Services
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-deep-charcoal transition-colors text-lg"
+              >
+                Schedule a Consultation
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </Link>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">
-                <Link href="/blog/roi-ai-measuring-success-business-process-automation" className="hover:text-ignition-orange transition-colors">
-                  The ROI of AI: Measuring Success in Business Process Automation
-                </Link>
-              </h3>
-              <p className="text-gray-600 mb-4">Learn the key metrics and methodologies for calculating the return on investment for your AI implementation projects.</p>
-              <div className="text-sm text-gray-500">7 min read</div>
-            </div>
-          </div>
+            <p className="text-sm text-gray-400 mt-6">
+              ✓ Free initial consultation  ✓ Tailored AI solutions  ✓ Ongoing support & training
+            </p>
+          </motion.div>
         </div>
       </section>
     </main>
