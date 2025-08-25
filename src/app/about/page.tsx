@@ -208,7 +208,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-deep-charcoal mb-2">Hector Norzagaray</h3>
                   <p className="text-lg text-ignition-orange font-semibold mb-4">Product Engineering & Community Strategy</p>
                   <p className="mb-6 text-gray-700">
-                    Hector Norzagaray is a dedicated Product Strategist with several years of experience in enterprise software, honed within the Microsoft Azure ecosystem. With a focus on driving innovation in cloud-based platforms and developer tools, Hector helps organizations enhance their operations through scalable, secure technology solutions.
+                    Hector Norzagaray is a dedicated Product Strategist with several years of experience in enterprise software, honed within the Microsoft Azure ecosystem. With a focus on driving innovation in cloud-based platforms and AI-first developer tools, Hector helps organizations enhance their operations through scalable, secure technology solutions.
                   </p>
                   <p className="mb-6 text-gray-700">
                     Unlike many professionals who emphasize theoretical concepts, Hector thrives on delivering practical, impactful products that support technical adoption and business growth across diverse environments.
@@ -216,7 +216,7 @@ const AboutPage = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Insight</h4>
                     <p className="text-gray-700 text-sm">
-                      With a background shaping solutions in Azure's cloud landscape, Hector brings a solid understanding of how technology integrations can strengthen enterprise systems, supporting scalable infrastructure and user-focused applications.
+                      With a background shaping solutions in Azure&apos;s cloud landscape, Hector brings a solid understanding of how technology integrations can strengthen enterprise systems, supporting scalable infrastructure and user-focused applications.
                     </p>
                   </div>
                   <div className="mb-6">
@@ -225,25 +225,19 @@ const AboutPage = () => {
                       Having led numerous engagement sessions and community initiatives at Microsoft, Hector combines technical expertise with effective communication to align strategies with stakeholder expectations.
                     </p>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-deep-charcoal mb-2">Production-Ready Solutions</h4>
-                    <p className="text-gray-700 text-sm">
-                      Hector's approach centers on designing and deploying reliable products, refined through enterprise projects to ensure broad adoption and effectiveness.
-                    </p>
-                  </div>
                 </div>
                 {/* Hector's Achievements (right column) */}
                 <div className="space-y-8">
                   <div className="bg-green-50 p-6 rounded-xl">
                     <h4 className="font-bold text-deep-charcoal mb-3">Impact Highlights</h4>
                     <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
-                      <li>Noticeable improvements in developer engagement through community platforms</li>
+                      <li>Measurable improvements in developer engagement through community platforms</li>
                       <li>Significant enhancements in product usability and user satisfaction</li>
                       <li>High approval ratings from feedback on deployed tools</li>
                     </ul>
                   </div>
                   <div className="bg-purple-50 p-6 rounded-xl">
-                    <h4 className="font-bold text-deep-charcoal mb-3">Key Contributions</h4>
+                    <h4 className="font-bold text-deep-charcoal mb-3">Key Achievements</h4>
                     <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
                       <li>Guided the development of cloud-based SDKs, enhancing data management capabilities</li>
                       <li>Created widely shared content on innovative technology applications for developers</li>
