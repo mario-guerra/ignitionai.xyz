@@ -137,7 +137,7 @@ const AboutPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -151,98 +151,108 @@ const AboutPage = () => {
                 Founded by enterprise AI veterans with a track record of shipping production solutions
               </p>
             </motion.div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
-                    Mario Guerra
-                  </h3>
-                  <p className="text-lg text-ignition-orange font-semibold mb-4">
-                    Founder & Principal AI Architect
-                  </p>
-                </div>
-                
-                <p className="text-gray-600 leading-relaxed mb-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Mario Guerra Profile (left column) */}
+              <div>
+                <h3 className="text-2xl font-bold text-deep-charcoal mb-2">Mario Guerra</h3>
+                <p className="text-lg text-ignition-orange font-semibold mb-4">Founder & Principal AI Architect</p>
+                <p className="mb-6 text-gray-700">
                   Mario Guerra is the Founder and Principal AI Architect of IgnitionAI, bringing 15+ years of enterprise AI experience from Microsoft, Qualcomm, and ARM to help businesses transform operations through production-ready AI implementations.
                 </p>
-                
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="mb-6 text-gray-700">
                   Unlike consultants who focus on experimental prototypes, Mario specializes in shipping AI solutions that deliver measurable business impact—from reducing documentation queries by 85% to achieving 30+% adoption across Azure services.
                 </p>
-
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Heritage</h4>
-                    <p className="text-gray-600 text-sm">
-                      Having architected solutions for Azure services, Snapdragon AI platforms, and ARM Cortex systems, Mario understands how AI implementations must integrate with existing enterprise infrastructure.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-deep-charcoal mb-2">Client-Facing Excellence</h4>
-                    <p className="text-gray-600 text-sm">
-                      With over 65 client demonstrations and training sessions delivered across Microsoft, Qualcomm, and ARM, Mario brings a unique combination of technical depth and client communication skills.
-                    </p>
-                  </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Heritage</h4>
+                  <p className="text-gray-700 text-sm">
+                    Having architected solutions for Azure services, Snapdragon AI platforms, and ARM Cortex systems, Mario understands how AI implementations must integrate with existing enterprise infrastructure.
+                  </p>
                 </div>
-              </motion.div>
-
-              <motion.div 
-                className="space-y-6"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-gradient-to-br from-ignition-orange/10 to-ember-red/10 p-6 rounded-xl">
+                <div>
+                  <h4 className="font-semibold text-deep-charcoal mb-2">Client-Facing Excellence</h4>
+                  <p className="text-gray-700 text-sm">
+                    With over 65 client demonstrations and training sessions delivered across Microsoft, Qualcomm, and ARM, Mario brings a unique combination of technical depth and client communication skills.
+                  </p>
+                </div>
+              </div>
+              {/* Achievements (right column) */}
+              <div className="space-y-8">
+                <div className="bg-orange-50 p-6 rounded-xl">
                   <h4 className="font-bold text-deep-charcoal mb-3">Production-Ready AI Solutions</h4>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-700 text-sm mb-4">
                     At IgnitionAI, we don&apos;t just build proof-of-concepts. We architect, implement, and deploy AI systems that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
                   </p>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-ignition-orange mt-1">•</span>
-                      <span>85% reduction in support response times through knowledge-powered AI assistants</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-ignition-orange mt-1">•</span>
-                      <span>70% improvement in process efficiency via multi-agent AI architectures</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-ignition-orange mt-1">•</span>
-                      <span>92% user satisfaction rates across deployed AI solutions</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                    <li>85% reduction in support response times through knowledge-powered AI assistants</li>
+                    <li>70% improvement in process efficiency via multi-agent AI architectures</li>
+                    <li>92% user satisfaction rates across deployed AI solutions</li>
                   </ul>
                 </div>
-
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
+                <div className="bg-blue-50 p-6 rounded-xl">
                   <h4 className="font-bold text-deep-charcoal mb-3">Key Achievements</h4>
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span>Led prototyping and production launch of GitHub Copilot extension for Azure</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span>Built AI assistants processing 5,000+ monthly queries with 92% satisfaction</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span>Guided TypeSpec API language to 30+% adoption across Azure services</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <span className="text-blue-500 mt-1">•</span>
-                      <span>Delivered 40+ customer onboarding sessions supporting 150+ deployments</span>
-                    </li>
+                  <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                    <li>Led prototyping and production launch of GitHub Copilot extension for Azure</li>
+                    <li>Built AI assistants processing 5,000+ monthly queries with 92% satisfaction</li>
+                    <li>Guided TypeSpec API language to 30+% adoption across Azure services</li>
+                    <li>Delivered 40+ customer onboarding sessions supporting 150+ deployments</li>
                   </ul>
                 </div>
-              </motion.div>
+              </div>
+            </div>
+
+            {/* Hector Norzagaray Profile */}
+            <div className="mt-16 pt-16 border-t border-gray-200">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                {/* Hector Profile (left column) */}
+                <div>
+                  <h3 className="text-2xl font-bold text-deep-charcoal mb-2">Hector Norzagaray</h3>
+                  <p className="text-lg text-ignition-orange font-semibold mb-4">Product Engineering & Community Strategy</p>
+                  <p className="mb-6 text-gray-700">
+                    Hector Norzagaray is a dedicated Product Strategist with several years of experience in enterprise software, honed within the Microsoft Azure ecosystem. With a focus on driving innovation in cloud-based platforms and developer tools, Hector helps organizations enhance their operations through scalable, secure technology solutions.
+                  </p>
+                  <p className="mb-6 text-gray-700">
+                    Unlike many professionals who emphasize theoretical concepts, Hector thrives on delivering practical, impactful products that support technical adoption and business growth across diverse environments.
+                  </p>
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Insight</h4>
+                    <p className="text-gray-700 text-sm">
+                      With a background shaping solutions in Azure's cloud landscape, Hector brings a solid understanding of how technology integrations can strengthen enterprise systems, supporting scalable infrastructure and user-focused applications.
+                    </p>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-deep-charcoal mb-2">Client-Facing Strength</h4>
+                    <p className="text-gray-700 text-sm">
+                      Having led numerous engagement sessions and community initiatives at Microsoft, Hector combines technical expertise with effective communication to align strategies with stakeholder expectations.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-deep-charcoal mb-2">Production-Ready Solutions</h4>
+                    <p className="text-gray-700 text-sm">
+                      Hector's approach centers on designing and deploying reliable products, refined through enterprise projects to ensure broad adoption and effectiveness.
+                    </p>
+                  </div>
+                </div>
+                {/* Hector's Achievements (right column) */}
+                <div className="space-y-8">
+                  <div className="bg-green-50 p-6 rounded-xl">
+                    <h4 className="font-bold text-deep-charcoal mb-3">Impact Highlights</h4>
+                    <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                      <li>Noticeable improvements in developer engagement through community platforms</li>
+                      <li>Significant enhancements in product usability and user satisfaction</li>
+                      <li>High approval ratings from feedback on deployed tools</li>
+                    </ul>
+                  </div>
+                  <div className="bg-purple-50 p-6 rounded-xl">
+                    <h4 className="font-bold text-deep-charcoal mb-3">Key Contributions</h4>
+                    <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
+                      <li>Guided the development of cloud-based SDKs, enhancing data management capabilities</li>
+                      <li>Created widely shared content on innovative technology applications for developers</li>
+                      <li>Supported numerous client onboarding efforts, contributing to successful deployments</li>
+                      <li>Facilitated global developer engagement through interactive platforms</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
