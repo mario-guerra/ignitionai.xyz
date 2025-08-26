@@ -45,7 +45,7 @@ const BlogPage = () => {
                 AI Insights & <span className="text-ignition-orange">Strategies</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results
               </p>
             </motion.div>
           ) : (
@@ -54,7 +54,7 @@ const BlogPage = () => {
                 AI Insights & <span className="text-ignition-orange">Strategies</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results.
+                Practical insights, implementation guides, and strategies for implementing AI solutions that drive real business results
               </p>
             </div>
           )}
@@ -152,7 +152,7 @@ const BlogPage = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 !text-white">Ready to Implement AI in Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation.
+              Get a free 30-minute consultation to identify your best AI opportunities and create a custom roadmap for implementation
             </p>
             
             <div className="max-w-md mx-auto">

@@ -36,37 +36,37 @@ const AboutPage = () => {
   const scenarios = [
     {
       name: "Manual Process Automation",
-      description: "Transform repetitive tasks like data entry, report generation, and workflow routing into intelligent automated systems.",
+      description: "Transform repetitive tasks like data entry, report generation, and workflow routing into intelligent automated systems",
       challenges: ["Time-consuming manual work", "Human error", "Process bottlenecks"],
       examples: ["Invoice processing", "Customer onboarding", "Inventory tracking"]
     },
     {
       name: "Global Expansion & Communication", 
-      description: "Break language barriers with real-time translation, multilingual customer support, and localized content creation.",
+      description: "Break language barriers with real-time translation, multilingual customer support, and localized content creation",
       challenges: ["Language barriers", "Cultural adaptation", "Communication scaling"],
       examples: ["Customer support translation", "Document localization", "International sales"]
     },
     {
       name: "Knowledge Management & Training",
-      description: "Convert scattered expertise into searchable knowledge bases, automated training, and instant Q&A systems.",
+      description: "Convert scattered expertise into searchable knowledge bases, automated training, and instant Q&A systems",
       challenges: ["Knowledge silos", "Training consistency", "Information retrieval"],
       examples: ["Employee onboarding", "Customer self-service", "Internal documentation"]
     },
     {
       name: "Customer Experience Enhancement",
-      description: "Deliver 24/7 intelligent support, personalized recommendations, and proactive customer communication.",
+      description: "Deliver 24/7 intelligent support, personalized recommendations, and proactive customer communication",
       challenges: ["Response time", "Consistency", "Personalization at scale"],
       examples: ["AI chatbots", "Smart recommendations", "Automated follow-ups"]
     },
     {
       name: "Decision Support & Analytics",
-      description: "Transform data into actionable insights with automated reporting, trend analysis, and predictive recommendations.",
+      description: "Transform data into actionable insights with automated reporting, trend analysis, and predictive recommendations",
       challenges: ["Data overload", "Analysis complexity", "Decision delays"],
       examples: ["Market analysis", "Performance dashboards", "Demand forecasting"]
     },
     {
       name: "Document & Content Intelligence",
-      description: "Automatically process, summarize, and extract insights from contracts, reports, emails, and other business documents.",
+      description: "Automatically process, summarize, and extract insights from contracts, reports, emails, and other business documents",
       challenges: ["Document volume", "Information extraction", "Compliance tracking"],
       examples: ["Contract analysis", "Report summarization", "Compliance monitoring"]
     }
