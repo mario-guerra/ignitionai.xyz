@@ -51,10 +51,10 @@ const HeroSection = () => {
               <div className="mt-8 md:mt-12 p-4 border-l-4 border-ignition-orange bg-gray-50 max-w-2xl mx-auto lg:mx-0">
                 <div className="text-sm">
                   <p className="text-gray-700 mb-2">
-                    <span className="font-semibold text-gray-900">The Challenge:</span> Growing businesses need enterprise-grade AI but lack Fortune 500 budgets.
+                    <span className="font-semibold text-gray-900">The Challenge:</span> Growing businesses need enterprise-grade AI but lack Fortune 500 budgets
                   </p>
                   <p className="text-gray-700">
-                    <span className="font-semibold text-gray-900">Our Solution:</span> Production-ready AI systems with 90-day ROI, built on 15+ years of enterprise experience.
+                    <span className="font-semibold text-gray-900">Our Solution:</span> Production-ready AI systems with 90-day ROI, built on 15+ years of enterprise experience
                   </p>
                 </div>
               </div>

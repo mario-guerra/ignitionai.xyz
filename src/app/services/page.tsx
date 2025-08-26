@@ -18,7 +18,7 @@ const ServicesPage = () => {
       industries: ["Logistics", "Construction", "Event Planning", "Agriculture"],
       roi: "80-95% time savings",
       timeline: "4-6 weeks",
-      investment: "$15K - $25K",
+      investment: "From $15K",
       icon: "🤖",
       gradient: "from-blue-500 to-cyan-500"
     },
@@ -36,7 +36,7 @@ const ServicesPage = () => {
       industries: ["Professional Services", "Healthcare", "Manufacturing", "Technology"],
       roi: "60-80% reduction in support tickets",
       timeline: "3-5 weeks",
-      investment: "$10K - $20K",
+      investment: "From $10K",
       icon: "🧠",
       gradient: "from-purple-500 to-pink-500"
     },
@@ -54,7 +54,7 @@ const ServicesPage = () => {
       industries: ["Healthcare", "E-commerce", "Manufacturing", "Tourism"],
       roi: "70-90% translation cost reduction",
       timeline: "2-4 weeks",
-      investment: "$8K - $18K",
+      investment: "From $8K",
       icon: "🌍",
       gradient: "from-green-500 to-blue-500"
     },
@@ -72,7 +72,7 @@ const ServicesPage = () => {
       industries: ["Legal", "Insurance", "Real Estate", "Financial Services"],
       roi: "85-95% processing time reduction",
       timeline: "2-3 weeks",
-      investment: "$5K - $15K",
+      investment: "From $5K",
       icon: "📄",
       gradient: "from-orange-500 to-red-500"
     },
@@ -90,7 +90,7 @@ const ServicesPage = () => {
       industries: ["Customer Service", "Technical Support", "Sales", "Education"],
       roi: "50-70% support cost reduction",
       timeline: "4-8 weeks",
-      investment: "$12K - $25K",
+      investment: "From $12K",
       icon: "💬",
       gradient: "from-indigo-500 to-purple-500"
     },
@@ -108,7 +108,7 @@ const ServicesPage = () => {
       industries: ["Software Development", "E-commerce", "SaaS", "Technology"],
       roi: "80-90% design time reduction",
       timeline: "1-3 weeks",
-      investment: "$5K - $12K",
+      investment: "From $5K",
       icon: "⚡",
       gradient: "from-yellow-500 to-orange-500"
     }
@@ -118,31 +118,31 @@ const ServicesPage = () => {
     {
       step: "01",
       title: "Discovery & Assessment",
-      description: "We analyze your current processes, identify automation opportunities, and define success metrics.",
+      description: "We analyze your current processes, identify automation opportunities, and define success metrics",
       duration: "1 week"
     },
     {
       step: "02", 
       title: "Solution Design",
-      description: "Custom AI solution architecture tailored to your specific business needs and technical requirements.",
+      description: "Custom AI solution architecture tailored to your specific business needs and technical requirements",
       duration: "1-2 weeks"
     },
     {
       step: "03",
       title: "Development & Integration",
-      description: "Agile development with weekly demos, ensuring the solution fits perfectly into your workflow.",
+      description: "Agile development with weekly demos, ensuring the solution fits perfectly into your workflow",
       duration: "2-6 weeks"
     },
     {
       step: "04",
       title: "Testing & Optimization",
-      description: "Comprehensive testing, performance optimization, and team training for successful adoption.",
+      description: "Comprehensive testing, performance optimization, and team training for successful adoption",
       duration: "1 week"
     },
     {
       step: "05",
       title: "Deployment & Support",
-      description: "Go-live support with ongoing monitoring, maintenance, and continuous improvement.",
+      description: "Go-live support with ongoing monitoring, maintenance, and continuous improvement",
       duration: "Ongoing"
     }
   ];
@@ -150,22 +150,22 @@ const ServicesPage = () => {
   const guarantees = [
     {
       title: "ROI Guarantee",
-      description: "Measurable return on investment within 2-3 months.",
+      description: "Measurable return on investment within 2-3 months",
       icon: "📈"
     },
     {
       title: "Fixed Timeline",
-      description: "Clear project timelines with weekly milestones.",
+      description: "Clear project timelines with weekly milestones",
       icon: "⏱️"
     },
     {
       title: "Transparent Pricing",
-      description: "Fixed-price projects with no hidden costs.",
+      description: "Transparent pricing",
       icon: "💰"
     },
     {
       title: "30-Day Support",
-      description: "Support for 30 days after deployment.",
+      description: "Support for 30 days after deployment",
       icon: "🛠️"
     }
   ];
@@ -247,19 +247,19 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">📞</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">AI Call Agent</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Missing calls = lost revenue. AI answers, qualifies, and books appointments automatically.
+                Missing calls = lost revenue. AI answers, qualifies, and books appointments automatically
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $500-1.5K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $500</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate </span>
                   <span className="text-gray-600"> 1-2 weeks</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
                   <span className="text-ignition-orange font-semibold"> 3+ bookings/week</span>
                 </div>
               </div>
@@ -285,19 +285,19 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">📧</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">Email Lead Triage</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Buried leads, slow responses. AI prioritizes and suggests replies instantly.
+                Buried leads, slow responses. AI prioritizes and suggests replies instantly
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $750-2K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $750</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate </span>
                   <span className="text-gray-600"> 1-2 weeks</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
                   <span className="text-ignition-orange font-semibold"> 80% faster responses</span>
                 </div>
               </div>
@@ -323,19 +323,19 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">🤖</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">FAQ Support Bot</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Team wastes time searching for answers. AI provides instant, accurate responses.
+                Team wastes time searching for answers. AI provides instant, accurate responses
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $1.5K-5K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $1500</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate </span>
                   <span className="text-gray-600"> 2-4 weeks</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
                   <span className="text-ignition-orange font-semibold"> 50% ticket deflection</span>
                 </div>
               </div>
@@ -363,19 +363,19 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">📅</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">Booking Automation</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Manual scheduling eats time, creates errors. Automated flow reduces no-shows and admin burden.
+                Manual scheduling eats time, creates errors. Automated flow reduces no-shows and admin burden
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $300-1K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $300</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate</span>
                   <span className="text-gray-600"> 1 week</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
                   <span className="text-ignition-orange font-semibold"> 60% fewer no-shows</span>
                 </div>
               </div>
@@ -401,20 +401,20 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">🧾</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">Invoice Automation</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Manual invoice handling is slow and error-prone. AI extracts, matches, and reconciles automatically.
+                Manual invoice handling is slow and error-prone. AI extracts, matches, and reconciles automatically
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $1.5K-6K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $1500</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate</span>
                   <span className="text-gray-600"> 2-4 weeks</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
-                  <span className="text-ignition-orange font-semibold"> 85% processing time saved</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
+                  <span className="text-ignition-orange font-semibold"> 85% faster processing</span>
                 </div>
               </div>
               <div className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full mb-4 inline-block">
@@ -439,19 +439,19 @@ const ServicesPage = () => {
               <div className="text-3xl mb-4">🌍</div>
               <h3 className="text-xl font-bold text-deep-charcoal mb-2">Multilingual Communications</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Language barriers lead to missed sales. AI provides fast, accurate translations with brand voice.
+                Language barriers lead to missed sales. AI provides fast, accurate translations with brand voice
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Pilot:</span>
-                  <span className="text-gray-600"> $500-2K</span>
+                  <span className="font-semibold text-deep-charcoal">Solutions from </span>
+                  <span className="text-gray-600"> $500</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                  <span className="font-semibold text-deep-charcoal">Timeline estimate </span>
                   <span className="text-gray-600"> 1-3 weeks</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-semibold text-deep-charcoal">ROI:</span>
+                  <span className="font-semibold text-deep-charcoal">ROI up to </span>
                   <span className="text-ignition-orange font-semibold"> 70% faster translations</span>
                 </div>
               </div>
@@ -551,19 +551,19 @@ const ServicesPage = () => {
 
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
-                        <span className="font-semibold text-deep-charcoal">Timeline:</span>
+                        <span className="font-semibold text-deep-charcoal">Timeline estimate</span>
                         <p className="text-gray-600">{service.timeline}</p>
                       </div>
                       <div>
-                        <span className="font-semibold text-deep-charcoal">Investment:</span>
+                        <span className="font-semibold text-deep-charcoal">Investment</span>
                         <p className="text-gray-600">{service.investment}</p>
                       </div>
                       <div>
-                        <span className="font-semibold text-deep-charcoal">Expected ROI:</span>
+                        <span className="font-semibold text-deep-charcoal">Potential ROI</span>
                         <p className="text-ignition-orange font-semibold">{service.roi}</p>
                       </div>
                       <div>
-                        <span className="font-semibold text-deep-charcoal">Industries:</span>
+                        <span className="font-semibold text-deep-charcoal">Industries</span>
                         <p className="text-gray-600">{service.industries.slice(0, 2).join(", ")}</p>
                       </div>
                     </div>
@@ -713,7 +713,7 @@ const ServicesPage = () => {
               viewport={{ once: true }}
             >
               Schedule a free consultation to discover which AI solution will deliver 
-              the biggest impact for your business in the next 90 days.
+              the biggest impact for your business in the next 90 days
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"

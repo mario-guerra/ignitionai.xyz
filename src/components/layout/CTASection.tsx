@@ -73,7 +73,7 @@ const CTASection = () => {
             </h2>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-              Schedule a free consultation with our experts to discover how IgnitionAI can transform your business operations and deliver measurable ROI.
+              Schedule a free consultation with our experts to discover how IgnitionAI can transform your business operations and deliver measurable ROI
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">

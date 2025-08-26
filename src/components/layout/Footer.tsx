@@ -37,7 +37,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-cool-gray mb-4">
-              Spark intelligent transformation for your business with AI solutions designed for measurable ROI.
+              Spark intelligent transformation for your business with AI solutions designed for measurable ROI
             </p>
           </div>
           

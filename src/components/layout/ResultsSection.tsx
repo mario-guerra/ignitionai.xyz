@@ -15,11 +15,6 @@ const ResultsSection = () => {
       color: "ember-red"
     },
     {
-      metric: "$5K-30K",
-      description: "Startup and SMB-focused project budgets that deliver meaningful ROI",
-      color: "spark-yellow"
-    },
-    {
       metric: "100%",
       description: "Custom-built solutions using proven AI technologies",
       color: "deep-charcoal"
@@ -36,7 +31,7 @@ const ResultsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {capabilities.map((capability, index) => (
             <motion.div 
               key={index}
