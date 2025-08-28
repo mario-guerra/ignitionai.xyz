@@ -56,4 +56,16 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     readTime: '6 min read',
     image: '/images/blog/multilingual-ai.jpg'
   }
+  ,
+  'do-you-need-ai-or-automation': {
+    id: 'do-you-need-ai-or-automation',
+    title: 'Do You Need a Full AI System or Just Workflow Automation? Understanding the Differences for Your Business',
+    excerpt: 'Many small business owners hear the terms "automation," "intelligent automation," and "AI" and feel confused. Choosing the right approach can save time, reduce costs, and help your business grow.',
+    publishDate: '2025-08-28',
+    author: 'Mario Guerra',
+    category: 'Business',
+    slug: 'do-you-need-ai-or-automation',
+    readTime: '4 min read',
+    image: '/images/IgnitionAI-logo-300x300px.png'
+  }
 };
