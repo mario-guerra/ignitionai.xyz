@@ -27,7 +27,7 @@ const DoYouNeedAIOrAutomation = () => {
               A short, pragmatic guide to choose between simple automation, intelligent automation, and AI so you spend money where it actually moves the needle.
             </p>
             <div className="flex items-center justify-center text-gray-300 text-sm">
-              <span>By Mario Guerra</span>
+              <span>By Mario Guerra & Hector Norzagaray</span>
               <span className="mx-3">•</span>
               <span>4 min read</span>
             </div>

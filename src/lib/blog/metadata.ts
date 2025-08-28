@@ -60,9 +60,9 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
   'do-you-need-ai-or-automation': {
     id: 'do-you-need-ai-or-automation',
     title: 'Do You Need a Full AI System or Just Workflow Automation? Understanding the Differences for Your Business',
-    excerpt: 'Many small business owners hear the terms "automation," "intelligent automation," and "AI" and feel confused. Choosing the right approach can save time, reduce costs, and help your business grow.',
+    excerpt: 'A short, pragmatic guide to choose between simple automation, intelligent automation, and AI so you spend money where it actually moves the needle.',
     publishDate: '2025-08-28',
-    author: 'Mario Guerra',
+    author: 'Mario Guerra & Hector Norzagaray',
     category: 'Business',
     slug: 'do-you-need-ai-or-automation',
     readTime: '4 min read',
