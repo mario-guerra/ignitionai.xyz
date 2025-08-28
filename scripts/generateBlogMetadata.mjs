@@ -104,7 +104,7 @@ async function fallbackFromAppPages() {
         // If publishDate is still default, try to derive from git history for the page file
         if (!meta || !meta.publishDate) {
           try {
-            const gitCmd = `git log --format=%aI --follow -- "${pageFile.replace(/"/g, '\\"')}"`;
+            const gitCmd = `git log --format=%aI --follow -- "${pageFile.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
             const { stdout } = await exec(gitCmd, { cwd: workspaceRoot });
             const lines = stdout.trim().split('\n').filter(Boolean);
             if (lines.length > 0) {
