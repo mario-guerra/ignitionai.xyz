@@ -5,6 +5,7 @@ import { pathToFileURL } from 'url';
 import matter from 'gray-matter';
 import { exec as _exec } from 'child_process';
 import { promisify } from 'util';
+import striptags from 'striptags';
 const exec = promisify(_exec);
 
 const workspaceRoot = process.cwd();
@@ -97,7 +98,7 @@ async function fallbackFromAppPages() {
           const h1Match = raw.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
           const pMatch = raw.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
           title = h1Match ? h1Match[1].replace(/\s+/g, ' ').trim() : title;
-          excerpt = pMatch ? pMatch[1].replace(/<[^>]+>/g, '').replace(/\s+/g,' ').trim().slice(0,200) : excerpt;
+          excerpt = pMatch ? striptags(pMatch[1]).replace(/\s+/g,' ').trim().slice(0,200) : excerpt;
         }
 
         // If publishDate is still default, try to derive from git history for the page file
