@@ -138,18 +138,23 @@ async function fallbackFromAppPages() {
   }
 }
 
+function escapeJsString(str) {
+  // Escapes backslash, then single quote, for safe JS single-quoted strings
+  return String(str).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
 function generateTs(posts) {
   const entries = posts.map(p => {
-    const imageLine = p.image ? `    image: '${p.image.replace(/'/g, "\\'")}'` : '';
+    const imageLine = p.image ? `    image: '${escapeJsString(p.image)}'` : '';
     return `  '${p.slug}': {
-    id: '${p.id}',
-    title: '${p.title.replace(/'/g, "\\'")}',
-    excerpt: '${(p.excerpt || '').replace(/'/g, "\\'")}',
-    publishDate: '${p.publishDate}',
-    author: '${p.author.replace(/'/g, "\\'")}',
-    category: '${p.category.replace(/'/g, "\\'")}',
-    slug: '${p.slug}',
-    readTime: '${p.readTime}',
+    id: '${escapeJsString(p.id)}',
+    title: '${escapeJsString(p.title)}',
+    excerpt: '${escapeJsString(p.excerpt || '')}',
+    publishDate: '${escapeJsString(p.publishDate)}',
+    author: '${escapeJsString(p.author)}',
+    category: '${escapeJsString(p.category)}',
+    slug: '${escapeJsString(p.slug)}',
+    readTime: '${escapeJsString(p.readTime)}',
 ${imageLine ? imageLine + '\n  }' : '  }' }
 `;
   }).join(',\n');
