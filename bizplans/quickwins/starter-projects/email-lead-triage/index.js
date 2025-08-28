@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const sanitizeHtml = require('sanitize-html');
 const app = express();
 const port = process.env.PORT || 4001;
 app.use(bodyParser.json());
@@ -17,7 +18,7 @@ app.post('/webhook/email', (req, res) => {
     id: message.id || 'local-' + Date.now(),
     from: message.from || 'unknown',
     subject: message.subject || '',
-    body_text: (message.body || '').replace(/<[^>]+>/g, '')
+    body_text: sanitizeHtml(message.body || '', { allowedTags: [], allowedAttributes: {} })
   };
   // Respond with a suggested reply placeholder
   const suggestion = {
