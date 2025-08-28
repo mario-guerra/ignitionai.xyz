@@ -1,0 +1,27 @@
+name: CI - appointment-booking-automation
+
+on:
+  push:
+    paths:
+      - 'bizplans/quickwins/starter-projects/appointment-booking-automation/**'
+  pull_request:
+    paths:
+      - 'bizplans/quickwins/starter-projects/appointment-booking-automation/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PORT: 4005
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: cd bizplans/quickwins/starter-projects/appointment-booking-automation && npm install
+      - name: Start service
+        run: cd bizplans/quickwins/starter-projects/appointment-booking-automation && node index.js & sleep 1
+      - name: Health check
+        run: curl -fsS http://localhost:4005/health

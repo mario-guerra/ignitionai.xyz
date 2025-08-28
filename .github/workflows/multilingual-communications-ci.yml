@@ -1,0 +1,27 @@
+name: CI - multilingual-communications
+
+on:
+  push:
+    paths:
+      - 'bizplans/quickwins/starter-projects/multilingual-communications/**'
+  pull_request:
+    paths:
+      - 'bizplans/quickwins/starter-projects/multilingual-communications/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PORT: 4003
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: cd bizplans/quickwins/starter-projects/multilingual-communications && npm install
+      - name: Start service
+        run: cd bizplans/quickwins/starter-projects/multilingual-communications && node index.js & sleep 1
+      - name: Health check
+        run: curl -fsS http://localhost:4003/health

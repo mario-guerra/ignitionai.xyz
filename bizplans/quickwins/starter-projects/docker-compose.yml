@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  email-lead-triage:
+    build: ./email-lead-triage
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  faq-support-bot:
+    build: ./faq-support-bot
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4002/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  multilingual-communications:
+    build: ./multilingual-communications
+    ports:
+      - "4003:4003"
+    environment:
+      - PORT=4003
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4003/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  invoice-receipt-automation:
+    build: ./invoice-receipt-automation
+    ports:
+      - "4004:4004"
+    environment:
+      - PORT=4004
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4004/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  appointment-booking-automation:
+    build: ./appointment-booking-automation
+    ports:
+      - "4005:4005"
+    environment:
+      - PORT=4005
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4005/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  ai-call-agent:
+    build: ./ai-call-agent
+    ports:
+      - "4006:4006"
+    environment:
+      - PORT=4006
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4006/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  default:
+    driver: bridge

@@ -1,0 +1,27 @@
+name: CI - faq-support-bot
+
+on:
+  push:
+    paths:
+      - 'bizplans/quickwins/starter-projects/faq-support-bot/**'
+  pull_request:
+    paths:
+      - 'bizplans/quickwins/starter-projects/faq-support-bot/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PORT: 4002
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: cd bizplans/quickwins/starter-projects/faq-support-bot && npm install
+      - name: Start service
+        run: cd bizplans/quickwins/starter-projects/faq-support-bot && node index.js & sleep 1
+      - name: Health check
+        run: curl -fsS http://localhost:4002/health
