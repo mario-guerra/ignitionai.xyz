@@ -1,0 +1,27 @@
+name: CI - email-lead-triage
+
+on:
+  push:
+    paths:
+      - 'bizplans/quickwins/starter-projects/email-lead-triage/**'
+  pull_request:
+    paths:
+      - 'bizplans/quickwins/starter-projects/email-lead-triage/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PORT: 4001
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: cd bizplans/quickwins/starter-projects/email-lead-triage && npm install
+      - name: Start service
+        run: cd bizplans/quickwins/starter-projects/email-lead-triage && node index.js & sleep 1
+      - name: Health check
+        run: curl -fsS http://localhost:4001/health

@@ -153,8 +153,8 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Ready to transform your business with AI? Schedule a free consultation to discover 
-              which of our six proven solutions will deliver the biggest impact for your business.
+              Ready to transform your business with AI and automation? Schedule a free consultation to discover
+              which of our proven solutions will deliver the biggest impact for your business.
             </motion.p>
             <motion.div
               className="inline-flex items-center space-x-2 text-ignition-orange font-semibold"
@@ -209,7 +209,7 @@ export default function Contact() {
                     Start Your AI Transformation
                   </h2>
                   <p className="text-gray-600 text-lg">
-                    Tell us about your business challenges and we&apos;ll show you how AI can help solve them.
+                    Tell us about your business challenges and we&apos;ll show you how AI and intelligent automation can help solve them.
                   </p>
                 </div>
                 
