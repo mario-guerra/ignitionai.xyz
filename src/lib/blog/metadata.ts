@@ -10,8 +10,20 @@ export interface BlogPostMetadata {
   image?: string;
 }
 
-// Blog post metadata registry
+// Blog post metadata registry (auto-generated)
 export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
+  'do-you-need-ai-or-automation': {
+    id: 'do-you-need-ai-or-automation',
+    title: 'Do You Need a Full AI System or Just Workflow Automation? Understanding the Differences for Your Business',
+    excerpt: 'A short, pragmatic guide to choose between simple automation, intelligent automation, and AI so you spend money where it actually moves the needle.',
+    publishDate: '2025-08-28',
+    author: 'Mario Guerra & Hector Norzagaray',
+    category: 'Business',
+    slug: 'do-you-need-ai-or-automation',
+    readTime: '4 min read',
+    image: '/images/IgnitionAI-logo-300x300px.png'
+  }
+,
   'introducing-ignitionai-sparking-intelligent-transformation': {
     id: 'introducing-ignitionai-sparking-intelligent-transformation',
     title: 'Introducing IgnitionAI: Sparking Intelligent Transformation',
@@ -22,7 +34,8 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     slug: 'introducing-ignitionai-sparking-intelligent-transformation',
     readTime: '6 min read',
     image: '/images/blog/ignitionai-announcement.jpg'
-  },
+  }
+,
   'how-ai-is-revolutionizing-customer-service-2025': {
     id: 'how-ai-is-revolutionizing-customer-service-2025',
     title: 'How AI is Revolutionizing Customer Service in 2025',
@@ -33,7 +46,8 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     slug: 'how-ai-is-revolutionizing-customer-service-2025',
     readTime: '5 min read',
     image: '/images/blog/customer-service-ai.jpg'
-  },
+  }
+,
   'roi-ai-measuring-success-business-process-automation': {
     id: 'roi-ai-measuring-success-business-process-automation',
     title: 'The ROI of AI: Measuring Success in Business Process Automation',
@@ -44,7 +58,8 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     slug: 'roi-ai-measuring-success-business-process-automation',
     readTime: '7 min read',
     image: '/images/blog/roi-ai-measurement.jpg'
-  },
+  }
+,
   'breaking-language-barriers-multilingual-ai-global-business': {
     id: 'breaking-language-barriers-multilingual-ai-global-business',
     title: 'Breaking Language Barriers: Multilingual AI in Global Business',
@@ -56,4 +71,5 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     readTime: '6 min read',
     image: '/images/blog/multilingual-ai.jpg'
   }
+
 };
