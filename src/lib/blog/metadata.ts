@@ -17,7 +17,7 @@ export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
     title: 'Tomando decisiones inteligentes: ¿Automatización, Automatización Inteligente o IA?',
     excerpt: 'Una guía pragmática para elegir entre automatización simple, automatización inteligente e IA para que gastes dinero donde realmente importa.',
     publishDate: '2025-09-02',
-    author: 'Mario Guerra & Hector Norzagaray',
+    author: 'Hector Norzagaray & Mario Guerra',
     category: 'Business',
     slug: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia',
     readTime: '5 min read',

@@ -27,7 +27,7 @@ const TomandoDecisionesInteligentes = () => {
               Una guía pragmática para elegir entre automatización simple, automatización inteligente e IA para que gastes dinero donde realmente importa.
             </p>
             <div className="flex items-center justify-center text-gray-300 text-sm">
-              <span>Por Mario Guerra & Hector Norzagaray</span>
+              <span>Por Hector Norzagaray & Mario Guerra</span>
               <span className="mx-3">•</span>
               <span>5 min de lectura</span>
             </div>
