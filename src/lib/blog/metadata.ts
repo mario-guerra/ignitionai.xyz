@@ -12,6 +12,18 @@ export interface BlogPostMetadata {
 
 // Blog post metadata registry (auto-generated)
 export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
+  'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia': {
+    id: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia',
+    title: 'Tomando decisiones inteligentes: ¿Automatización, Automatización Inteligente o IA?',
+    excerpt: 'Una guía pragmática para elegir entre automatización simple, automatización inteligente e IA para que gastes dinero donde realmente importa.',
+    publishDate: '2025-09-02',
+    author: 'Mario Guerra & Hector Norzagaray',
+    category: 'Business',
+    slug: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia',
+    readTime: '5 min read',
+    image: '/images/IgnitionAI-logo-300x300px.png'
+  }
+,
   'do-you-need-ai-or-automation': {
     id: 'do-you-need-ai-or-automation',
     title: 'Do You Need a Full AI System or Just Workflow Automation? Understanding the Differences for Your Business',
