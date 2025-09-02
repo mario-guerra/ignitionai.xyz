@@ -1,5 +1,5 @@
 
-<!-- title?: Tomando decisiones inteligentes: ¿Automatización, Automatización Inteligente o IA? -->
+<!-- title: Tomando decisiones inteligentes: ¿Automatización, Automatización Inteligente o IA? -->
 
 # ¿Necesitas Automatización o Inteligencia Artificial? Entiende las Diferencias Antes de Implementar
 
