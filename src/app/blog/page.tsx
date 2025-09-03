@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState, useCallback } from 'react';
 import { BlogPostMetadata } from '@/lib/blog/metadata';
 
-import { getAllCategories, getBlogPostsByCategory } from '@/lib/blog/utils';
+import { getAllCategories, getBlogPostsByCategory, getPostUrl } from '@/lib/blog/utils';
 const BlogPage = () => {
   const [isMounted, setIsMounted] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -110,7 +110,7 @@ const BlogPage = () => {
                   </div>
                   
                   <h2 className="text-xl font-bold mb-3">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-ignition-orange transition-colors">
+                    <Link href={getPostUrl(post)} className="hover:text-ignition-orange transition-colors">
                       {post.title}
                     </Link>
                   </h2>
@@ -125,7 +125,7 @@ const BlogPage = () => {
                     </div>
                     
                     <Link 
-                      href={`/blog/${post.slug}`} 
+                      href={getPostUrl(post)} 
                       className="text-ignition-orange hover:text-ember-red font-medium flex items-center transition-colors"
                     >
                       Read More

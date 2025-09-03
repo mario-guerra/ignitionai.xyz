@@ -2,8 +2,14 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import LanguageToggle from '@/components/blog/LanguageToggle';
+import { BlogPostMetadata } from '@/lib/blog/metadata';
 
-const TomandoDecisionesInteligentes = () => {
+interface TomandoDecisionesInteligentesClientProps {
+  post: BlogPostMetadata;
+}
+
+const TomandoDecisionesInteligentesClient = ({ post }: TomandoDecisionesInteligentesClientProps) => {
   return (
     <main className="min-h-screen bg-white">
       {/* Article Header */}
@@ -26,10 +32,13 @@ const TomandoDecisionesInteligentes = () => {
             <p className="text-xl md:text-2xl !text-gray-300 mb-8">
               Una guía pragmática para elegir entre automatización simple, automatización inteligente e IA para que gastes dinero donde realmente importa.
             </p>
-            <div className="flex items-center justify-center text-gray-300 text-sm">
-              <span>Por Hector Norzagaray & Mario Guerra</span>
-              <span className="mx-3">•</span>
-              <span>5 min de lectura</span>
+            <div className="flex items-center justify-center text-gray-300 text-sm gap-4">
+              <div className="flex items-center">
+                <span>Por Hector Norzagaray & Mario Guerra</span>
+                <span className="mx-3">•</span>
+                <span>5 min de lectura</span>
+              </div>
+              <LanguageToggle currentPost={post} />
             </div>
           </motion.div>
         </div>
@@ -45,8 +54,8 @@ const TomandoDecisionesInteligentes = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Muchos dueños de pequeñas empresas escuchan términos como <em>automatización</em>, <em>automatización inteligente</em> e <em>inteligencia artificial (IA)</em> y se sienten confundidos. A menudo se usan como sinónimos, pero no significan lo mismo. Elegir el enfoque correcto puede ahorrar tiempo, reducir costos y acelerar el crecimiento.
+                            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                Muchos propietarios de pequeñas empresas escuchan los términos &quot;automatización&quot;, &quot;automatización inteligente&quot; e &quot;IA&quot; y se sienten confundidos. Estos términos se usan a menudo indistintamente, pero no son lo mismo. Elegir el enfoque correcto puede ahorrar tiempo, reducir costos y ayudar a que tu negocio crezca.
               </p>
 
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -69,86 +78,61 @@ const TomandoDecisionesInteligentes = () => {
               </div>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Beneficios:</strong> Ahorra tiempo, reduce errores humanos, mejora la eficiencia.
-              </p>
-
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Mejor uso:</strong> Para tareas predecibles y repetitivas que consumen tiempo.
+                <strong>Beneficios:</strong> Ahorra tiempo, reduce errores humanos, mejora la eficiencia. <strong>Mejor uso:</strong> Para tareas predecibles y repetitivas que consumen tiempo.
               </p>
 
               <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">¿Qué es la Automatización Inteligente?</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                La automatización inteligente agrega capacidad de decisión básica. Interpreta datos y responde con lógica simple.
+                La automatización inteligente se basa en la automatización y agrega &quot;inteligencia.&quot; Puede interpretar datos y tomar decisiones pequeñas.
               </p>
 
               <div className="bg-light-gray p-6 rounded-lg mb-6">
                 <h3 className="text-xl font-semibold text-deep-charcoal mb-3">Ejemplos</h3>
                 <ul className="space-y-2 text-lg text-gray-700">
-                  <li>Un sistema de correo que identifica mensajes urgentes y los asigna automáticamente</li>
-                  <li>Una herramienta que escanea facturas en distintos formatos y las organiza</li>
-                  <li>Un sistema de atención al cliente que enruta solicitudes según palabras clave</li>
+                  <li>Un sistema de correo que lee mensajes entrantes, decide cuáles son urgentes y los asigna automáticamente</li>
+                  <li>Una herramienta que escanea facturas en diferentes formatos y las organiza para contabilidad</li>
+                  <li>Un sistema de servicio al cliente que enruta solicitudes basándose en palabras clave</li>
                 </ul>
               </div>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Beneficios:</strong> Maneja tareas más complejas, reduce decisiones manuales, aumenta velocidad y precisión.
-              </p>
-
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Mejor uso:</strong> Para tareas con cierta variabilidad o que requieren decisiones simples.
+                <strong>Beneficios:</strong> Maneja tareas más complejas, reduce la toma de decisiones manual, mejora velocidad y precisión. <strong>Mejor uso:</strong> Tareas con cierta variabilidad o que requieren toma de decisiones básica.
               </p>
 
               <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">¿Qué es la Inteligencia Artificial?</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                La IA aprende de los datos, se adapta a nuevas situaciones y mejora con el tiempo. A diferencia de la automatización, puede hacer predicciones y ofrecer insights.
+                Los sistemas de IA aprenden de datos, se adaptan a nuevas situaciones y mejoran con el tiempo. A diferencia de la automatización, la IA puede hacer predicciones y proporcionar insights.
               </p>
 
               <div className="bg-light-gray p-6 rounded-lg mb-6">
                 <h3 className="text-xl font-semibold text-deep-charcoal mb-3">Ejemplos</h3>
                 <ul className="space-y-2 text-lg text-gray-700">
-                  <li>Un chatbot que responde preguntas y mejora con cada interacción</li>
-                  <li>Una herramienta que predice qué clientes tienen más probabilidad de comprar</li>
-                  <li>Un asistente que agenda llamadas de forma natural y eficiente</li>
+                  <li>Un chatbot de IA que responde preguntas de clientes y mejora con cada interacción</li>
+                  <li>Una herramienta que predice qué prospectos tienen más probabilidad de convertirse en ventas</li>
+                  <li>Un asistente de programación de llamadas que interactúa naturalmente con clientes y programa citas</li>
                 </ul>
               </div>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Beneficios:</strong> Aprende y mejora continuamente, toma decisiones basadas en datos, abre nuevas oportunidades que la automatización no puede ofrecer.
-              </p>
-
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                <strong>Mejor uso:</strong> Para tareas complejas, que requieren adaptación y análisis profundo.
+                <strong>Beneficios:</strong> Aprende y mejora continuamente, toma decisiones basadas en datos, crea nuevas oportunidades que la automatización sola no puede ofrecer. <strong>Mejor uso:</strong> Cuando quieres sistemas que manejen tareas complejas, se adapten con el tiempo y te ayuden a tomar mejores decisiones de negocio.
               </p>
 
               <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">¿Cómo Decidir Qué Necesitas?</h2>
 
-              <table className="w-full border-collapse border border-gray-300 mb-6">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-300 px-4 py-2 text-left">Necesidad</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Solución Ideal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">Tareas simples y repetitivas</td>
-                    <td className="border border-gray-300 px-4 py-2">Automatización</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 px-4 py-2">Tareas con decisiones básicas</td>
-                    <td className="border border-gray-300 px-4 py-2">Automatización Inteligente</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-4 py-2">Tareas que requieren aprendizaje</td>
-                    <td className="border border-gray-300 px-4 py-2">Inteligencia Artificial</td>
-                  </tr>
-                </tbody>
-              </table>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                - <strong>Automatización:</strong> Para tareas simples y repetitivas.
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                - <strong>Automatización Inteligente:</strong> Para tareas que requieren toma de decisiones o manejo de inputs variables.
+              </p>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                - <strong>IA:</strong> Para tareas que necesitan aprendizaje, predicciones o insights.
+              </p>
 
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                El estudio del MIT destaca que la IA funciona mejor cuando se implementa con objetivos claros y alineación estratégica. Empezar con proyectos pequeños y enfocados en resultados rápidos es clave para lograr impacto.
+                El estudio del MIT enfatiza que la IA funciona mejor cuando se implementa cuidadosamente con objetivos claros y alineación con procesos de negocio. Empezar pequeño y enfocarse en victorias rápidas ayuda a asegurar resultados medibles.
               </p>
 
               <h2 className="text-3xl font-bold text-deep-charcoal mb-6 mt-12">Próximos Pasos</h2>
@@ -164,10 +148,10 @@ const TomandoDecisionesInteligentes = () => {
               <div className="bg-gradient-to-r from-ignition-orange to-ember-red text-white p-8 rounded-lg mb-8">
                 <h3 className="text-2xl font-bold mb-4">¿Listo para evaluar tus oportunidades?</h3>
                 <p className="text-lg mb-6 text-white/90">
-                  Agenda una llamada corta de descubrimiento y identificaremos oportunidades prácticas y de alto impacto en IA y automatización que puedas implementar rápidamente.
+                  Agenda una llamada de descubrimiento corta e identificaremos oportunidades prácticas y de alto impacto de IA y automatización que puedes implementar rápidamente.
                 </p>
                 <Link href="/contact" className="inline-block bg-white text-ignition-orange px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Agenda una Consulta Gratuita
+                  Programar Consulta Gratuita
                 </Link>
               </div>
 
@@ -179,4 +163,4 @@ const TomandoDecisionesInteligentes = () => {
   );
 };
 
-export default TomandoDecisionesInteligentes;
+export default TomandoDecisionesInteligentesClient;
