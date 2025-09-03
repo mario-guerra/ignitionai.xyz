@@ -50,12 +50,18 @@ async function fallbackFromAppPages() {
   try {
     const entries = await fs.readdir(appBlogDir, { withFileTypes: true });
     const posts = [];
+    
+    // Process main blog directory
     for (const dirent of entries) {
       if (!dirent.isDirectory()) continue;
+      if (dirent.name === 'es') continue; // Skip es directory for now
+      if (dirent.name.startsWith('[') && dirent.name.endsWith(']')) continue; // Skip dynamic routes
+      
       const dirPath = path.join(appBlogDir, dirent.name);
       const pageFile = path.join(dirPath, 'page.tsx');
       const metaJson = path.join(dirPath, 'meta.json');
       const metaMjs = path.join(dirPath, 'meta.mjs');
+      
       try {
         // Prefer a meta.json or meta.mjs file if present for explicit metadata
         let meta = null;
@@ -76,7 +82,7 @@ async function fallbackFromAppPages() {
           meta = null;
         }
 
-  let title = dirent.name.replace(/-/g,' ');
+        let title = dirent.name.replace(/-/g,' ');
         let excerpt = '';
         let publishDate = (new Date()).toISOString().slice(0,10);
         let author = 'Unknown';
@@ -84,7 +90,7 @@ async function fallbackFromAppPages() {
         let readTime = '4 min read';
         let image = undefined;
 
-  if (meta) {
+        if (meta) {
           title = meta.title || title;
           excerpt = meta.excerpt || '';
           publishDate = meta.publishDate || publishDate;
@@ -132,6 +138,100 @@ async function fallbackFromAppPages() {
         // skip if no page.tsx
       }
     }
+    
+    // Process Spanish blog posts in es/ directory
+    const esDir = path.join(appBlogDir, 'es');
+    try {
+      const esEntries = await fs.readdir(esDir, { withFileTypes: true });
+      for (const dirent of esEntries) {
+        if (!dirent.isDirectory()) continue;
+        if (dirent.name.startsWith('[') && dirent.name.endsWith(']')) continue; // Skip dynamic routes
+        
+        const dirPath = path.join(esDir, dirent.name);
+        const pageFile = path.join(dirPath, 'page.tsx');
+        const metaJson = path.join(dirPath, 'meta.json');
+        const metaMjs = path.join(dirPath, 'meta.mjs');
+        
+        try {
+          // Prefer a meta.json or meta.mjs file if present for explicit metadata
+          let meta = null;
+          try {
+            const statJson = await fs.stat(metaJson).catch(() => null);
+            if (statJson && statJson.isFile()) {
+              const rawMeta = await fs.readFile(metaJson, 'utf8');
+              meta = JSON.parse(rawMeta);
+            } else {
+              const statMjs = await fs.stat(metaMjs).catch(() => null);
+              if (statMjs && statMjs.isFile()) {
+                // dynamic import
+                const mod = await import(pathToFileURL(metaMjs).href);
+                meta = mod.default || mod.meta || mod;
+              }
+            }
+          } catch (e) {
+            meta = null;
+          }
+
+          let title = dirent.name.replace(/-/g,' ');
+          let excerpt = '';
+          let publishDate = (new Date()).toISOString().slice(0,10);
+          let author = 'Unknown';
+          let category = 'Blog';
+          let readTime = '4 min read';
+          let image = undefined;
+
+          if (meta) {
+            title = meta.title || title;
+            excerpt = meta.excerpt || '';
+            publishDate = meta.publishDate || publishDate;
+            author = meta.author || author;
+            category = meta.category || category;
+            readTime = meta.readTime || readTime;
+            image = meta.image || image;
+          } else {
+            // fallback: parse page.tsx for H1 and first paragraph
+            const raw = await fs.readFile(pageFile, 'utf8');
+            const h1Match = raw.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+            const pMatch = raw.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+            title = h1Match ? h1Match[1].replace(/\s+/g, ' ').trim() : title;
+            excerpt = pMatch ? striptags(pMatch[1]).replace(/\s+/g,' ').trim().slice(0,200) : excerpt;
+          }
+
+          // If publishDate is still default, try to derive from git history for the page file
+          if (!meta || !meta.publishDate) {
+            try {
+              const gitCmd = `git log --format=%aI --follow -- "${pageFile.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+              const { stdout } = await exec(gitCmd, { cwd: workspaceRoot });
+              const lines = stdout.trim().split('\n').filter(Boolean);
+              if (lines.length > 0) {
+                // use the last entry (oldest) as the creation date
+                const created = lines[lines.length - 1];
+                publishDate = created.slice(0,10);
+              }
+            } catch (e) {
+              // ignore git errors and keep publishDate as-is
+            }
+          }
+
+          posts.push({
+            id: dirent.name,
+            title,
+            excerpt,
+            publishDate,
+            author,
+            category,
+            slug: dirent.name,
+            readTime,
+            image,
+          });
+        } catch (e) {
+          // skip if no page.tsx
+        }
+      }
+    } catch (e) {
+      // es directory doesn't exist or can't be read
+    }
+    
     return posts;
   } catch (e) {
     return null;
@@ -145,7 +245,28 @@ function escapeJsString(str) {
 
 function generateTs(posts) {
   const entries = posts.map(p => {
-    const imageLine = p.image ? `    image: '${escapeJsString(p.image)}'` : '';
+    const imageLine = p.image ? `    image: '${escapeJsString(p.image)}',` : '';
+    
+    // Check if this is a Spanish post or has language variants
+    let languageLine = '';
+    let alternateLanguagesLine = '';
+    
+    if (p.slug === 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia') {
+      languageLine = "    language: 'es',";
+      alternateLanguagesLine = `    alternateLanguages: {
+      en: 'do-you-need-ai-or-automation',
+      es: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia'
+    },`;
+    } else if (p.slug === 'do-you-need-ai-or-automation') {
+      languageLine = "    language: 'en',";
+      alternateLanguagesLine = `    alternateLanguages: {
+      en: 'do-you-need-ai-or-automation',
+      es: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia'
+    },`;
+    } else {
+      languageLine = "    language: 'en',";
+    }
+
     return `  '${p.slug}': {
     id: '${escapeJsString(p.id)}',
     title: '${escapeJsString(p.title)}',
@@ -154,9 +275,9 @@ function generateTs(posts) {
     author: '${escapeJsString(p.author)}',
     category: '${escapeJsString(p.category)}',
     slug: '${escapeJsString(p.slug)}',
-    readTime: '${escapeJsString(p.readTime)}',
-${imageLine ? imageLine + '\n  }' : '  }' }
-`;
+    readTime: '${escapeJsString(p.readTime)}',${imageLine ? '\n' + imageLine : ''}
+${languageLine}${alternateLanguagesLine ? '\n' + alternateLanguagesLine : ''}
+  }`;
   }).join(',\n');
 
   return `export interface BlogPostMetadata {
@@ -169,6 +290,11 @@ ${imageLine ? imageLine + '\n  }' : '  }' }
   slug: string;
   readTime: string;
   image?: string;
+  language: 'en' | 'es';
+  alternateLanguages?: {
+    en?: string; // English slug
+    es?: string; // Spanish slug  
+  };
 }
 
 // Blog post metadata registry (auto-generated)

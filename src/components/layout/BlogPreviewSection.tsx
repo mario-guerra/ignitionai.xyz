@@ -3,18 +3,16 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { BlogPostMetadata, blogPostsMetadata } from '@/lib/blog/metadata';
+import { BlogPostMetadata } from '@/lib/blog/metadata';
+import { getAllBlogPosts, getPostUrl } from '@/lib/blog/utils';
 
 const BlogPreviewSection = () => {
   const [recentPosts, setRecentPosts] = useState<BlogPostMetadata[]>([]);
 
   useEffect(() => {
-    // Get all posts and sort by date (newest first), then take first 3
-    const allPosts = Object.values(blogPostsMetadata);
-    const sortedPosts = allPosts.sort((a, b) => 
-      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    );
-    const latestThree = sortedPosts.slice(0, 3);
+    // Get filtered English posts and take first 3
+    const englishPosts = getAllBlogPosts();
+    const latestThree = englishPosts.slice(0, 3);
     setRecentPosts(latestThree);
   }, []);
 
@@ -60,7 +58,7 @@ const BlogPreviewSection = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold mb-3">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-ignition-orange transition-colors">
+                  <Link href={getPostUrl(post)} className="hover:text-ignition-orange transition-colors">
                     {post.title}
                   </Link>
                 </h3>
@@ -74,7 +72,7 @@ const BlogPreviewSection = () => {
                     <span className="text-sm font-medium">{post.author}</span>
                   </div>
                   
-                  <Link href={`/blog/${post.slug}`} className="text-ignition-orange hover:text-ember-red font-medium flex items-center transition-colors">
+                  <Link href={getPostUrl(post)} className="text-ignition-orange hover:text-ember-red font-medium flex items-center transition-colors">
                     Read More
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
