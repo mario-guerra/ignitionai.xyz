@@ -286,7 +286,7 @@ const AboutPage = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Our solutions are built on methodologies tested across Fortune 500 companies at Microsoft, 
                   Qualcomm, and ARM. We understand enterprise constraints, compliance requirements, and the 
-                  critical difference between a working demo and a production system, whether it's simple automation 
+                  critical difference between a working demo and a production system, whether it&apos;s simple automation 
                   or advanced AI.
                 </p>
                 <p className="text-gray-600 leading-relaxed">

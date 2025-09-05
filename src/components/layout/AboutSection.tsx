@@ -16,7 +16,7 @@ const AboutSection = () => {
           >
             <h2 className="section-title mb-6">About IgnitionAI: Technology Solutions Matched to Business Needs</h2>
             <p className="text-lg mb-6 text-gray-700">
-              IgnitionAI was founded to help startups and SMBs implement the right technology solutions, whether that's automation, 
+              IgnitionAI was founded to help startups and SMBs implement the right technology solutions, whether that&apos;s automation, 
               intelligent workflows, or advanced AI. Unlike consultancies that push complex AI regardless of need, we focus on 
               matching technology to your specific business challenges.
             </p>
