@@ -29,32 +29,32 @@ const HeroSection = () => {
             <div className="space-y-4 md:space-y-6">
               <div className="inline-block bg-gradient-to-r from-ignition-orange to-ember-red bg-clip-text text-transparent">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Ignite Your Business with AI
+                  Ignite Your Business with Intelligent Solutions
                 </h1>
               </div>
               
               <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto lg:mx-0">
-                Transform your organization with enterprise-grade AI solutions that deliver 
-                measurable results. From strategy to implementation, we accelerate your AI journey 
-                with proven frameworks and cutting-edge technology.
+                Transform your organization by applying the right technology to your business challenges. 
+                Whether you need simple automation, intelligent workflows, or advanced AI, we deliver 
+                measurable results with proven frameworks and practical implementation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
                 <Link href="/contact" className="btn-primary text-center">
-                  Start Your AI Journey
+                  Find Your Right Solution
                 </Link>
                 <Link href="/services" className="btn-secondary text-center">
-                  Explore Services
+                  Explore Solution Spectrum
                 </Link>
               </div>
 
               <div className="mt-8 md:mt-12 p-4 border-l-4 border-ignition-orange bg-gray-50 max-w-2xl mx-auto lg:mx-0">
                 <div className="text-sm">
                   <p className="text-gray-700 mb-2">
-                    <span className="font-semibold text-gray-900">The Challenge:</span> Growing businesses need enterprise-grade AI but lack Fortune 500 budgets
+                    <span className="font-semibold text-gray-900">The Challenge:</span> Growing businesses need smarter systems but struggle to identify which technology actually fits their needs and budget
                   </p>
                   <p className="text-gray-700">
-                    <span className="font-semibold text-gray-900">Our Solution:</span> Production-ready AI systems with 90-day ROI, built on 15+ years of enterprise experience
+                    <span className="font-semibold text-gray-900">Our Solution:</span> Custom-fit technology solutions from simple automation to advanced AI that deliver measurable ROI within 90 days
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const HeroSection = () => {
                   {/* Stylized flame rising from circuit - exact same as header logo */}
                   <path d="M60 10C60 10 40 30 40 50C40 70 60 70 60 90C60 70 80 70 80 50C80 30 60 10 60 10Z" fill="url(#hero_flame_gradient)"/>
                   
-                  {/* AI text centered in flame with readable background */}
+                  {/* Logo text centered in flame with readable background */}
                   <circle cx="60" cy="50" r="12" fill="rgba(255, 255, 255, 0.95)" stroke="rgba(255, 98, 0, 0.3)" strokeWidth="1"/>
                   <text 
                     x="60" 
@@ -88,9 +88,9 @@ const HeroSection = () => {
                     textAnchor="middle" 
                     dominantBaseline="central" 
                     className="font-bold fill-deep-charcoal"
-                    style={{ fontSize: '12px', fontFamily: 'Montserrat, sans-serif' }}
+                    style={{ fontSize: '10px', fontFamily: 'Montserrat, sans-serif' }}
                   >
-                    AI
+                    IA
                   </text>
                   
                   {/* Circuit base - exact same as header logo */}

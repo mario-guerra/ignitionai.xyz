@@ -14,16 +14,17 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title mb-6">About IgnitionAI</h2>
+            <h2 className="section-title mb-6">About IgnitionAI: Technology Solutions Matched to Business Needs</h2>
             <p className="text-lg mb-6 text-gray-700">
-              IgnitionAI was founded to make enterprise-grade AI accessible to startups and small & medium-sized businesses. 
-              With deep technical expertise and enterprise experience, we focus on delivering practical AI solutions 
-              that solve real business problems.
+              IgnitionAI was founded to help startups and SMBs implement the right technology solutions, whether that's automation, 
+              intelligent workflows, or advanced AI. Unlike consultancies that push complex AI regardless of need, we focus on 
+              matching technology to your specific business challenges.
             </p>
             <p className="text-lg mb-6 text-gray-700">
-              We have multiple ready-to-deploy AI scenarios that can be implemented immediately, and also offer solutions tailored to your specific needs.
-              Each solution is custom-built using proven technologies and frameworks, adapting to whatever challenge
-              your business faces.
+              With deep technical expertise and enterprise experience, we begin every engagement by understanding your business 
+              goals and processes. Then we recommend the simplest, most cost-effective solution that will deliver the results you need.
+              We have ready-to-deploy scenarios across the automation to AI spectrum that can be implemented immediately, with solutions 
+              ranging from simple workflow automation to complex AI systems, each custom-built using proven technologies and frameworks.
             </p>
             <div className="flex flex-wrap gap-6 mt-8">
               <div className="flex items-center">

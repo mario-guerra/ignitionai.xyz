@@ -8,11 +8,13 @@ import ResultsSection from "@/components/layout/ResultsSection";
 import PortfolioShowcase from "@/components/layout/TestimonialsSection";
 import BlogPreviewSection from "@/components/layout/BlogPreviewSection";
 import CTASection from "@/components/layout/CTASection";
+import SolutionSpectrumSection from "@/components/layout/SolutionSpectrumSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <SolutionSpectrumSection />
       
       {/* Value Proposition Section */}
       <section className="section bg-white">
@@ -62,7 +64,9 @@ export default function Home() {
       {/* Scenarios We Ignite Section */}
       <section className="section bg-gray-50 circuit-bg">
         <div className="container mx-auto">
-          <h2 className="section-title text-center">Scenarios We Ignite</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-4">Scenarios We Ignite</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             <div className="card hover:border-l-4 hover:border-l-ignition-orange transition-all">
               <h3 className="text-xl font-bold mb-4 text-deep-charcoal">Process Automation</h3>
