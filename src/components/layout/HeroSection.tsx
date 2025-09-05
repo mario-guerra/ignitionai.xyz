@@ -90,7 +90,7 @@ const HeroSection = () => {
                     className="font-bold fill-deep-charcoal"
                     style={{ fontSize: '10px', fontFamily: 'Montserrat, sans-serif' }}
                   >
-                    IA
+                    AI
                   </text>
                   
                   {/* Circuit base - exact same as header logo */}
