@@ -29,7 +29,7 @@ const HeroSection = () => {
             <div className="space-y-4 md:space-y-6">
               <div className="inline-block bg-gradient-to-r from-ignition-orange to-ember-red bg-clip-text text-transparent">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Ignite Your Business with Intelligent Solutions
+                  Ignite Your Business with Automated Solutions
                 </h1>
               </div>
               
