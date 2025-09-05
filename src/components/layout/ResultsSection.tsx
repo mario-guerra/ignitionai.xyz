@@ -25,9 +25,9 @@ const ResultsSection = () => {
     <section className="section bg-ignition-orange text-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to Transform Your Business</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Smart Solutions, Measurable Outcomes</h2>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Here&apos;s what IgnitionAI brings to your AI transformation journey.
+            Here&apos;s what IgnitionAI brings to your AI and automation transformation journey.
           </p>
         </div>
         

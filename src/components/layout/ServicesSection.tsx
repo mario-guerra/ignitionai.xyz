@@ -29,7 +29,7 @@ const ServicesSection = () => {
     <section id="services" className="section bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-4">Our Services</h2>
           <p className="text-xl max-w-3xl mx-auto text-gray-700">
             We offer a structured approach to AI implementation, from assessment to execution, ensuring rapid ROI and measurable business impact.
           </p>
@@ -42,17 +42,15 @@ const ServicesSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-                    {/* Service 1: AI Readiness Assessment */}
-          <motion.div
-            className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+          {/* Service 1: AI Readiness Assessment */}
+          <motion.div 
+            className="card relative overflow-hidden border-t-4 border-t-ember-red"
+            variants={itemVariants}
           >
-            <h3 className="text-2xl font-bold mb-4">AI Readiness Assessment</h3>
+            <div className="absolute -right-16 -top-16 w-32 h-32 bg-ember-red/10 rounded-full"></div>
+            <h3 className="text-2xl font-bold mb-4">Readiness Assessment</h3>
             <p className="text-gray-700 mb-6">
-              Comprehensive assessment of your business operations to identify AI opportunities with the highest ROI potential
+              Comprehensive assessment of your business operations to identify AI and automation opportunities with the highest ROI potential
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
@@ -78,10 +76,10 @@ const ServicesSection = () => {
           
           {/* Service 2: Solution Design */}
           <motion.div 
-            className="card relative overflow-hidden border-t-4 border-t-ember-red"
+            className="card relative overflow-hidden border-t-4 border-t-ignition-orange"
             variants={itemVariants}
           >
-            <div className="absolute -right-16 -top-16 w-32 h-32 bg-ember-red/10 rounded-full"></div>
+            <div className="absolute -right-16 -top-16 w-32 h-32 bg-ignition-orange/10 rounded-full"></div>
             <h3 className="text-2xl font-bold mb-4">Solution Design</h3>
             <p className="text-gray-700 mb-6">
               Custom AI solution architecture tailored to your specific business needs, goals, and existing systems

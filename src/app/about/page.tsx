@@ -13,7 +13,7 @@ const AboutPage = () => {
   const values = [
     {
       title: "Production-Ready Solutions",
-      description: "We architect, implement, and deploy AI systems that scale in production environments, not just prototypes.",
+      description: "We architect, implement, and deploy solutions across the automation spectrum that scale in production environments, not just prototypes.",
       icon: "🎯"
     },
     {
@@ -23,12 +23,12 @@ const AboutPage = () => {
     },
     {
       title: "Measurable Impact",
-      description: "Every engagement delivers quantifiable ROI within 90 days, with 40-70% improvements in key metrics.",
+      description: "Every engagement delivers quantifiable ROI within 90 days, with 40-70% improvements in key metrics using the right-sized solution for your needs.",
       icon: "🚀"
     },
     {
       title: "Deep Technical Expertise",
-      description: "15+ years of enterprise AI experience shipping solutions that handle thousands of daily interactions.",
+      description: "15+ years of enterprise AI & intelligent automation experience shipping solutions that handle thousands of daily interactions.",
       icon: "⚡"
     }
   ];
@@ -84,7 +84,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Enterprise-Proven <span className="text-ignition-orange">AI Solutions</span> for Growing Businesses
+              Enterprise-Proven <span className="text-ignition-orange">Automation & AI</span> for Growing Businesses
             </motion.h1>
             <motion.p 
               className="text-xl text-gray-600 mb-8 leading-relaxed"
@@ -92,9 +92,9 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              IgnitionAI brings 15+ years of enterprise AI experience from Microsoft, Qualcomm, and ARM 
-              to help businesses implement production-ready AI solutions that deliver measurable impact 
-              within 90 days.
+              IgnitionAI brings 15+ years of enterprise technology experience from Microsoft, Qualcomm, and ARM 
+              to help businesses implement the right solution for their needs, from simple automation to advanced AI, 
+              delivering measurable impact within 90 days.
             </motion.p>
             <motion.div
               className="inline-flex items-center space-x-2 text-ignition-orange font-semibold"
@@ -103,7 +103,7 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <span>🔥</span>
-              <span>Production-Ready AI • Enterprise-Proven Methodologies • Measurable Results</span>
+              <span>From Automation to AI • Enterprise Methodologies • Measurable Results</span>
             </motion.div>
           </div>
         </div>
@@ -157,15 +157,15 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-bold text-deep-charcoal mb-2">Mario Guerra</h3>
                 <p className="text-lg text-ignition-orange font-semibold mb-4">Founder & Principal AI Architect</p>
                 <p className="mb-6 text-gray-700">
-                  Mario Guerra is the Founder and Principal AI Architect of IgnitionAI, bringing 15+ years of enterprise AI experience from Microsoft, Qualcomm, and ARM to help businesses transform operations through production-ready AI implementations.
+                  Mario Guerra is the Founder and Principal Technology Architect of IgnitionAI, bringing 15+ years of enterprise experience from Microsoft, Qualcomm, and ARM to help businesses transform operations through right-sized technology implementations, from automation to advanced AI.
                 </p>
                 <p className="mb-6 text-gray-700">
-                  Unlike consultants who focus on experimental prototypes, Mario specializes in shipping AI solutions that deliver measurable business impact—from reducing documentation queries by 85% to achieving 30+% adoption across Azure services.
+                  Unlike consultants who focus on experimental prototypes, Mario specializes in shipping solutions that deliver measurable business impact, carefully matching the right level of technology to each business need, from simple automation to intelligent workflows to advanced AI.
                 </p>
                 <div className="mb-6">
                   <h4 className="font-semibold text-deep-charcoal mb-2">Enterprise Platform Heritage</h4>
                   <p className="text-gray-700 text-sm">
-                    Having architected solutions for Azure services, Snapdragon AI platforms, and ARM Cortex systems, Mario understands how AI implementations must integrate with existing enterprise infrastructure.
+                    Having architected solutions for Azure services, Snapdragon platforms, and ARM Cortex systems, Mario understands how technology implementations must integrate with existing enterprise infrastructure, whether they involve simple automation workflows or complex AI systems.
                   </p>
                 </div>
                 <div>
@@ -178,9 +178,9 @@ const AboutPage = () => {
               {/* Achievements (right column) */}
               <div className="space-y-8">
                 <div className="bg-orange-50 p-6 rounded-xl">
-                  <h4 className="font-bold text-deep-charcoal mb-3">Production-Ready AI Solutions</h4>
+                  <h4 className="font-bold text-deep-charcoal mb-3">Production-Ready Technology Solutions</h4>
                   <p className="text-gray-700 text-sm mb-4">
-                    At IgnitionAI, we don&apos;t just build proof-of-concepts. We architect, implement, and deploy AI systems that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
+                    At IgnitionAI, we don&apos;t just build proof-of-concepts. We architect, implement, and deploy systems across the automation spectrum that scale in production environments. Our approach is grounded in methodologies tested across Fortune 500 companies.
                   </p>
                   <ul className="space-y-2 text-sm text-gray-700 list-disc pl-5">
                     <li>85% reduction in support response times through knowledge-powered AI assistants</li>
@@ -208,7 +208,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-deep-charcoal mb-2">Hector Norzagaray</h3>
                   <p className="text-lg text-ignition-orange font-semibold mb-4">Product Engineering & Community Strategy</p>
                   <p className="mb-6 text-gray-700">
-                    Hector Norzagaray is a dedicated Product Strategist with several years of experience in enterprise software, honed within the Microsoft Azure ecosystem. With a focus on driving innovation in cloud-based platforms and AI-first developer tools, Hector helps organizations enhance their operations through scalable, secure technology solutions.
+                    Hector Norzagaray is a dedicated Product Strategist with several years of experience in enterprise software, honed within the Microsoft Azure ecosystem. With a focus on driving innovation in cloud-based platforms and intelligent automation tools, Hector helps organizations enhance their operations through scalable, secure technology solutions tailored to their specific needs.
                   </p>
                   <p className="mb-6 text-gray-700">
                     Unlike many professionals who emphasize theoretical concepts, Hector thrives on delivering practical, impactful products that support technical adoption and business growth across diverse environments.
@@ -267,9 +267,9 @@ const AboutPage = () => {
                 The IgnitionAI Difference
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                We bridge the gap between enterprise-grade AI capabilities and accessible business solutions. 
-                Our implementations deliver immediate, measurable impact through production-ready systems 
-                built on proven methodologies.
+                We bridge the gap between enterprise-grade technology capabilities and accessible business solutions, 
+                helping you find the right approach for your specific needs. Our implementations deliver immediate, 
+                measurable impact through production-ready systems built on proven methodologies.
               </p>
             </motion.div>
 
@@ -286,12 +286,13 @@ const AboutPage = () => {
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Our solutions are built on methodologies tested across Fortune 500 companies at Microsoft, 
                   Qualcomm, and ARM. We understand enterprise constraints, compliance requirements, and the 
-                  critical difference between a working demo and a production system that handles thousands 
-                  of daily interactions.
+                  critical difference between a working demo and a production system, whether it's simple automation 
+                  or advanced AI.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  This enterprise heritage enables us to deliver faster, more reliable deployments that work 
-                  within your current technology ecosystem while scaling to meet growing business demands.
+                  This enterprise heritage enables us to identify which technology approach will work best for your 
+                  specific needs, delivering faster, more reliable deployments that work within your current 
+                  technology ecosystem while scaling to meet growing business demands.
                 </p>
               </motion.div>
 
@@ -388,7 +389,7 @@ const AboutPage = () => {
               Scenarios We Ignite
             </h2>
             <p className="text-xl text-gray-600">
-              Common business challenges that AI can transform across any industry
+              Common business challenges that AI & intelligent automation can transform across any industry
             </p>
           </motion.div>
 
@@ -474,22 +475,23 @@ const AboutPage = () => {
               viewport={{ once: true }}
             >
               <p className="text-gray-300 leading-relaxed mb-6">
-                The AI revolution is creating a two-tier system: large enterprises with unlimited budgets 
-                and dedicated AI teams are rapidly implementing sophisticated solutions, while growing 
-                businesses are left with generic consultants who lack deep AI expertise or experimental 
+                The technology revolution is creating a two-tier system: large enterprises with unlimited budgets 
+                and dedicated teams are rapidly implementing sophisticated solutions, while growing 
+                businesses struggle to determine whether they need automation, intelligent automation, or AI. 
+                Many are left with generic consultants who lack deep expertise or experimental 
                 prototypes that never reach production.
               </p>
               <p className="text-gray-300 leading-relaxed mb-6">
-                IgnitionAI was founded to democratize access to enterprise-grade AI solutions. Through 
-                our founder&apos;s 15+ years of experience shipping production AI systems at Microsoft, 
+                IgnitionAI was founded to democratize access to enterprise-grade technology solutions. Through 
+                our founder&apos;s 15+ years of experience shipping production systems at Microsoft, 
                 Qualcomm, and ARM, we bring Fortune 500-proven methodologies to businesses ready 
-                to transform their operations.
+                to transform their operations with the right technology for their specific needs.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Our approach is fundamentally different: we don&apos;t just consult—we implement production-ready 
-                systems. We don&apos;t just theorize—we deliver measurable results. Every solution is designed 
-                with the understanding that businesses need AI implementations that integrate seamlessly 
-                with existing infrastructure and deliver ROI within 90 days.
+                Our approach is fundamentally different: we don&apos;t just consult, we implement production-ready 
+                systems. We don&apos;t just theorize, we deliver measurable results. Every solution is designed 
+                with the understanding that businesses need implementations that integrate seamlessly 
+                with existing infrastructure and deliver ROI within 90 days, whether that solution is simple automation or advanced AI.
               </p>
             </motion.div>
 
@@ -504,7 +506,7 @@ const AboutPage = () => {
                 href="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-ignition-orange text-white font-semibold rounded-lg hover:bg-ignition-orange/90 transition-colors"
               >
-                Start Your AI Transformation
+                Find Your Right Solution
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
