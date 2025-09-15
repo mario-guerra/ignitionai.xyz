@@ -1,7 +1,7 @@
 # IgnitionAI Branding and Logo Guide
 
 ## Branding Vision
-**IgnitionAI** sparks transformation for small and medium-sized businesses (SMBs) by making AI accessible, impactful, and ROI-driven. The brand identity should convey:
+**IgnitionAI** sparks transformation for small and medium-sized businesses (SMBs) by making AI and intelligent automation accessible, impactful, and ROI-driven. The brand identity should convey:
 - **Energy and Transformation**: Reflect the “ignition” theme with dynamic, catalyst-inspired visuals (e.g., sparks, flames) to signal action and change.
 - **Professionalism**: Build trust with SMBs in logistics, healthcare, e-commerce, and professional services through clean, modern design.
 - **Approachability**: Appeal to non-technical owners/managers with clear, welcoming aesthetics, avoiding overly complex tech vibes.
