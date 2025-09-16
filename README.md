@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IgnitionAI Website
 
-## Getting Started
+A modern, responsive website for IgnitionAI, a consulting firm specializing in AI solutions for small and medium-sized businesses. Built with Next.js 15 and deployed on GitHub Pages.
 
-First, run the development server:
+## 🚀 About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+IgnitionAI helps SMBs implement AI solutions with measurable ROI in 2-3 months. Our website showcases our services, portfolio, blog content, and contact information.
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Content**: Markdown with Gray Matter
+- **Deployment**: GitHub Pages
+- **Analytics**: Google Analytics 4
+
+## ✨ Features
+
+- Responsive design optimized for all devices
+- SEO-optimized with meta tags and structured data
+- Blog system with markdown content
+- Portfolio showcase
+- Contact forms and service inquiries
+- Google Analytics integration
+- Fast loading with Next.js optimizations
+
+## 📁 Project Structure
+
+```
+ignitionai.xyz/
+├── src/
+│   ├── app/                 # Next.js App Router pages
+│   │   ├── about/          # About page
+│   │   ├── blog/           # Blog pages
+│   │   ├── contact/        # Contact page
+│   │   ├── services/       # Services page
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page
+│   ├── components/         # Reusable React components
+│   │   ├── animations/     # Animation components
+│   │   ├── blog/           # Blog-related components
+│   │   ├── layout/         # Layout components (Header, Footer)
+│   │   └── ui/             # UI components
+│   ├── lib/                # Utility libraries
+│   └── utils/              # Helper functions
+├── public/                 # Static assets
+│   ├── fonts/              # Custom fonts
+│   ├── images/             # Images and logos
+│   └── [favicons]          # Favicon files
+├── bizplans/               # Business planning documents
+├── branding/               # Brand guidelines and assets
+├── content/                # Content management
+│   ├── blog/               # Blog posts
+│   └── case-studies/       # Case studies
+├── portfolio/              # Portfolio projects
+└── scripts/                # Build scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# IgnitionAI Website
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A modern, responsive website for IgnitionAI, a consulting firm specializing in AI solutions for small and medium-sized businesses. Built with Next.js 15 and deployed on GitHub Pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 About
 
-## Learn More
+IgnitionAI helps SMBs implement AI solutions with measurable ROI in 2-3 months. Our website showcases our services, portfolio, blog content, and contact information.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Content**: Markdown with Gray Matter
+- **Deployment**: GitHub Pages
+- **Analytics**: Google Analytics 4
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+- Responsive design optimized for all devices
+- SEO-optimized with meta tags and structured data
+- Blog system with markdown content
+- Portfolio showcase
+- Contact forms and service inquiries
+- Google Analytics integration
+- Fast loading with Next.js optimizations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+ignitionai.xyz/
+├── src/
+│   ├── app/                 # Next.js App Router pages
+│   │   ├── about/          # About page
+│   │   ├── blog/           # Blog pages
+│   │   ├── contact/        # Contact page
+│   │   ├── services/       # Services page
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page
+│   ├── components/         # Reusable React components
+│   │   ├── animations/     # Animation components
+│   │   ├── blog/           # Blog-related components
+│   │   ├── layout/         # Layout components (Header, Footer)
+│   │   └── ui/             # UI components
+│   ├── lib/                # Utility libraries
+│   └── utils/              # Helper functions
+├── public/                 # Static assets
+│   ├── fonts/              # Custom fonts
+│   ├── images/             # Images and logos
+│   └── [favicons]          # Favicon files
+├── bizplans/               # Business planning documents
+├── branding/               # Brand guidelines and assets
+├── content/                # Content management
+│   ├── blog/               # Blog posts
+│   └── case-studies/       # Case studies
+├── portfolio/              # Portfolio projects
+└── scripts/                # Build scripts
+```
+
+## 📊 Analytics
+
+Google Analytics 4 is integrated with Measurement ID `G-F89WZNQXV3`. Tracking is automatically enabled across all pages.
+
+## 🤝 Contributing
+
+This is a private business website. For contributions or updates, please contact the development team.
+
+## 📞 Contact
+
+IgnitionAI
+- Website: [ignitionai.xyz](https://ignitionai.xyz)
+- Email: [contact@ignitionai.xyz](mailto:contact@ignitionai.xyz)
+
+---
+
