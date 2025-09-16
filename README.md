@@ -1,6 +1,6 @@
 # IgnitionAI Website
 
-A modern, responsive website for IgnitionAI, a consulting firm specializing in AI solutions for small and medium-sized businesses. Built with Next.js 15 and deployed on GitHub Pages.
+A modern, responsive website for IgnitionAI, a consulting firm specializing in automation and AI solutions for small and medium-sized businesses. Built with Next.js 15 and deployed on GitHub Pages.
 
 ## 🚀 About
 
