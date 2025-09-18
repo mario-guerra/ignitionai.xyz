@@ -17,14 +17,29 @@ function doPost(e) {
       };
     }
 
-    const { name, email, subject, message, human, js_input, submissionTime } = data;
+    const { name, email, subject, message, human, js_input } = data;
+    // normalize submissionTime to number (may be 0 or NaN)
+    const submissionTime = Number(data && data.submissionTime) || 0;
 
-    // (Debugging) we will return detailed error info in the HTTP/iframe response when failures occur.
-
-    // Basic validation
+    // Input validation (basic)
+    const errors = [];
+    // basic email regex (not perfect but filters obvious invalid values)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!name || !email || !subject || !message || !human || js_input !== 'js_present') {
+      errors.push('missing_required_fields');
+    }
+    if (email && !emailRegex.test(String(email))) {
+      errors.push('invalid_email');
+    }
+    // length limits
+    if (String(name || '').length > 100) errors.push('name_too_long');
+    if (String(subject || '').length > 150) errors.push('subject_too_long');
+    if (String(message || '').length > 5000) errors.push('message_too_long');
+
+    if (errors.length > 0) {
+      // Return sanitized error info to caller
       return ContentService
-        .createTextOutput(JSON.stringify({ error: 'Invalid submission' }))
+        .createTextOutput(JSON.stringify({ success: false, errorCode: 'INVALID_INPUT', errors: errors }))
         .setMimeType(ContentService.MimeType.JSON);
     }
 
@@ -32,7 +47,7 @@ function doPost(e) {
     const timeElapsed = Date.now() - submissionTime;
     if (timeElapsed < 5000 || !human) {
       return ContentService
-        .createTextOutput(JSON.stringify({ error: 'Spam detected' }))
+        .createTextOutput(JSON.stringify({ success: false, errorCode: 'SPAM_DETECTED' }))
         .setMimeType(ContentService.MimeType.JSON);
     }
 
@@ -56,26 +71,28 @@ function doPost(e) {
     const isJsonRequest = e.postData && e.postData.type && e.postData.type.indexOf('application/json') !== -1;
 
     try {
-      MailApp.sendEmail(recipient, subjectLine, body, { replyTo: email || undefined, name: 'IgnitionAI Contact Form' });
-      Logger.log('Email sent. Remaining quota: %s', MailApp.getRemainingDailyQuota && MailApp.getRemainingDailyQuota());
+  MailApp.sendEmail(recipient, subjectLine, body, { replyTo: email || undefined, name: 'IgnitionAI Contact Form' });
+      // Log remaining quota in a safe way
+      try {
+        const remaining = (typeof MailApp.getRemainingDailyQuota === 'function') ? MailApp.getRemainingDailyQuota() : 'unknown';
+        Logger.log('Email sent successfully. Remaining MailApp daily quota: %s', remaining);
+      } catch (quotaErr) {
+        Logger.log('Email sent; unable to read remaining quota: %s', String(quotaErr));
+      }
       // Mail sent successfully; continue
     } catch (mailErr) {
-      Logger.log('MailApp.sendEmail error: %s', mailErr.toString());
-      Logger.log('MailApp.sendEmail error: %s', mailErr.toString());
-      // Return detailed error info to the caller for in-browser debugging. Note: this reveals
-      // internal error strings to the client — remove or sanitize this in production.
-      const details = String(mailErr);
-      const params = e && e.parameter ? e.parameter : null;
+      // Log full internal error server-side only
+      Logger.log('MailApp.sendEmail error: %s', String(mailErr));
+
+      // Return a sanitized error to callers (do not leak internal details)
       if (isJsonRequest) {
         return ContentService
-          .createTextOutput(JSON.stringify({ error: 'Failed to send email', details: details, params: params }))
+          .createTextOutput(JSON.stringify({ success: false, errorCode: 'MAIL_FAILED', message: 'Failed to send email' }))
           .setMimeType(ContentService.MimeType.JSON);
       } else {
-        const errorPayload = { success: false, error: 'Failed to send email', details: details, params: params };
-        const html = `<!doctype html><html><head><meta charset="utf-8"></head><body><script>
-          try{ window.parent.postMessage(${JSON.stringify(errorPayload)}, '*'); }catch(e){}
-          document.write('Submission failed.');
-        </script></body></html>`;
+        const errorPayload = { success: false, error: 'Failed to send email' };
+        const html = "<!doctype html><html><head><meta charset=\"utf-8\"></head><body><script>try{ window.parent.postMessage(" +
+          JSON.stringify(errorPayload) + ", '*'); }catch(e){} document.write('Submission failed.');</script></body></html>";
         return HtmlService.createHtmlOutput(html).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
       }
     }
@@ -109,7 +126,7 @@ function doPost(e) {
    * It returns an object with details about the attempt and logs the outcome.
    */
   function testSend() {
-    const recipient = 'contact@ignitionai.xyz'; // <-- adjust if you want a different test recipient
+  const recipient = 'mario.guerra@ignitionai.xyz'; // <-- test recipient (adjust if you want a different address)
     const subjectLine = 'Test email from IgnitionAI Apps Script';
     const body = [
       'This is a test message sent by testSend() from the Apps Script project.',

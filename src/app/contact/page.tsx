@@ -102,9 +102,13 @@ export default function Contact() {
     }
 
     // Create a hidden iframe and submit the form into it to avoid CORS restrictions
-    const iframe = document.createElement('iframe');
-    iframe.name = 'hidden_iframe';
-    iframe.style.display = 'none';
+  const iframe = document.createElement('iframe');
+  iframe.name = 'hidden_iframe';
+  // Restrict iframe features to avoid browser permission-policy console violations
+  // while still allowing scripts in the iframe to run so it can postMessage back.
+  // This prevents noisy logs like "Potential permissions policy violation: camera is not allowed".
+  iframe.sandbox = 'allow-scripts allow-forms';
+  iframe.style.display = 'none';
     document.body.appendChild(iframe);
 
     // Add JS detection and submissionTime as hidden inputs so the Apps Script can validate
