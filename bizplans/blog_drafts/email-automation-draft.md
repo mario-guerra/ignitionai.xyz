@@ -53,7 +53,7 @@ Take Emily Chen, who recently contacted one of our legal clients about estate pl
 > Once you've completed the assessment, you can immediately schedule your consultation at a time that works for you. I have availability this week and would be happy to discuss how we can protect what matters most to you.
 >
 > Best regards,  
-> Attorney Michael Harrison  
+> Attorney Max Power  
 > Harborview Legal Group
 
 Notice the difference? This isn't just acknowledgment: it's engagement. Emily feels heard, understood, and guided toward the next logical step.
