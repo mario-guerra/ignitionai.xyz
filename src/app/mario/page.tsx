@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const MarioBusinessCard = () => {
   // Generate vCard for contact download
@@ -197,7 +198,7 @@ END:VCARD`;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <a 
+              <Link 
                 href="/"
                 className="inline-flex items-center space-x-2 text-ignition-orange hover:text-ember-red transition-colors"
               >
@@ -205,7 +206,7 @@ END:VCARD`;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <span className="font-semibold">IgnitionAI</span>
-              </a>
+              </Link>
               <p className="text-sm text-gray-500 mt-1">
                 Spark Intelligent Transformation
               </p>

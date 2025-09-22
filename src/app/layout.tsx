@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { montserrat, sourceSans } from "./fonts";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -23,19 +24,6 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F89WZNQXV3"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-F89WZNQXV3');
-            `,
-          }}
-        />
-
         {/* Favicons - Simplified for GitHub Pages compatibility */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -45,7 +33,21 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${sourceSans.variable} antialiased`}
       >
-          <div className="min-h-screen flex flex-col">
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F89WZNQXV3"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F89WZNQXV3');
+          `}
+        </Script>
+
+        <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">
               {children}
