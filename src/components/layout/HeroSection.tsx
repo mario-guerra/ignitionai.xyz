@@ -39,12 +39,9 @@ const HeroSection = () => {
                 measurable results with proven frameworks and practical implementation.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
-                <Link href="/contact" className="btn-primary text-center">
-                  Find Your Right Solution
-                </Link>
-                <Link href="/services" className="btn-secondary text-center">
-                  Explore Solution Spectrum
+              <div className="flex justify-center lg:justify-start pt-4">
+                <Link href="/services" className="btn-primary text-center">
+                  Explore AI Solutions
                 </Link>
               </div>
 
@@ -124,20 +121,29 @@ const HeroSection = () => {
                 </svg>
               </div>
 
-              {/* Floating metrics - repositioned for mobile */}
+              {/* Floating metrics - repositioned for balance */}
               <motion.div 
                 className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 bg-white shadow-lg rounded-lg p-2 sm:p-3"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <div className="text-xs text-gray-600">Target ROI</div>
-                <div className="text-sm sm:text-lg font-bold text-ignition-orange">150%+</div>
+                <div className="text-xs text-gray-600">ROI Timeline</div>
+                <div className="text-sm sm:text-lg font-bold text-spark-yellow">90 Days</div>
               </motion.div>
 
               <motion.div 
-                className="absolute top-1/2 right-2 sm:-right-2 lg:-right-8 bg-white shadow-lg rounded-lg p-2 sm:p-3"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-white shadow-lg rounded-lg p-2 sm:p-3"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 2.8, repeat: Infinity, delay: 0.5 }}
+              >
+                <div className="text-xs text-gray-600">Cost Reduction</div>
+                <div className="text-sm sm:text-lg font-bold text-ignition-orange">50%+</div>
+              </motion.div>
+
+              <motion.div 
+                className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-white shadow-lg rounded-lg p-2 sm:p-3"
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+                transition={{ duration: 2.5, repeat: Infinity, delay: 1 }}
               >
                 <div className="text-xs text-gray-600">Time Saved</div>
                 <div className="text-sm sm:text-lg font-bold text-ember-red">40%+</div>
@@ -145,11 +151,11 @@ const HeroSection = () => {
 
               <motion.div 
                 className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-white shadow-lg rounded-lg p-2 sm:p-3"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 2.8, repeat: Infinity, delay: 1 }}
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 2.2, repeat: Infinity, delay: 1.5 }}
               >
-                <div className="text-xs text-gray-600">Accuracy</div>
-                <div className="text-sm sm:text-lg font-bold text-spark-yellow">95%+</div>
+                <div className="text-xs text-gray-600">Deploy Speed</div>
+                <div className="text-sm sm:text-lg font-bold text-ignition-orange">2-4 Weeks</div>
               </motion.div>
             </div>
           </motion.div>
