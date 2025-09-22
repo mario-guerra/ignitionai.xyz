@@ -154,7 +154,7 @@ const HeroSection = () => {
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 2.2, repeat: Infinity, delay: 1.5 }}
               >
-                <div className="text-xs text-gray-600">Deploy Speed</div>
+                <div className="text-xs text-gray-600">Deployment</div>
                 <div className="text-sm sm:text-lg font-bold text-ignition-orange">2-4 Weeks</div>
               </motion.div>
             </div>
