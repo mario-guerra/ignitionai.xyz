@@ -84,9 +84,8 @@ END:VCARD`;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h2 className="text-lg font-bold text-deep-charcoal mb-3">About</h2>
               <p className="text-gray-700 leading-relaxed">
-                AI-focused Technical Leader with 15+ years delivering AI-enabled products, 
+                AI-focused Technical Leader with 15+ years delivering automation & AI-enabled products,
                 developer platforms, and solutions architecture.
               </p>
             </motion.div>
