@@ -158,13 +158,13 @@ Para empresas que desean el sistema completo sin la curva de aprendizaje:
 
 Pongamos esto en perspectiva. Si normalmente conviertes el 20% de tus clientes potenciales y estás recibiendo 50 clientes potenciales por mes, estás cerrando 10 acuerdos. Ahora imagina duplicar tu tasa de conversión al 40% simplemente respondiendo más rápido y proporcionando una mejor experiencia inicial. Eso son 20 acuerdos en lugar de 10: un aumento del 100% en las ventas con el mismo gasto en marketing.
 
-Para la mayoría de las empresas, este sistema se paga solo en el primer mes solo con los clientes potenciales que de otra manera se habrían perdido por tiempos de respuesta lentos.
+Para la mayoría de las empresas, este sistema se amortiza en el primer mes con los clientes potenciales que de otra manera se habrían perdido por tiempos de respuesta lentos.
 
 ## Lo que sigue: El futuro de la automatización empresarial inteligente
 
 La automatización de correo electrónico es solo el comienzo. Ya estamos trabajando en funciones de próxima generación que revolucionarán aún más cómo operan las empresas:
 
-**Puntuación predictiva de clientes potenciales:** IA que identifica a tus prospectos de mayor valor antes de que incluso hagas hablado con ellos.
+**Puntuación predictiva de clientes potenciales:** IA que identifica a tus prospectos de mayor valor antes de que incluso hayas hablado con ellos.
 **Integración de precios dinámicos:** Cotizaciones automatizadas que se ajustan según la demanda, la competencia y la calificación del cliente.
 **Seguimiento activado por voz:** Asistentes de IA que pueden manejar conversaciones telefónicas iniciales y reservar reuniones.
 **Inteligencia multiplataforma:** Sistemas que aprenden de cada interacción con el cliente para mejorar las respuestas futuras.
@@ -185,4 +185,4 @@ Porque en Ignition AI, creemos que cada negocio merece capturar cada oportunidad
 
 ---
 
-*Héctor Norzagaray es el co-fundador de Ignition AI, donde nos especializamos en sistemas de automatización inteligente que ayudan a las empresas a capturar, calificar y convertir más leads.*
+*Héctor Norzagaray es el Principal de Ingeniería de Producto y Estrategia de Comunidad de Ignition AI, donde nos especializamos en sistemas de automatización inteligente que ayudan a las empresas a capturar, calificar y convertir más leads.*
