@@ -247,30 +247,32 @@ const NuncaPierdasOtroClientePotencialClient = ({ post }: NuncaPierdasOtroClient
                 Cada punto de contacto se siente natural y útil, nunca desesperado ni agresivo.
               </p>
 
-              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">Resultados del mundo real: Los números no mienten</h2>
+              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">Impacto Potencial: Lo que Estos Sistemas Pueden Lograr</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Hablemos de lo que esto significa realmente para tu negocio. Aquí están los resultados de implementaciones recientes de clientes:
+                Hablemos de lo que esto podría significar realmente para tu negocio. Basado en investigación de la industria y resultados típicos de automatización, aquí están los tipos de mejoras que las empresas suelen ver:
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="bg-light-gray p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Harborview Legal Group (resultados de 6 meses):</h4>
+                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Práctica Legal (Escenario hipotético de 6 meses):</h4>
+                  <div className="text-sm text-gray-600 mb-3 font-medium">*Resultados estimados basados en benchmarks de la industria</div>
                   <ul className="space-y-2 text-gray-700">
-                    <li><strong>Tiempo de respuesta:</strong> Reducido de más de 4 horas a menos de 5 minutos</li>
-                    <li><strong>Tasa de conversión de clientes potenciales:</strong> Aumentó del 23% al 47%</li>
-                    <li><strong>Tasa de asistencia a consultas:</strong> Mejoró del 71% al 89%</li>
-                    <li><strong>Impacto en los ingresos:</strong> $180,000 en reservas adicionales directamente atribuidas a una respuesta más rápida y una mejor calificación</li>
+                    <li><strong>Tiempo de respuesta:</strong> De más de 4 horas a menos de 5 minutos</li>
+                    <li><strong>Tasa de conversión de clientes potenciales:</strong> Aumento potencial del 23% al 47%</li>
+                    <li><strong>Tasa de asistencia a consultas:</strong> Mejora potencial del 71% al 89%</li>
+                    <li><strong>Impacto en los ingresos:</strong> Estimado $180,000+ en oportunidades adicionales por respuesta más rápida y mejor calificación</li>
                   </ul>
                 </div>
                 
                 <div className="bg-light-gray p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">TechSolutions Consulting (resultados de 3 meses):</h4>
+                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Firma de Consultoría (Escenario hipotético de 3 meses):</h4>
+                  <div className="text-sm text-gray-600 mb-3 font-medium">*Resultados proyectados basados en mejores prácticas de automatización</div>
                   <ul className="space-y-2 text-gray-700">
-                    <li><strong>Tiempo de calificación de clientes potenciales:</strong> Reducido de 20 minutos por cliente potencial a 3 minutos</li>
-                    <li><strong>Eficiencia del equipo de ventas:</strong> Mejora del 300% en clientes potenciales calificados por hora</li>
-                    <li><strong>Valor del embudo:</strong> Aumentó el tamaño promedio de los acuerdos en un 34% debido a una mejor precalificación</li>
-                    <li><strong>Satisfacción del cliente:</strong> 95% de retroalimentación positiva sobre la experiencia de respuesta inicial</li>
+                    <li><strong>Tiempo de calificación de clientes potenciales:</strong> De 20 minutos por cliente potencial a 3 minutos</li>
+                    <li><strong>Eficiencia del equipo de ventas:</strong> Hasta 300% de mejora en clientes potenciales calificados por hora</li>
+                    <li><strong>Valor del embudo:</strong> Potencial aumento del 34% en el tamaño promedio de los acuerdos mediante mejor precalificación</li>
+                    <li><strong>Satisfacción del cliente:</strong> Meta de 95%+ de retroalimentación positiva sobre la experiencia de respuesta inicial</li>
                   </ul>
                 </div>
               </div>

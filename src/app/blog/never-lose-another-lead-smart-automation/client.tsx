@@ -247,30 +247,32 @@ const NeverLoseAnotherLeadClient = ({ post }: NeverLoseAnotherLeadClientProps) =
                 Each touch point feels natural and helpful, never desperate or aggressive.
               </p>
 
-              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">Real-World Results: The Numbers Don&apos;t Lie</h2>
+              <h2 className="text-3xl font-bold text-deep-charcoal mb-6">Potential Impact: What These Systems Can Achieve</h2>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Let&apos;s talk about what this actually means for your business. Here are results from recent client implementations:
+                Let&apos;s talk about what this could actually mean for your business. Based on industry research and typical automation outcomes, here are the types of improvements businesses often see:
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="bg-light-gray p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Harborview Legal Group (6-month results):</h4>
+                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Legal Practice (Hypothetical 6-month scenario):</h4>
+                  <div className="text-sm text-gray-600 mb-3 font-medium">*Estimated results based on industry benchmarks</div>
                   <ul className="space-y-2 text-gray-700">
-                    <li><strong>Response time:</strong> Reduced from 4+ hours to under 5 minutes</li>
-                    <li><strong>Lead conversion rate:</strong> Increased from 23% to 47%</li>
-                    <li><strong>Consultation show-rate:</strong> Improved from 71% to 89%</li>
-                    <li><strong>Revenue impact:</strong> $180,000 in additional bookings directly attributed to faster response and better qualification</li>
+                    <li><strong>Response time:</strong> From 4+ hours to under 5 minutes</li>
+                    <li><strong>Lead conversion rate:</strong> Potential increase from 23% to 47%</li>
+                    <li><strong>Consultation show-rate:</strong> Potential improvement from 71% to 89%</li>
+                    <li><strong>Revenue impact:</strong> Estimated $180,000+ in additional opportunities from faster response and better qualification</li>
                   </ul>
                 </div>
                 
                 <div className="bg-light-gray p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">TechSolutions Consulting (3-month results):</h4>
+                  <h4 className="text-xl font-semibold text-deep-charcoal mb-4">Consulting Firm (Hypothetical 3-month scenario):</h4>
+                  <div className="text-sm text-gray-600 mb-3 font-medium">*Projected outcomes based on automation best practices</div>
                   <ul className="space-y-2 text-gray-700">
-                    <li><strong>Lead qualification time:</strong> Reduced from 20 minutes per lead to 3 minutes</li>
-                    <li><strong>Sales team efficiency:</strong> 300% improvement in qualified leads per hour</li>
-                    <li><strong>Pipeline value:</strong> Increased average deal size by 34% due to better pre-qualification</li>
-                    <li><strong>Client satisfaction:</strong> 95% positive feedback on initial response experience</li>
+                    <li><strong>Lead qualification time:</strong> From 20 minutes per lead to 3 minutes</li>
+                    <li><strong>Sales team efficiency:</strong> Up to 300% improvement in qualified leads per hour</li>
+                    <li><strong>Pipeline value:</strong> Potential 34% increase in average deal size through better pre-qualification</li>
+                    <li><strong>Client satisfaction:</strong> Target of 95%+ positive feedback on initial response experience</li>
                   </ul>
                 </div>
               </div>
