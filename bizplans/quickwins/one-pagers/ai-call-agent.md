@@ -94,8 +94,9 @@
 - Start small: Pilot on a secondary number during off-hours to gather real voicemails for tuning.
 - Iterate on prompts: Use initial escalations to refine LLM accuracy without risking live actions.
 - Cost Projection: For 100 voicemails/month, ~$2-5 total (Twilio + ASR + LLM); scale linearly.
-- Future-Proof: Design for easy upgrade to live calls by adding streaming ASR later.# AI Voicemail Agent — Revised Architecture Spec
+- Future-Proof: Design for easy upgrade to live calls by adding streaming ASR later.
 
+# AI Voicemail Agent — Revised Architecture Spec
 **Purpose**  
 - Provide a production-ready spec for an AI voicemail agent that processes incoming voicemail messages, extracts relevant information (e.g., intent to book, caller details), performs actions like scheduling or inquiries, and sends automated responses (SMS/email) with human fallback for uncertain cases. This simplifies the original live interaction model by focusing on asynchronous, post-call processing to reduce complexity and costs.
 
