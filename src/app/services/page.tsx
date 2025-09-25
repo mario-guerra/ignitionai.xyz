@@ -245,9 +245,9 @@ const ServicesPage = () => {
               viewport={{ once: true }}
             >
               <div className="text-3xl mb-4">📞</div>
-              <h3 className="text-xl font-bold text-deep-charcoal mb-2">AI Call Agent</h3>
+              <h3 className="text-xl font-bold text-deep-charcoal mb-2">AI Voicemail Agent</h3>
               <p className="text-gray-600 mb-4 text-sm">
-                Missing calls = lost revenue. AI answers, qualifies, and books appointments automatically
+                Turn missed calls into booked appointments. AI transcribes voicemails, extracts booking intents, and sends automated responses
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
@@ -260,7 +260,7 @@ const ServicesPage = () => {
                 </div>
                 <div className="text-sm">
                   <span className="font-semibold text-deep-charcoal">ROI up to </span>
-                  <span className="text-ignition-orange font-semibold"> 3+ bookings/week</span>
+                  <span className="text-ignition-orange font-semibold"> 90% voicemail recovery</span>
                 </div>
               </div>
               <div className="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full mb-4 inline-block">
@@ -368,7 +368,7 @@ const ServicesPage = () => {
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
                   <span className="font-semibold text-deep-charcoal">Solutions from </span>
-                  <span className="text-gray-600"> $300</span>
+                  <span className="text-gray-600"> $500</span>
                 </div>
                 <div className="text-sm">
                   <span className="font-semibold text-deep-charcoal">Timeline estimate</span>
