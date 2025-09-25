@@ -55,9 +55,14 @@ export async function generateMetadata({ params }: SpanishBlogPostProps) {
   };
 }
 
-// Dynamic import for the Spanish client component
+// Dynamic imports for Spanish client components
 const TomandoDecisionesInteligentesClient = dynamic(() => 
   import('../tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia/client'),
+  { ssr: true }
+);
+
+const NuncaPierdasOtroClientePotencialClient = dynamic(() => 
+  import('../nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente/client'),
   { ssr: true }
 );
 
@@ -69,9 +74,13 @@ export default async function SpanishBlogPost({ params }: SpanishBlogPostProps) 
     notFound();
   }
 
-  // For now, we only have one Spanish post. In the future, this could be more dynamic
+  // Handle specific Spanish posts
   if (resolvedParams.slug === 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia') {
     return <TomandoDecisionesInteligentesClient post={post} />;
+  }
+
+  if (resolvedParams.slug === 'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente') {
+    return <NuncaPierdasOtroClientePotencialClient post={post} />;
   }
 
   notFound();

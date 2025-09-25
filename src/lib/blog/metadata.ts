@@ -17,6 +17,38 @@ export interface BlogPostMetadata {
 
 // Blog post metadata registry (auto-generated)
 export const blogPostsMetadata: Record<string, BlogPostMetadata> = {
+  'never-lose-another-lead-smart-automation': {
+    id: 'never-lose-another-lead-smart-automation',
+    title: 'Never Lose Another Lead: Make Every Customer Feel Like Your Top Priority Using Smart Automation',
+    excerpt: 'Learn how intelligent automation can transform your lead management, convert more prospects, and ensure no opportunity slips through the cracks - all while you focus on running your business.',
+    publishDate: '2025-09-25',
+    author: 'Mario Guerra & Hector Norzagaray',
+    category: 'Lead Management',
+    slug: 'never-lose-another-lead-smart-automation',
+    readTime: '12 min read',
+    image: '/images/blog/lead-automation.jpg',
+    language: 'en',
+    alternateLanguages: {
+      en: 'never-lose-another-lead-smart-automation',
+      es: 'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente'
+    },
+  },
+  'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente': {
+    id: 'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente',
+    title: 'Haz que cada cliente se sienta como tu cliente más importante a través de la automatización inteligente',
+    excerpt: 'Aprende cómo la automatización inteligente puede transformar la gestión de tus clientes potenciales, convertir más prospectos y asegurar que ninguna oportunidad se escape - todo mientras te enfocas en dirigir tu negocio.',
+    publishDate: '2025-09-25',
+    author: 'Hector Norzagaray',
+    category: 'Gestión de Clientes Potenciales',
+    slug: 'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente',
+    readTime: '12 min lectura',
+    image: '/images/blog/lead-automation-es.jpg',
+    language: 'es',
+    alternateLanguages: {
+      en: 'never-lose-another-lead-smart-automation',
+      es: 'nunca-pierdas-otro-cliente-potencial-automatizacion-inteligente'
+    },
+  },
   'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia': {
     id: 'tomando-decisiones-inteligentes-automatizacion-automatizacion-inteligente-o-ia',
     title: 'Tomando decisiones inteligentes: ¿Automatización, Automatización Inteligente o IA?',
